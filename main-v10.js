@@ -12789,7 +12789,7 @@ class Task {
 		const questring = / \?\?\?/ ;
 		const impstring = / \!\!\!/ ;
 		const stopstring = / ===/ ;
-		const donestring = / ✅.*/ ;
+		const donestring = / ✅✅✅.*/ ; //delete this
 		let newDescription = this.description;
 		switch(true) {
 			case delString.test(this.description):
@@ -12806,7 +12806,7 @@ class Task {
                 break;
 			case stopstring.test(this.description):
 				newStatus = Status.Stop;
-				newDescription=this.description.replace(stopstring," ⏱@");
+				newDescription=this.description.replace(stopstring,"");// ⏱
                 break;
 			case donestring.test(this.description):
 				newDescription=this.description.replace(donestring,"");
@@ -12926,12 +12926,12 @@ Task.taskRegex = /^([\s\t]*)[-*] +\[(.)\] *(.*)/u;
 // The following regexes end with `$` because they will be matched and
 // removed from the end until none are left.
 Task.priorityRegex = /([⏫🔼🔽])$/u;
-Task.startDateRegex = /🛫 ?(\d{2}-\d{2})$/u;
-Task.scheduledDateRegex = /[⏳⌛⏱] ?(\d{2}-\d{2})/u;
+Task.startDateRegex = /🛫 ?((?:\d{4}-)?(\d{2}-\d{2})((\(.*\))?))$/u;
+Task.scheduledDateRegex = /[⏳⌛⏱] ?((?:\d{4}-)?(\d{2}-\d{2})((\(.*\))?))/u;
 //Task.dueDateRegex = /[📅📆🗓] ?(\d{4}-\d{2}-\d{2})/u;
 //Task.dueDateRegex = /\[(\d{2}-\d{2})\]/u;//TOTAL
-Task.dueDateRegex = /[📅📆🗓] ?(\d{2}-\d{2})/u;//TOTAL
-Task.doneDateRegex = /✅ ?(\d{2}-\d{2})$/u;
+Task.dueDateRegex = /[📅📆🗓] ?((?:\d{4}-)?(\d{2}-\d{2})((\(.*\))?))/u;//TOTAL
+Task.doneDateRegex = /✅ ?((?:\d{4}-)?(\d{2}-\d{2})((\(.*\))?))$/u;
 Task.recurrenceRegex = /🔁([a-zA-Z0-9, !]+)$/u;
 Task.blockLinkRegex = / \^[a-zA-Z0-9-]+$/u;
 
@@ -19381,6 +19381,43 @@ const toggleDone = (checking, editor, view) => {
     const cursorPosition = editor.getCursor();
     const lineNumber = cursorPosition.line;
     const line = editor.getLine(lineNumber);
+    const toggledLine = toggleLine({ line, path });
+    editor.setLine(lineNumber, toggledLine);
+    // The cursor is moved to the end of the line by default.
+    // If there is text on the line, put the cursor back where it was on the line.
+    if (/[^ [\]*-]/.test(toggledLine)) {
+        editor.setCursor({
+            line: cursorPosition.line,
+            // Need to move the cursor by the distance we added to the beginning.
+            ch: cursorPosition.ch + toggledLine.length - line.length,
+        });
+    }
+};
+const toggleDel = (checking, editor, view) => {
+    var _a;
+    if (checking) {
+        if (!(view instanceof obsidian.MarkdownView)) {
+            // If we are not in a markdown view, the command shouldn't be shown.
+            return false;
+        }
+        // The command should always trigger in a markdown view:
+        // - Convert lines to list items.
+        // - Convert list items to tasks.
+        // - Toggle tasks' status.
+        return true;
+    }
+    if (!(view instanceof obsidian.MarkdownView)) {
+        // Should never happen due to check above.
+        return;
+    }
+    // We are certain we are in the editor due to the check above.
+    const path = (_a = view.file) === null || _a === void 0 ? void 0 : _a.path;
+    if (path === undefined) {
+        return;
+    }
+    const cursorPosition = editor.getCursor();
+    const lineNumber = cursorPosition.line;
+    const line = editor.getLine(lineNumber)+ "xxx";
     const toggledLine = toggleLine({ line, path });
     editor.setLine(lineNumber, toggledLine);
     // The cursor is moved to the end of the line by default.
