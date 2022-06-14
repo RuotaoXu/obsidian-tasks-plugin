@@ -1,0 +1,61 @@
+.tasks-count {
+    color: var(--text-faint);
+    padding-left: 20px;
+}
+
+/* Pencil icon. */
+.tasks-edit {
+    background-color: var(--text-faint);
+    mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20aria-hidden%3D%22true%22%20focusable%3D%22false%22%20width%3D%221em%22%20height%3D%221em%22%20style%3D%22-ms-transform%3A%20rotate(360deg)%3B%20-webkit-transform%3A%20rotate(360deg)%3B%20transform%3A%20rotate(360deg)%3B%22%20preserveAspectRatio%3D%22xMidYMid%20meet%22%20viewBox%3D%220%200%201536%201536%22%3E%3Cpath%20d%3D%22M363%201408l91-91l-235-235l-91%2091v107h128v128h107zm523-928q0-22-22-22q-10%200-17%207l-542%20542q-7%207-7%2017q0%2022%2022%2022q10%200%2017-7l542-542q7-7%207-17zm-54-192l416%20416l-832%20832H0v-416zm683%2096q0%2053-37%2090l-166%20166l-416-416l166-165q36-38%2090-38q53%200%2091%2038l235%20234q37%2039%2037%2091z%22%20fill%3D%22%23626262%22%2F%3E%3C%2Fsvg%3E");
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20aria-hidden%3D%22true%22%20focusable%3D%22false%22%20width%3D%221em%22%20height%3D%221em%22%20style%3D%22-ms-transform%3A%20rotate(360deg)%3B%20-webkit-transform%3A%20rotate(360deg)%3B%20transform%3A%20rotate(360deg)%3B%22%20preserveAspectRatio%3D%22xMidYMid%20meet%22%20viewBox%3D%220%200%201536%201536%22%3E%3Cpath%20d%3D%22M363%201408l91-91l-235-235l-91%2091v107h128v128h107zm523-928q0-22-22-22q-10%200-17%207l-542%20542q-7%207-7%2017q0%2022%2022%2022q10%200%2017-7l542-542q7-7%207-17zm-54-192l416%20416l-832%20832H0v-416zm683%2096q0%2053-37%2090l-166%20166l-416-416l166-165q36-38%2090-38q53%200%2091%2038l235%20234q37%2039%2037%2091z%22%20fill%3D%22%23626262%22%2F%3E%3C%2Fsvg%3E");
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    margin-left: 0.3em;
+    cursor: pointer;
+}
+/* Copy icon. */
+.tasks-copy {
+    background-color: var(--text-faint);
+    mask-image: url("data:image/svg+xml,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221em%22%20height%3D%221em%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20d%3D%22M28.681%2011.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-11.5c-1.379%200-2.5%201.122-2.5%202.5v23c0%201.378%201.121%202.5%202.5%202.5h19c1.378%200%202.5-1.122%202.5-2.5v-15.5c0-0.448-0.137-1.23-1.319-2.841zM24.543%209.457c0.959%200.959%201.712%201.825%202.268%202.543h-4.811v-4.811c0.718%200.556%201.584%201.309%202.543%202.268v0zM28%2029.5c0%200.271-0.229%200.5-0.5%200.5h-19c-0.271%200-0.5-0.229-0.5-0.5v-23c0-0.271%200.229-0.5%200.5-0.5%200%200%2011.499-0%2011.5%200v7c0%200.552%200.448%201%201%201h7v15.5z%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M18.841%201.319c-1.612-1.182-2.393-1.319-2.841-1.319h-11.5c-1.378%200-2.5%201.121-2.5%202.5v23c0%201.207%200.86%202.217%202%202.45v-25.45c0-0.271%200.229-0.5%200.5-0.5h15.215c-0.301-0.248-0.595-0.477-0.873-0.681z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221em%22%20height%3D%221em%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20d%3D%22M28.681%2011.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-11.5c-1.379%200-2.5%201.122-2.5%202.5v23c0%201.378%201.121%202.5%202.5%202.5h19c1.378%200%202.5-1.122%202.5-2.5v-15.5c0-0.448-0.137-1.23-1.319-2.841zM24.543%209.457c0.959%200.959%201.712%201.825%202.268%202.543h-4.811v-4.811c0.718%200.556%201.584%201.309%202.543%202.268v0zM28%2029.5c0%200.271-0.229%200.5-0.5%200.5h-19c-0.271%200-0.5-0.229-0.5-0.5v-23c0-0.271%200.229-0.5%200.5-0.5%200%200%2011.499-0%2011.5%200v7c0%200.552%200.448%201%201%201h7v15.5z%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M18.841%201.319c-1.612-1.182-2.393-1.319-2.841-1.319h-11.5c-1.378%200-2.5%201.121-2.5%202.5v23c0%201.207%200.86%202.217%202%202.45v-25.45c0-0.271%200.229-0.5%200.5-0.5h15.215c-0.301-0.248-0.595-0.477-0.873-0.681z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    margin-left: 0.3em;
+    cursor: pointer;
+}
+
+.tasks-list-text {
+    position: relative;
+}
+
+.tasks-list-text .tooltip {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    white-space: nowrap;
+}
+
+.tasks-setting-important {
+    color: red;
+    font-weight: bold;
+}
+
+.tasks-modal label {
+    margin: 5px 0 5px 0;
+}
+
+.tasks-modal input[type=text] {
+    width: 100%;
+}
+
+.tasks-modal hr {
+    margin: 10px 0 10px 0;
+}
+
+.tasks-modal-date {
+    margin-bottom: 10px;
+}
