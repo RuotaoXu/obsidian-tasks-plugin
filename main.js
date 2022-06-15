@@ -6359,6 +6359,7 @@ var wr = class {
     this.hideDueDate = !1;
     this.hideRecurrenceRule = !1;
     this.hideEditButton = !1;
+    this.hideCopyButton = !1;
     this.shortMode = !1;
   }
 };
@@ -9080,6 +9081,7 @@ var B = class {
     sectionIndex: a,
     originalStatusCharacter: o,
     precedingHeader: u,
+    precedingHeader2: u2,
     priority: l,
     startDate: d,
     scheduledDate: c,
@@ -9098,6 +9100,7 @@ var B = class {
       (this.sectionIndex = a),
       (this.originalStatusCharacter = o),
       (this.precedingHeader = u),
+      (this.precedingHeader2 = u2),
       (this.tags = b),
       (this.priority = l),
       (this.startDate = d),
@@ -9113,6 +9116,7 @@ var B = class {
     sectionStart: n,
     sectionIndex: i,
     precedingHeader: s,
+    precedingHeader2: s2
   }) {
     let a = e.match(B.taskRegex);
     if (a === null) return null;
@@ -9226,6 +9230,7 @@ var B = class {
         sectionIndex: i,
         originalStatusCharacter: c,
         precedingHeader: s,
+        precedingHeader2: s2,
         priority: b,
         startDate: O,
         scheduledDate: K,
@@ -9345,7 +9350,7 @@ var B = class {
     let t = null, n = null;
     switch (this.status) {
       case ue.Todo:
-        e = ue.Done; break;
+        e = ue.Doing; break;
       case ue.Doing:
         e = ue.Done; break;
       case ue.Question:
@@ -9639,6 +9644,12 @@ var Ii = class {
                 sections: t.sections,
                 fileLines: s,
               }),
+              precedingHeader2: this.getPrecedingHeader2({
+                lineNumberTask: u.position.start.line,
+                headings: t.headings,
+                fileLines: s,
+              })
+              // precedingHeader2: null
             });
           d !== null && (o++, this.tasks.push(d));
         }
@@ -9671,6 +9682,23 @@ var Ii = class {
       u = a.match(o);
     return u === null ? null : u[1];
   }
+  getPrecedingHeader2({ lineNumberTask: e, headings: t, fileLines: n }) {
+    if (t === void 0) return null;
+    let i;
+    for (let l of t) {
+      if (l.level === 2) {
+        if (l.position.start.line > e) break;
+        i = l;
+      }
+    }
+    if (i === void 0) return null;
+    //precedingHeaderHeading = headings[1];
+    let s = i.position.start.line,
+      a = n[s],
+      o = /^#+ +(.*)/u,
+      u = a.match(o);
+    return u === null ? null : u[1];
+  }//TOTAL
 };
 var aa = Le(require("obsidian"));
 var Yf = Le(require("obsidian"));
@@ -10607,6 +10635,7 @@ var Uf = (r, e, t, n) => {
       sectionStart: 0,
       sectionIndex: 0,
       precedingHeader: null,
+      precedingHeader2: null
     });
     if (t !== null) return t;
     let n = /^([\s\t]*)[-*]? *(\[(.)\])? *(.*)/u,
@@ -10629,6 +10658,7 @@ var Uf = (r, e, t, n) => {
           sectionStart: 0,
           sectionIndex: 0,
           precedingHeader: null,
+          precedingHeader2: null,
           blockLink: "",
           tags: [],
         })
@@ -10657,6 +10687,7 @@ var Uf = (r, e, t, n) => {
         sectionStart: 0,
         sectionIndex: 0,
         precedingHeader: null,
+        precedingHeader2: null,
         tags: [],
       })
     );
@@ -10684,6 +10715,7 @@ var qf = (r, e, t) => {
         sectionStart: 0,
         sectionIndex: 0,
         precedingHeader: null,
+        precedingHeader2: null,
       });
     if (n !== null) t = yv({ task: n });
     else {
@@ -10794,6 +10826,7 @@ var ca = class {
           sectionStart: a.lineStart,
           sectionIndex: u,
           precedingHeader: null,
+          precedingHeader2: null,
         });
         h !== null && (l.push(h), u++);
       }
@@ -10844,6 +10877,7 @@ var jf = () => $f.ViewPlugin.fromClass(Bf),
           sectionStart: 0,
           sectionIndex: 0,
           precedingHeader: null,
+          precedingHeader2: null,
         });
       if (a === null) return !1;
       e.preventDefault();
@@ -11318,6 +11352,19 @@ var Ta = class extends st {
 },
   pi = Ta;
 pi.headingRegexp = /^heading (includes|does not include) (.*)/;
+var Ta2 = class extends st {
+  filterRegexp() {
+    return Ta2.headingRegexp;
+  }
+  fieldName() {
+    return "heading2";
+  }
+  value(e) {
+    return e.precedingHeader2 ? e.precedingHeader2 : "";
+  }
+},
+  pi2 = Ta2;
+pi2.headingRegexp = /^heading2 (includes|does not include) (.*)/;
 var ba = class extends st {
   filterRegexp() {
     return ba.pathRegexp;
@@ -11515,7 +11562,6 @@ var pn = class {
     this.delString = 'delete';
     this.notDelString = 'not delete';
     this.stopString = 'stop';
-    this.heading2Regexp = /heading2 (includes|does not include) (.*)/;
     this.markRegexp = /mark (includes|does not include) (.*)/;//TOTAL
 
     (this.source = e),
@@ -11605,6 +11651,8 @@ var pn = class {
               break;
             case this.parseFilter(t, new pi()):
               break;
+            case this.parseFilter(t, new pi2()):
+              break;
             case this.limitRegexp.test(t):
               this.parseLimit({ line: t });
               break;
@@ -11679,6 +11727,9 @@ var pn = class {
           break;
         case "edit button":
           this._layoutOptions.hideEditButton = !0;
+          break;
+        case 'copy button':
+          this._layoutOptions.hideCopyButton = !0;
           break;
         default:
           this._error = "do not understand hide option";
@@ -11819,6 +11870,8 @@ var ka = class {
           this.query.layoutOptions.hideBacklinks ||
             this.addBacklinks(c, o, f, u),
             this.query.layoutOptions.hideEditButton || this.addEditButton(c, o),
+            // s.appendChild(l),
+            this.query.layoutOptions.hideCopyButton || this.addCopyButton(c, o),
             s.appendChild(l);
         }
         return { taskList: s, tasksCount: i };
@@ -11831,6 +11884,12 @@ var ka = class {
           Rn({ originalTask: t, newTasks: o });
         };
         new dn({ app: this.app, task: t, onSubmit: s }).open();
+      });
+    }
+    addCopyButton(e, t) {
+      e.createEl('a', { cls: 'tasks-copy' }).onClickEvent((i) => {
+        i.preventDefault();
+        navigator.clipboard.writeText(`${t.toFileLineString()}`);
       });
     }
     static addGroupHeadings(e, t) {
