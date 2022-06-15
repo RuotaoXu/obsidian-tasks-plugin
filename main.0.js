@@ -133,9 +133,9 @@ var Dr = Object.defineProperty,
   Ha = Object.prototype.hasOwnProperty,
   eh = Object.prototype.propertyIsEnumerable;
 var za = (r, e, t) =>
-  e in r
-    ? Dr(r, e, { enumerable: !0, configurable: !0, writable: !0, value: t })
-    : (r[e] = t),
+    e in r
+      ? Dr(r, e, { enumerable: !0, configurable: !0, writable: !0, value: t })
+      : (r[e] = t),
   We = (r, e) => {
     for (var t in e || (e = {})) Ha.call(e, t) && za(r, t, e[t]);
     if (Ga) for (var t of Ga(e)) eh.call(e, t) && za(r, t, e[t]);
@@ -175,12 +175,12 @@ var p = (r, e) => () => (e || r((e = { exports: {} }).exports, e), e.exports),
 var te = (r, e, t) =>
   new Promise((n, i) => {
     var s = (u) => {
-      try {
-        o(t.next(u));
-      } catch (l) {
-        i(l);
-      }
-    },
+        try {
+          o(t.next(u));
+        } catch (l) {
+          i(l);
+        }
+      },
       a = (u) => {
         try {
           o(t.throw(u));
@@ -220,23 +220,23 @@ var wo = p((Iv, An) => {
       typeof global == "object"
         ? global
         : typeof self == "object"
-          ? self
-          : typeof this == "object"
-            ? this
-            : {};
+        ? self
+        : typeof this == "object"
+        ? this
+        : {};
     typeof define == "function" && define.amd
       ? define("tslib", ["exports"], function (n) {
-        r(t(e, t(n)));
-      })
+          r(t(e, t(n)));
+        })
       : typeof An == "object" && typeof An.exports == "object"
-        ? r(t(e, t(An.exports)))
-        : r(t(e));
+      ? r(t(e, t(An.exports)))
+      : r(t(e));
     function t(n, i) {
       return (
         n !== e &&
-        (typeof Object.create == "function"
-          ? Object.defineProperty(n, "__esModule", { value: !0 })
-          : (n.__esModule = !0)),
+          (typeof Object.create == "function"
+            ? Object.defineProperty(n, "__esModule", { value: !0 })
+            : (n.__esModule = !0)),
         function (s, a) {
           return (n[s] = i ? i(s, a) : a);
         }
@@ -293,8 +293,8 @@ var wo = p((Iv, An) => {
             a < 3
               ? n
               : s === null
-                ? (s = Object.getOwnPropertyDescriptor(n, i))
-                : s,
+              ? (s = Object.getOwnPropertyDescriptor(n, i))
+              : s,
           u;
         if (typeof Reflect == "object" && typeof Reflect.decorate == "function")
           o = Reflect.decorate(t, n, i, s);
@@ -318,8 +318,8 @@ var wo = p((Iv, An) => {
           return o instanceof i
             ? o
             : new i(function (u) {
-              u(o);
-            });
+                u(o);
+              });
         }
         return new (i || (i = Promise))(function (o, u) {
           function l(f) {
@@ -344,14 +344,14 @@ var wo = p((Iv, An) => {
       }),
       (lo = function (t, n) {
         var i = {
-          label: 0,
-          sent: function () {
-            if (o[0] & 1) throw o[1];
-            return o[1];
+            label: 0,
+            sent: function () {
+              if (o[0] & 1) throw o[1];
+              return o[1];
+            },
+            trys: [],
+            ops: [],
           },
-          trys: [],
-          ops: [],
-        },
           s,
           a,
           o,
@@ -359,9 +359,9 @@ var wo = p((Iv, An) => {
         return (
           (u = { next: l(0), throw: l(1), return: l(2) }),
           typeof Symbol == "function" &&
-          (u[Symbol.iterator] = function () {
-            return this;
-          }),
+            (u[Symbol.iterator] = function () {
+              return this;
+            }),
           u
         );
         function l(c) {
@@ -371,17 +371,17 @@ var wo = p((Iv, An) => {
         }
         function d(c) {
           if (s) throw new TypeError("Generator is already executing.");
-          for (; i;)
+          for (; i; )
             try {
               if (
                 ((s = 1),
-                  a &&
+                a &&
                   (o =
                     c[0] & 2
                       ? a.return
                       : c[0]
-                        ? a.throw || ((o = a.return) && o.call(a), 0)
-                        : a.next) &&
+                      ? a.throw || ((o = a.return) && o.call(a), 0)
+                      : a.next) &&
                   !(o = o.call(a, c[1])).done)
               )
                 return o;
@@ -401,7 +401,7 @@ var wo = p((Iv, An) => {
                 default:
                   if (
                     ((o = i.trys),
-                      !(o = o.length > 0 && o[o.length - 1]) &&
+                    !(o = o.length > 0 && o[o.length - 1]) &&
                       (c[0] === 6 || c[0] === 2))
                   ) {
                     i = 0;
@@ -465,7 +465,7 @@ var wo = p((Iv, An) => {
           o = [],
           u;
         try {
-          for (; (n === void 0 || n-- > 0) && !(a = s.next()).done;)
+          for (; (n === void 0 || n-- > 0) && !(a = s.next()).done; )
             o.push(a.value);
         } catch (l) {
           u = { error: l };
@@ -557,12 +557,12 @@ var wo = p((Iv, An) => {
         function s(a, o) {
           n[a] = t[a]
             ? function (u) {
-              return (i = !i)
-                ? { value: Xt(t[a](u)), done: a === "return" }
-                : o
+                return (i = !i)
+                  ? { value: Xt(t[a](u)), done: a === "return" }
+                  : o
                   ? o(u)
                   : u;
-            }
+              }
             : o;
         }
       }),
@@ -665,8 +665,8 @@ var ae = p((Et) => {
       r instanceof Array
         ? (e = [...r])
         : r instanceof Map
-          ? (e = Array.from(r.keys()))
-          : (e = Object.keys(r)),
+        ? (e = Array.from(r.keys()))
+        : (e = Object.keys(r)),
       e
     );
   }
@@ -684,8 +684,8 @@ var be = p((ji, Bi) => {
     typeof ji == "object" && typeof Bi != "undefined"
       ? (Bi.exports = e())
       : typeof define == "function" && define.amd
-        ? define(e)
-        : ((r = typeof globalThis != "undefined" ? globalThis : r || self).dayjs =
+      ? define(e)
+      : ((r = typeof globalThis != "undefined" ? globalThis : r || self).dayjs =
           e());
   })(ji, function () {
     "use strict";
@@ -745,7 +745,7 @@ var be = p((ji, Bi) => {
         p: function (w) {
           return (
             { M: l, y: c, w: u, d: o, D: f, h: a, m: s, s: i, ms: n, Q: d }[
-            w
+              w
             ] ||
             String(w || "")
               .toLowerCase()
@@ -760,8 +760,8 @@ var be = p((ji, Bi) => {
       j = {};
     j[J] = b;
     var V = function (w) {
-      return w instanceof ne;
-    },
+        return w instanceof ne;
+      },
       re = function (w, v, y) {
         var E;
         if (!w) return J;
@@ -784,141 +784,141 @@ var be = p((ji, Bi) => {
         return x(w, { locale: v.$L, utc: v.$u, x: v.$x, $offset: v.$offset });
       });
     var ne = (function () {
-      function w(y) {
-        (this.$L = re(y.locale, null, !0)), this.parse(y);
-      }
-      var v = w.prototype;
-      return (
-        (v.parse = function (y) {
-          (this.$d = (function (E) {
-            var T = E.date,
-              k = E.utc;
-            if (T === null) return new Date(NaN);
-            if (R.u(T)) return new Date();
-            if (T instanceof Date) return new Date(T);
-            if (typeof T == "string" && !/Z$/i.test(T)) {
-              var M = T.match(m);
-              if (M) {
-                var G = M[2] - 1 || 0,
-                  ee = (M[7] || "0").substring(0, 3);
-                return k
-                  ? new Date(
-                    Date.UTC(
-                      M[1],
-                      G,
-                      M[3] || 1,
-                      M[4] || 0,
-                      M[5] || 0,
-                      M[6] || 0,
-                      ee
-                    )
-                  )
-                  : new Date(
-                    M[1],
-                    G,
-                    M[3] || 1,
-                    M[4] || 0,
-                    M[5] || 0,
-                    M[6] || 0,
-                    ee
-                  );
+        function w(y) {
+          (this.$L = re(y.locale, null, !0)), this.parse(y);
+        }
+        var v = w.prototype;
+        return (
+          (v.parse = function (y) {
+            (this.$d = (function (E) {
+              var T = E.date,
+                k = E.utc;
+              if (T === null) return new Date(NaN);
+              if (R.u(T)) return new Date();
+              if (T instanceof Date) return new Date(T);
+              if (typeof T == "string" && !/Z$/i.test(T)) {
+                var M = T.match(m);
+                if (M) {
+                  var G = M[2] - 1 || 0,
+                    ee = (M[7] || "0").substring(0, 3);
+                  return k
+                    ? new Date(
+                        Date.UTC(
+                          M[1],
+                          G,
+                          M[3] || 1,
+                          M[4] || 0,
+                          M[5] || 0,
+                          M[6] || 0,
+                          ee
+                        )
+                      )
+                    : new Date(
+                        M[1],
+                        G,
+                        M[3] || 1,
+                        M[4] || 0,
+                        M[5] || 0,
+                        M[6] || 0,
+                        ee
+                      );
+                }
               }
+              return new Date(T);
+            })(y)),
+              (this.$x = y.x || {}),
+              this.init();
+          }),
+          (v.init = function () {
+            var y = this.$d;
+            (this.$y = y.getFullYear()),
+              (this.$M = y.getMonth()),
+              (this.$D = y.getDate()),
+              (this.$W = y.getDay()),
+              (this.$H = y.getHours()),
+              (this.$m = y.getMinutes()),
+              (this.$s = y.getSeconds()),
+              (this.$ms = y.getMilliseconds());
+          }),
+          (v.$utils = function () {
+            return R;
+          }),
+          (v.isValid = function () {
+            return this.$d.toString() !== h;
+          }),
+          (v.isSame = function (y, E) {
+            var T = x(y);
+            return this.startOf(E) <= T && T <= this.endOf(E);
+          }),
+          (v.isAfter = function (y, E) {
+            return x(y) < this.startOf(E);
+          }),
+          (v.isBefore = function (y, E) {
+            return this.endOf(E) < x(y);
+          }),
+          (v.$g = function (y, E, T) {
+            return R.u(y) ? this[E] : this.set(T, y);
+          }),
+          (v.unix = function () {
+            return Math.floor(this.valueOf() / 1e3);
+          }),
+          (v.valueOf = function () {
+            return this.$d.getTime();
+          }),
+          (v.startOf = function (y, E) {
+            var T = this,
+              k = !!R.u(E) || E,
+              M = R.p(y),
+              G = function (Me, fe) {
+                var ze = R.w(
+                  T.$u ? Date.UTC(T.$y, fe, Me) : new Date(T.$y, fe, Me),
+                  T
+                );
+                return k ? ze : ze.endOf(o);
+              },
+              ee = function (Me, fe) {
+                return R.w(
+                  T.toDate()[Me].apply(
+                    T.toDate("s"),
+                    (k ? [0, 0, 0, 0] : [23, 59, 59, 999]).slice(fe)
+                  ),
+                  T
+                );
+              },
+              q = this.$W,
+              de = this.$M,
+              Ie = this.$D,
+              $e = "set" + (this.$u ? "UTC" : "");
+            switch (M) {
+              case c:
+                return k ? G(1, 0) : G(31, 11);
+              case l:
+                return k ? G(1, de) : G(0, de + 1);
+              case u:
+                var tt = this.$locale().weekStart || 0,
+                  yt = (q < tt ? q + 7 : q) - tt;
+                return G(k ? Ie - yt : Ie + (6 - yt), de);
+              case o:
+              case f:
+                return ee($e + "Hours", 0);
+              case a:
+                return ee($e + "Minutes", 1);
+              case s:
+                return ee($e + "Seconds", 2);
+              case i:
+                return ee($e + "Milliseconds", 3);
+              default:
+                return this.clone();
             }
-            return new Date(T);
-          })(y)),
-            (this.$x = y.x || {}),
-            this.init();
-        }),
-        (v.init = function () {
-          var y = this.$d;
-          (this.$y = y.getFullYear()),
-            (this.$M = y.getMonth()),
-            (this.$D = y.getDate()),
-            (this.$W = y.getDay()),
-            (this.$H = y.getHours()),
-            (this.$m = y.getMinutes()),
-            (this.$s = y.getSeconds()),
-            (this.$ms = y.getMilliseconds());
-        }),
-        (v.$utils = function () {
-          return R;
-        }),
-        (v.isValid = function () {
-          return this.$d.toString() !== h;
-        }),
-        (v.isSame = function (y, E) {
-          var T = x(y);
-          return this.startOf(E) <= T && T <= this.endOf(E);
-        }),
-        (v.isAfter = function (y, E) {
-          return x(y) < this.startOf(E);
-        }),
-        (v.isBefore = function (y, E) {
-          return this.endOf(E) < x(y);
-        }),
-        (v.$g = function (y, E, T) {
-          return R.u(y) ? this[E] : this.set(T, y);
-        }),
-        (v.unix = function () {
-          return Math.floor(this.valueOf() / 1e3);
-        }),
-        (v.valueOf = function () {
-          return this.$d.getTime();
-        }),
-        (v.startOf = function (y, E) {
-          var T = this,
-            k = !!R.u(E) || E,
-            M = R.p(y),
-            G = function (Me, fe) {
-              var ze = R.w(
-                T.$u ? Date.UTC(T.$y, fe, Me) : new Date(T.$y, fe, Me),
-                T
-              );
-              return k ? ze : ze.endOf(o);
-            },
-            ee = function (Me, fe) {
-              return R.w(
-                T.toDate()[Me].apply(
-                  T.toDate("s"),
-                  (k ? [0, 0, 0, 0] : [23, 59, 59, 999]).slice(fe)
-                ),
-                T
-              );
-            },
-            q = this.$W,
-            de = this.$M,
-            Ie = this.$D,
-            $e = "set" + (this.$u ? "UTC" : "");
-          switch (M) {
-            case c:
-              return k ? G(1, 0) : G(31, 11);
-            case l:
-              return k ? G(1, de) : G(0, de + 1);
-            case u:
-              var tt = this.$locale().weekStart || 0,
-                yt = (q < tt ? q + 7 : q) - tt;
-              return G(k ? Ie - yt : Ie + (6 - yt), de);
-            case o:
-            case f:
-              return ee($e + "Hours", 0);
-            case a:
-              return ee($e + "Minutes", 1);
-            case s:
-              return ee($e + "Seconds", 2);
-            case i:
-              return ee($e + "Milliseconds", 3);
-            default:
-              return this.clone();
-          }
-        }),
-        (v.endOf = function (y) {
-          return this.startOf(y, !1);
-        }),
-        (v.$set = function (y, E) {
-          var T,
-            k = R.p(y),
-            M = "set" + (this.$u ? "UTC" : ""),
-            G = ((T = {}),
+          }),
+          (v.endOf = function (y) {
+            return this.startOf(y, !1);
+          }),
+          (v.$set = function (y, E) {
+            var T,
+              k = R.p(y),
+              M = "set" + (this.$u ? "UTC" : ""),
+              G = ((T = {}),
               (T[o] = M + "Date"),
               (T[f] = M + "Date"),
               (T[l] = M + "Month"),
@@ -928,107 +928,107 @@ var be = p((ji, Bi) => {
               (T[i] = M + "Seconds"),
               (T[n] = M + "Milliseconds"),
               T)[k],
-            ee = k === o ? this.$D + (E - this.$W) : E;
-          if (k === l || k === c) {
-            var q = this.clone().set(f, 1);
-            q.$d[G](ee),
-              q.init(),
-              (this.$d = q.set(f, Math.min(this.$D, q.daysInMonth())).$d);
-          } else G && this.$d[G](ee);
-          return this.init(), this;
-        }),
-        (v.set = function (y, E) {
-          return this.clone().$set(y, E);
-        }),
-        (v.get = function (y) {
-          return this[R.p(y)]();
-        }),
-        (v.add = function (y, E) {
-          var T,
-            k = this;
-          y = Number(y);
-          var M = R.p(E),
-            G = function (de) {
-              var Ie = x(k);
-              return R.w(Ie.date(Ie.date() + Math.round(de * y)), k);
-            };
-          if (M === l) return this.set(l, this.$M + y);
-          if (M === c) return this.set(c, this.$y + y);
-          if (M === o) return G(1);
-          if (M === u) return G(7);
-          var ee = ((T = {}), (T[s] = e), (T[a] = t), (T[i] = r), T)[M] || 1,
-            q = this.$d.getTime() + y * ee;
-          return R.w(q, this);
-        }),
-        (v.subtract = function (y, E) {
-          return this.add(-1 * y, E);
-        }),
-        (v.format = function (y) {
-          var E = this,
-            T = this.$locale();
-          if (!this.isValid()) return T.invalidDate || h;
-          var k = y || "YYYY-MM-DDTHH:mm:ssZ",
-            M = R.z(this),
-            G = this.$H,
-            ee = this.$m,
-            q = this.$M,
-            de = T.weekdays,
-            Ie = T.months,
-            $e = function (fe, ze, Fe, Nt) {
-              return (fe && (fe[ze] || fe(E, k))) || Fe[ze].substr(0, Nt);
-            },
-            tt = function (fe) {
-              return R.s(G % 12 || 12, fe, "0");
-            },
-            yt =
-              T.meridiem ||
-              function (fe, ze, Fe) {
-                var Nt = fe < 12 ? "AM" : "PM";
-                return Fe ? Nt.toLowerCase() : Nt;
+              ee = k === o ? this.$D + (E - this.$W) : E;
+            if (k === l || k === c) {
+              var q = this.clone().set(f, 1);
+              q.$d[G](ee),
+                q.init(),
+                (this.$d = q.set(f, Math.min(this.$D, q.daysInMonth())).$d);
+            } else G && this.$d[G](ee);
+            return this.init(), this;
+          }),
+          (v.set = function (y, E) {
+            return this.clone().$set(y, E);
+          }),
+          (v.get = function (y) {
+            return this[R.p(y)]();
+          }),
+          (v.add = function (y, E) {
+            var T,
+              k = this;
+            y = Number(y);
+            var M = R.p(E),
+              G = function (de) {
+                var Ie = x(k);
+                return R.w(Ie.date(Ie.date() + Math.round(de * y)), k);
+              };
+            if (M === l) return this.set(l, this.$M + y);
+            if (M === c) return this.set(c, this.$y + y);
+            if (M === o) return G(1);
+            if (M === u) return G(7);
+            var ee = ((T = {}), (T[s] = e), (T[a] = t), (T[i] = r), T)[M] || 1,
+              q = this.$d.getTime() + y * ee;
+            return R.w(q, this);
+          }),
+          (v.subtract = function (y, E) {
+            return this.add(-1 * y, E);
+          }),
+          (v.format = function (y) {
+            var E = this,
+              T = this.$locale();
+            if (!this.isValid()) return T.invalidDate || h;
+            var k = y || "YYYY-MM-DDTHH:mm:ssZ",
+              M = R.z(this),
+              G = this.$H,
+              ee = this.$m,
+              q = this.$M,
+              de = T.weekdays,
+              Ie = T.months,
+              $e = function (fe, ze, Fe, Nt) {
+                return (fe && (fe[ze] || fe(E, k))) || Fe[ze].substr(0, Nt);
               },
-            Me = {
-              YY: String(this.$y).slice(-2),
-              YYYY: this.$y,
-              M: q + 1,
-              MM: R.s(q + 1, 2, "0"),
-              MMM: $e(T.monthsShort, q, Ie, 3),
-              MMMM: $e(Ie, q),
-              D: this.$D,
-              DD: R.s(this.$D, 2, "0"),
-              d: String(this.$W),
-              dd: $e(T.weekdaysMin, this.$W, de, 2),
-              ddd: $e(T.weekdaysShort, this.$W, de, 3),
-              dddd: de[this.$W],
-              H: String(G),
-              HH: R.s(G, 2, "0"),
-              h: tt(1),
-              hh: tt(2),
-              a: yt(G, ee, !0),
-              A: yt(G, ee, !1),
-              m: String(ee),
-              mm: R.s(ee, 2, "0"),
-              s: String(this.$s),
-              ss: R.s(this.$s, 2, "0"),
-              SSS: R.s(this.$ms, 3, "0"),
-              Z: M,
-            };
-          return k.replace(g, function (fe, ze) {
-            return ze || Me[fe] || M.replace(":", "");
-          });
-        }),
-        (v.utcOffset = function () {
-          return 15 * -Math.round(this.$d.getTimezoneOffset() / 15);
-        }),
-        (v.diff = function (y, E, T) {
-          var k,
-            M = R.p(E),
-            G = x(y),
-            ee = (G.utcOffset() - this.utcOffset()) * e,
-            q = this - G,
-            de = R.m(this, G);
-          return (
-            (de =
-              ((k = {}),
+              tt = function (fe) {
+                return R.s(G % 12 || 12, fe, "0");
+              },
+              yt =
+                T.meridiem ||
+                function (fe, ze, Fe) {
+                  var Nt = fe < 12 ? "AM" : "PM";
+                  return Fe ? Nt.toLowerCase() : Nt;
+                },
+              Me = {
+                YY: String(this.$y).slice(-2),
+                YYYY: this.$y,
+                M: q + 1,
+                MM: R.s(q + 1, 2, "0"),
+                MMM: $e(T.monthsShort, q, Ie, 3),
+                MMMM: $e(Ie, q),
+                D: this.$D,
+                DD: R.s(this.$D, 2, "0"),
+                d: String(this.$W),
+                dd: $e(T.weekdaysMin, this.$W, de, 2),
+                ddd: $e(T.weekdaysShort, this.$W, de, 3),
+                dddd: de[this.$W],
+                H: String(G),
+                HH: R.s(G, 2, "0"),
+                h: tt(1),
+                hh: tt(2),
+                a: yt(G, ee, !0),
+                A: yt(G, ee, !1),
+                m: String(ee),
+                mm: R.s(ee, 2, "0"),
+                s: String(this.$s),
+                ss: R.s(this.$s, 2, "0"),
+                SSS: R.s(this.$ms, 3, "0"),
+                Z: M,
+              };
+            return k.replace(g, function (fe, ze) {
+              return ze || Me[fe] || M.replace(":", "");
+            });
+          }),
+          (v.utcOffset = function () {
+            return 15 * -Math.round(this.$d.getTimezoneOffset() / 15);
+          }),
+          (v.diff = function (y, E, T) {
+            var k,
+              M = R.p(E),
+              G = x(y),
+              ee = (G.utcOffset() - this.utcOffset()) * e,
+              q = this - G,
+              de = R.m(this, G);
+            return (
+              (de =
+                ((k = {}),
                 (k[c] = de / 12),
                 (k[l] = de),
                 (k[d] = de / 3),
@@ -1038,39 +1038,39 @@ var be = p((ji, Bi) => {
                 (k[s] = q / e),
                 (k[i] = q / r),
                 k)[M] || q),
-            T ? de : R.a(de)
-          );
-        }),
-        (v.daysInMonth = function () {
-          return this.endOf(l).$D;
-        }),
-        (v.$locale = function () {
-          return j[this.$L];
-        }),
-        (v.locale = function (y, E) {
-          if (!y) return this.$L;
-          var T = this.clone(),
-            k = re(y, E, !0);
-          return k && (T.$L = k), T;
-        }),
-        (v.clone = function () {
-          return R.w(this.$d, this);
-        }),
-        (v.toDate = function () {
-          return new Date(this.valueOf());
-        }),
-        (v.toJSON = function () {
-          return this.isValid() ? this.toISOString() : null;
-        }),
-        (v.toISOString = function () {
-          return this.$d.toISOString();
-        }),
-        (v.toString = function () {
-          return this.$d.toUTCString();
-        }),
-        w
-      );
-    })(),
+              T ? de : R.a(de)
+            );
+          }),
+          (v.daysInMonth = function () {
+            return this.endOf(l).$D;
+          }),
+          (v.$locale = function () {
+            return j[this.$L];
+          }),
+          (v.locale = function (y, E) {
+            if (!y) return this.$L;
+            var T = this.clone(),
+              k = re(y, E, !0);
+            return k && (T.$L = k), T;
+          }),
+          (v.clone = function () {
+            return R.w(this.$d, this);
+          }),
+          (v.toDate = function () {
+            return new Date(this.valueOf());
+          }),
+          (v.toJSON = function () {
+            return this.isValid() ? this.toISOString() : null;
+          }),
+          (v.toISOString = function () {
+            return this.$d.toISOString();
+          }),
+          (v.toString = function () {
+            return this.$d.toUTCString();
+          }),
+          w
+        );
+      })(),
       Ce = ne.prototype;
     return (
       (x.prototype = Ce),
@@ -1149,7 +1149,7 @@ var Re = p((C) => {
     C.MONTH_DICTIONARY =
     C.FULL_MONTH_NAME_DICTIONARY =
     C.WEEKDAY_DICTIONARY =
-    void 0;
+      void 0;
   var Ln = ae(),
     Jh = Ne();
   C.WEEKDAY_DICTIONARY = {
@@ -1311,16 +1311,16 @@ var Re = p((C) => {
     return C.INTEGER_WORD_DICTIONARY[e] !== void 0
       ? C.INTEGER_WORD_DICTIONARY[e]
       : e === "a" || e === "an"
-        ? 1
-        : e.match(/few/)
-          ? 3
-          : e.match(/half/)
-            ? 0.5
-            : e.match(/couple/)
-              ? 2
-              : e.match(/several/)
-                ? 7
-                : parseFloat(e);
+      ? 1
+      : e.match(/few/)
+      ? 3
+      : e.match(/half/)
+      ? 0.5
+      : e.match(/couple/)
+      ? 2
+      : e.match(/several/)
+      ? 7
+      : parseFloat(e);
   }
   C.parseNumberPattern = gu;
   C.ORDINAL_NUMBER_PATTERN = `(?:${Ln.matchAnyPattern(
@@ -1344,8 +1344,8 @@ var Re = p((C) => {
   }
   C.parseYear = tp;
   var _u = `(${C.NUMBER_PATTERN})\\s{0,5}(${Ln.matchAnyPattern(
-    C.TIME_UNIT_DICTIONARY
-  )})\\s{0,5}`,
+      C.TIME_UNIT_DICTIONARY
+    )})\\s{0,5}`,
     Tu = new RegExp(_u, "i");
   C.TIME_UNITS_PATTERN = Ln.repeatedTimeunitPattern(
     "(?:(?:about|around)\\s*)?",
@@ -1355,7 +1355,7 @@ var Re = p((C) => {
     let e = {},
       t = r,
       n = Tu.exec(t);
-    for (; n;) np(e, n), (t = t.substring(n[0].length)), (n = Tu.exec(t));
+    for (; n; ) np(e, n), (t = t.substring(n[0].length)), (n = Tu.exec(t));
     return e;
   }
   C.parseTimeUnits = rp;
@@ -1370,8 +1370,8 @@ var bu = p((Gi, Hi) => {
     typeof Gi == "object" && typeof Hi != "undefined"
       ? (Hi.exports = e())
       : typeof define == "function" && define.amd
-        ? define(e)
-        : ((r =
+      ? define(e)
+      : ((r =
           typeof globalThis != "undefined"
             ? globalThis
             : r || self).dayjs_plugin_quarterOfYear = e());
@@ -1401,11 +1401,11 @@ var bu = p((Gi, Hi) => {
           var c = this.quarter() - 1;
           return d
             ? this.month(3 * c)
-              .startOf(r)
-              .startOf("day")
+                .startOf(r)
+                .startOf("day")
             : this.month(3 * c + 2)
-              .endOf(r)
-              .endOf("day");
+                .endOf(r)
+                .endOf("day");
         }
         return a.bind(this)(o, u);
       };
@@ -1419,7 +1419,7 @@ var Ve = p((nt) => {
     nt.assignSimilarTime =
     nt.assignSimilarDate =
     nt.assignTheNextDay =
-    void 0;
+      void 0;
   function ip(r, e) {
     (e = e.add(1, "day")), vu(r, e), Du(r, e);
   }
@@ -1477,8 +1477,8 @@ var Ge = p((Rt) => {
       return e in this.knownValues
         ? this.knownValues[e]
         : e in this.impliedValues
-          ? this.impliedValues[e]
-          : null;
+        ? this.impliedValues[e]
+        : null;
     }
     isCertain(e) {
       return e in this.knownValues;
@@ -1686,8 +1686,8 @@ var Nu = p((Zi) => {
     hp = N(),
     pp = new RegExp(
       `(?:on\\s*?)?(${$n.ORDINAL_NUMBER_PATTERN})(?:\\s*(?:to|\\-|\\\u2013|until|through|till|\\s)\\s*(${$n.ORDINAL_NUMBER_PATTERN}))?(?:-|/|\\s*(?:of)?\\s*)(` +
-      fp.matchAnyPattern(Pu.MONTH_DICTIONARY) +
-      `)(?:(?:-|/|,?\\s*)(${Mu.YEAR_PATTERN}(?![^\\s]\\d)))?(?=\\W|$)`,
+        fp.matchAnyPattern(Pu.MONTH_DICTIONARY) +
+        `)(?:(?:-|/|,?\\s*)(${Mu.YEAR_PATTERN}(?![^\\s]\\d)))?(?=\\W|$)`,
       "i"
     ),
     Ou = 1,
@@ -1729,8 +1729,10 @@ var Yu = p((Qi) => {
     gp = ae(),
     _p = N(),
     Tp = new RegExp(
-      `(${gp.matchAnyPattern(Su.MONTH_DICTIONARY)})(?:-|/|\\s*,?\\s*)(${jn.ORDINAL_NUMBER_PATTERN
-      })(?!\\s*(?:am|pm))\\s*(?:(?:to|\\-)\\s*(${jn.ORDINAL_NUMBER_PATTERN
+      `(${gp.matchAnyPattern(Su.MONTH_DICTIONARY)})(?:-|/|\\s*,?\\s*)(${
+        jn.ORDINAL_NUMBER_PATTERN
+      })(?!\\s*(?:am|pm))\\s*(?:(?:to|\\-)\\s*(${
+        jn.ORDINAL_NUMBER_PATTERN
       })\\s*)?(?:(?:-|/|\\s*,?\\s*)(${Iu.YEAR_PATTERN}))?(?=\\W|$)(?!\\:\\d)`,
       "i"
     ),
@@ -1773,7 +1775,8 @@ var ju = p((Ji) => {
     kp = new RegExp(
       `((?:in)\\s*)?(${wp.matchAnyPattern(
         Xi.MONTH_DICTIONARY
-      )})\\s*(?:[,-]?\\s*(${Uu.YEAR_PATTERN
+      )})\\s*(?:[,-]?\\s*(${
+        Uu.YEAR_PATTERN
       })?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)`,
       "i"
     ),
@@ -1938,13 +1941,13 @@ var ar = p((Hn) => {
         }
         if (
           (i.assign("hour", o),
-            i.assign("minute", s),
-            a !== null
-              ? i.assign("meridiem", a)
-              : o < 12
-                ? i.imply("meridiem", xe.Meridiem.AM)
-                : i.imply("meridiem", xe.Meridiem.PM),
-            t[Gn] != null)
+          i.assign("minute", s),
+          a !== null
+            ? i.assign("meridiem", a)
+            : o < 12
+            ? i.imply("meridiem", xe.Meridiem.AM)
+            : i.imply("meridiem", xe.Meridiem.PM),
+          t[Gn] != null)
         ) {
           let u = parseInt(t[Gn].substring(0, 3));
           if (u >= 1e3) return null;
@@ -1976,7 +1979,7 @@ var ar = p((Hn) => {
           (t[sr] != null
             ? (a = parseInt(t[sr]))
             : s > 100 && ((a = s % 100), (s = Math.floor(s / 100))),
-            a >= 60 || s > 24)
+          a >= 60 || s > 24)
         )
           return null;
         if ((s >= 12 && (o = xe.Meridiem.PM), t[Sr] != null)) {
@@ -1984,17 +1987,17 @@ var ar = p((Hn) => {
           let u = t[Sr][0].toLowerCase();
           u == "a" &&
             ((o = xe.Meridiem.AM),
-              s == 12 &&
+            s == 12 &&
               ((s = 0),
-                i.isCertain("day") || i.imply("day", i.get("day") + 1))),
+              i.isCertain("day") || i.imply("day", i.get("day") + 1))),
             u == "p" && ((o = xe.Meridiem.PM), s != 12 && (s += 12)),
             n.start.isCertain("meridiem") ||
-            (o == xe.Meridiem.AM
-              ? (n.start.imply("meridiem", xe.Meridiem.AM),
-                n.start.get("hour") == 12 && n.start.assign("hour", 0))
-              : (n.start.imply("meridiem", xe.Meridiem.PM),
-                n.start.get("hour") != 12 &&
-                n.start.assign("hour", n.start.get("hour") + 12)));
+              (o == xe.Meridiem.AM
+                ? (n.start.imply("meridiem", xe.Meridiem.AM),
+                  n.start.get("hour") == 12 && n.start.assign("hour", 0))
+                : (n.start.imply("meridiem", xe.Meridiem.PM),
+                  n.start.get("hour") != 12 &&
+                    n.start.assign("hour", n.start.get("hour") + 12)));
         }
         return (
           i.assign("hour", s),
@@ -2002,15 +2005,15 @@ var ar = p((Hn) => {
           o >= 0
             ? i.assign("meridiem", o)
             : n.start.isCertain("meridiem") && n.start.get("hour") > 12
-              ? n.start.get("hour") - 12 > s
-                ? i.imply("meridiem", xe.Meridiem.AM)
-                : s <= 12 &&
+            ? n.start.get("hour") - 12 > s
+              ? i.imply("meridiem", xe.Meridiem.AM)
+              : s <= 12 &&
                 (i.assign("hour", s + 12), i.assign("meridiem", xe.Meridiem.PM))
-              : s > 12
-                ? i.imply("meridiem", xe.Meridiem.PM)
-                : s <= 12 && i.imply("meridiem", xe.Meridiem.AM),
+            : s > 12
+            ? i.imply("meridiem", xe.Meridiem.PM)
+            : s <= 12 && i.imply("meridiem", xe.Meridiem.AM),
           i.date().getTime() < n.start.date().getTime() &&
-          i.imply("day", i.get("day") + 1),
+            i.imply("day", i.get("day") + 1),
           i
         );
       }
@@ -2101,7 +2104,7 @@ var Ju = p((rs) => {
           }
           t[0].endsWith("morning") &&
             (n.assign("meridiem", zn.Meridiem.AM),
-              n.get("hour") < 12 && n.assign("hour", n.get("hour")));
+            n.get("hour") < 12 && n.assign("hour", n.get("hour")));
         }
         return n;
       }
@@ -2124,11 +2127,11 @@ var ur = p((or) => {
     for (let i in e) n = n.add(e[i], i);
     return (
       ("day" in e || "d" in e || "week" in e || "month" in e || "year" in e) &&
-      (t.imply("day", n.date()),
+        (t.imply("day", n.date()),
         t.imply("month", n.month() + 1),
         t.imply("year", n.year())),
       ("second" in e || "minute" in e || "hour" in e) &&
-      (t.imply("second", n.second()),
+        (t.imply("second", n.second()),
         t.imply("minute", n.minute()),
         t.imply("hour", n.hour())),
       t
@@ -2172,8 +2175,8 @@ var nl = p((as) => {
     Vp = N(),
     Zp = new RegExp(
       "(" +
-      ss.TIME_UNITS_PATTERN +
-      ")(later|after|from now|henceforth|forward|out)(?=(?:\\W|$))",
+        ss.TIME_UNITS_PATTERN +
+        ")(later|after|from now|henceforth|forward|out)(?=(?:\\W|$))",
       "i"
     ),
     Qp = new RegExp(
@@ -2248,10 +2251,10 @@ var $t = p((os) => {
             (n.start.getCertainComponents().forEach((s) => {
               t.start.isCertain(s) || t.start.assign(s, n.start.get(s));
             }),
-              t.start.getCertainComponents().forEach((s) => {
-                n.start.isCertain(s) || n.start.assign(s, t.start.get(s));
-              })),
-            t.start.date().getTime() > n.start.date().getTime())
+            t.start.getCertainComponents().forEach((s) => {
+              n.start.isCertain(s) || n.start.assign(s, t.start.get(s));
+            })),
+          t.start.date().getTime() > n.start.date().getTime())
         ) {
           let s = t.start.dayjs(),
             a = n.start.dayjs();
@@ -2261,11 +2264,11 @@ var $t = p((os) => {
               t.start.imply("month", s.month() + 1),
               t.start.imply("year", s.year()))
             : n.start.isOnlyWeekdayComponent() && a.add(7, "days").isAfter(s)
-              ? ((a = a.add(7, "days")),
-                n.start.imply("day", a.date()),
-                n.start.imply("month", a.month() + 1),
-                n.start.imply("year", a.year()))
-              : ([n, t] = [t, n]);
+            ? ((a = a.add(7, "days")),
+              n.start.imply("day", a.date()),
+              n.start.imply("month", a.month() + 1),
+              n.start.imply("year", a.year()))
+            : ([n, t] = [t, n]);
         }
         let i = t.clone();
         return (
@@ -2338,17 +2341,17 @@ var ll = p((cr) => {
           t.imply("second", e.get("second")),
           t.imply("millisecond", e.get("millisecond"))),
       e.isCertain("timezoneOffset") &&
-      t.assign("timezoneOffset", e.get("timezoneOffset")),
+        t.assign("timezoneOffset", e.get("timezoneOffset")),
       e.isCertain("meridiem")
         ? t.assign("meridiem", e.get("meridiem"))
         : e.get("meridiem") != null &&
-        t.get("meridiem") == null &&
-        t.imply("meridiem", e.get("meridiem")),
+          t.get("meridiem") == null &&
+          t.imply("meridiem", e.get("meridiem")),
       t.get("meridiem") == rm.Meridiem.PM &&
-      t.get("hour") < 12 &&
-      (e.isCertain("hour")
-        ? t.assign("hour", t.get("hour") + 12)
-        : t.imply("hour", t.get("hour") + 12)),
+        t.get("hour") < 12 &&
+        (e.isCertain("hour")
+          ? t.assign("hour", t.get("hour") + 12)
+          : t.imply("hour", t.get("hour") + 12)),
       t
     );
   }
@@ -2617,9 +2620,9 @@ var ml = p((cs) => {
             let f = s.start.get("timezoneOffset");
             (f !== null && c != f) ||
               ((s.text += l[0]),
-                s.start.isCertain("timezoneOffset") ||
+              s.start.isCertain("timezoneOffset") ||
                 s.start.assign("timezoneOffset", c),
-                s.end != null &&
+              s.end != null &&
                 !s.end.isCertain("timezoneOffset") &&
                 s.end.assign("timezoneOffset", c));
           }),
@@ -2633,9 +2636,9 @@ var gl = p((ds) => {
   "use strict";
   Object.defineProperty(ds, "__esModule", { value: !0 });
   var lm = new RegExp(
-    "^\\s*(?:(?:GMT|UTC)\\s?)?([+-])(\\d{1,2})(?::?(\\d{2}))?",
-    "i"
-  ),
+      "^\\s*(?:(?:GMT|UTC)\\s?)?([+-])(\\d{1,2})(?::?(\\d{2}))?",
+      "i"
+    ),
     cm = 1,
     dm = 2,
     fm = 3,
@@ -2696,32 +2699,32 @@ var vl = p((Lr) => {
       refine(e, t) {
         return (
           e.option.forwardDate &&
-          t.forEach(function (n) {
-            let i = pm.default(e.refDate);
-            if (
-              n.start.isOnlyDayMonthComponent() &&
-              i.isAfter(n.start.dayjs())
-            )
-              for (let s = 0; s < 3 && i.isAfter(n.start.dayjs()); s++)
-                n.start.imply("year", n.start.get("year") + 1),
-                  e.debug(() => {
-                    console.log(
-                      `Forward yearly adjusted for ${n} (${n.start})`
-                    );
-                  }),
-                  n.end &&
-                  !n.end.isCertain("year") &&
-                  (n.end.imply("year", n.end.get("year") + 1),
+            t.forEach(function (n) {
+              let i = pm.default(e.refDate);
+              if (
+                n.start.isOnlyDayMonthComponent() &&
+                i.isAfter(n.start.dayjs())
+              )
+                for (let s = 0; s < 3 && i.isAfter(n.start.dayjs()); s++)
+                  n.start.imply("year", n.start.get("year") + 1),
                     e.debug(() => {
                       console.log(
-                        `Forward yearly adjusted for ${n} (${n.end})`
+                        `Forward yearly adjusted for ${n} (${n.start})`
                       );
-                    }));
-            n.start.isOnlyWeekdayComponent() &&
-              i.isAfter(n.start.dayjs()) &&
-              (i.day() > n.start.get("weekday")
-                ? (i = i.day(n.start.get("weekday") + 7))
-                : (i = i.day(n.start.get("weekday"))),
+                    }),
+                    n.end &&
+                      !n.end.isCertain("year") &&
+                      (n.end.imply("year", n.end.get("year") + 1),
+                      e.debug(() => {
+                        console.log(
+                          `Forward yearly adjusted for ${n} (${n.end})`
+                        );
+                      }));
+              n.start.isOnlyWeekdayComponent() &&
+                i.isAfter(n.start.dayjs()) &&
+                (i.day() > n.start.get("weekday")
+                  ? (i = i.day(n.start.get("weekday") + 7))
+                  : (i = i.day(n.start.get("weekday"))),
                 n.start.imply("day", i.date()),
                 n.start.imply("month", i.month() + 1),
                 n.start.imply("year", i.year()),
@@ -2729,17 +2732,17 @@ var vl = p((Lr) => {
                   console.log(`Forward weekly adjusted for ${n} (${n.start})`);
                 }),
                 n.end &&
-                n.end.isOnlyWeekdayComponent() &&
-                (i.day() > n.end.get("weekday")
-                  ? (i = i.day(n.end.get("weekday") + 7))
-                  : (i = i.day(n.end.get("weekday"))),
+                  n.end.isOnlyWeekdayComponent() &&
+                  (i.day() > n.end.get("weekday")
+                    ? (i = i.day(n.end.get("weekday") + 7))
+                    : (i = i.day(n.end.get("weekday"))),
                   n.end.imply("day", i.date()),
                   n.end.imply("month", i.month() + 1),
                   n.end.imply("year", i.year()),
                   e.debug(() => {
                     console.log(`Forward weekly adjusted for ${n} (${n.end})`);
                   })));
-          }),
+            }),
           t
         );
       }
@@ -2758,40 +2761,40 @@ var wl = p((hs) => {
       isValid(e, t) {
         return t.text.replace(" ", "").match(/^\d*(\.\d*)?$/)
           ? (e.debug(() => {
-            console.log(`Removing unlikely result '${t.text}'`);
-          }),
+              console.log(`Removing unlikely result '${t.text}'`);
+            }),
             !1)
           : t.start.isValidDate()
-            ? t.end && !t.end.isValidDate()
-              ? (e.debug(() => {
+          ? t.end && !t.end.isValidDate()
+            ? (e.debug(() => {
                 console.log(`Removing invalid result: ${t} (${t.end})`);
               }),
-                !1)
-              : this.strictMode
-                ? this.isStrictModeValid(e, t)
-                : !0
-            : (e.debug(() => {
+              !1)
+            : this.strictMode
+            ? this.isStrictModeValid(e, t)
+            : !0
+          : (e.debug(() => {
               console.log(`Removing invalid result: ${t} (${t.start})`);
             }),
-              !1);
+            !1);
       }
       isStrictModeValid(e, t) {
         return t.start.isOnlyWeekdayComponent()
           ? (e.debug(() => {
-            console.log(
-              `(Strict) Removing weekday only component: ${t} (${t.end})`
-            );
-          }),
+              console.log(
+                `(Strict) Removing weekday only component: ${t} (${t.end})`
+              );
+            }),
             !1)
           : t.start.isOnlyTime() &&
             (!t.start.isCertain("hour") || !t.start.isCertain("minute"))
-            ? (e.debug(() => {
+          ? (e.debug(() => {
               console.log(
                 `(Strict) Removing uncertain time component: ${t} (${t.end})`
               );
             }),
-              !1)
-            : !0;
+            !1)
+          : !0;
       }
     };
   hs.default = Dl;
@@ -2821,16 +2824,16 @@ var ms = p((ps) => {
         let n = {};
         if (
           ((n.year = parseInt(t[_m])),
-            (n.month = parseInt(t[Tm])),
-            (n.day = parseInt(t[bm])),
-            t[El] != null)
+          (n.month = parseInt(t[Tm])),
+          (n.day = parseInt(t[bm])),
+          t[El] != null)
         )
           if (
             ((n.hour = parseInt(t[El])),
-              (n.minute = parseInt(t[vm])),
-              t[kl] != null && (n.second = parseInt(t[kl])),
-              t[Rl] != null && (n.millisecond = parseInt(t[Rl])),
-              t[Pl] == null)
+            (n.minute = parseInt(t[vm])),
+            t[kl] != null && (n.second = parseInt(t[kl])),
+            t[Rl] != null && (n.millisecond = parseInt(t[Rl])),
+            t[Pl] == null)
           )
             n.timezoneOffset = 0;
           else {
@@ -2959,29 +2962,29 @@ var Bt = p((Se) => {
 var Sl = p((Ze) => {
   "use strict";
   var Wm =
-    (Ze && Ze.__createBinding) ||
-    (Object.create
-      ? function (r, e, t, n) {
-        n === void 0 && (n = t),
-          Object.defineProperty(r, n, {
-            enumerable: !0,
-            get: function () {
-              return e[t];
-            },
-          });
-      }
-      : function (r, e, t, n) {
-        n === void 0 && (n = t), (r[n] = e[t]);
-      }),
+      (Ze && Ze.__createBinding) ||
+      (Object.create
+        ? function (r, e, t, n) {
+            n === void 0 && (n = t),
+              Object.defineProperty(r, n, {
+                enumerable: !0,
+                get: function () {
+                  return e[t];
+                },
+              });
+          }
+        : function (r, e, t, n) {
+            n === void 0 && (n = t), (r[n] = e[t]);
+          }),
     Lm =
       (Ze && Ze.__setModuleDefault) ||
       (Object.create
         ? function (r, e) {
-          Object.defineProperty(r, "default", { enumerable: !0, value: e });
-        }
+            Object.defineProperty(r, "default", { enumerable: !0, value: e });
+          }
         : function (r, e) {
-          r.default = e;
-        }),
+            r.default = e;
+          }),
     Ym =
       (Ze && Ze.__importStar) ||
       function (r) {
@@ -3028,8 +3031,8 @@ var Sl = p((Ze) => {
           default:
             i.match(/last\s*night/) &&
               (n.hour() > 6 && (n = n.add(-1, "day")),
-                jm.assignSimilarDate(s, n),
-                s.imply("hour", 0));
+              jm.assignSimilarDate(s, n),
+              s.imply("hour", 0));
             break;
         }
         return s;
@@ -3117,8 +3120,8 @@ var pr = p((Mt) => {
       Math.abs(e - 7 - n) < Math.abs(e - n)
         ? (t = t.day(e - 7))
         : Math.abs(e + 7 - n) < Math.abs(e - n)
-          ? (t = t.day(e + 7))
-          : (t = t.day(e)),
+        ? (t = t.day(e + 7))
+        : (t = t.day(e)),
       t
     );
   }
@@ -3155,8 +3158,8 @@ var ql = p((gs) => {
         o == "last" || o == "past"
           ? (u = "last")
           : o == "next"
-            ? (u = "next")
-            : o == "this" && (u = "this");
+          ? (u = "next")
+          : o == "this" && (u = "this");
         let l = ey.toDayJSWeekday(e.refDate, i, u);
         return e
           .createParsingComponents()
@@ -3220,16 +3223,16 @@ var Gl = p((jr) => {
               a.imply("month", o.month() + 1),
               a.imply("year", o.year()))
             : i.match(/month/i)
-              ? ((o = o.add(-o.date() + 1, "d")),
-                a.imply("day", o.date()),
-                a.assign("year", o.year()),
-                a.assign("month", o.month() + 1))
-              : i.match(/year/i) &&
+            ? ((o = o.add(-o.date() + 1, "d")),
+              a.imply("day", o.date()),
+              a.assign("year", o.year()),
+              a.assign("month", o.month() + 1))
+            : i.match(/year/i) &&
               ((o = o.add(-o.date() + 1, "d")),
-                (o = o.add(-o.month(), "month")),
-                a.imply("day", o.date()),
-                a.imply("month", o.month() + 1),
-                a.assign("year", o.year())),
+              (o = o.add(-o.month(), "month")),
+              a.imply("day", o.date()),
+              a.imply("month", o.month() + 1),
+              a.assign("year", o.year())),
           a
         );
       }
@@ -3279,7 +3282,7 @@ var Ot = p((mr) => {
           s = e.text,
           a = e.text,
           o = i.exec(a);
-        for (; o;) {
+        for (; o; ) {
           let u = o.index + s.length - a.length;
           o.index = u;
           let l = t.extract(e, o);
@@ -3291,8 +3294,8 @@ var Ot = p((mr) => {
           l instanceof Br.ParsingResult
             ? (d = l)
             : l instanceof Br.ParsingComponents
-              ? ((d = e.createParsingResult(o.index, o[0])), (d.start = l))
-              : (d = e.createParsingResult(o.index, o[0], l)),
+            ? ((d = e.createParsingResult(o.index, o[0])), (d.start = l))
+            : (d = e.createParsingResult(o.index, o[0], l)),
             e.debug(() =>
               console.log(`${t.constructor.name} extracted result ${d}`)
             ),
@@ -3430,7 +3433,7 @@ var Ts = p((ce) => {
     ce.GB =
     ce.strict =
     ce.casual =
-    void 0;
+      void 0;
   var _y = De(Ru()),
     Ty = De(Nu()),
     by = De(Yu()),
@@ -3514,13 +3517,13 @@ var nc = p((Es) => {
         let n = super.extractPrimaryTimeComponents(e, t);
         return (
           n &&
-          ((t[0].endsWith("morgens") || t[0].endsWith("vormittags")) &&
-            (n.assign("meridiem", tc.Meridiem.AM),
+            ((t[0].endsWith("morgens") || t[0].endsWith("vormittags")) &&
+              (n.assign("meridiem", tc.Meridiem.AM),
               n.get("hour") < 12 && n.assign("hour", n.get("hour"))),
             (t[0].endsWith("nachmittags") ||
               t[0].endsWith("abends") ||
               t[0].endsWith("nachts")) &&
-            (n.assign("meridiem", tc.Meridiem.PM),
+              (n.assign("meridiem", tc.Meridiem.PM),
               n.get("hour") < 12 && n.assign("hour", n.get("hour") + 12))),
           n
         );
@@ -3541,7 +3544,7 @@ var Qn = p((z) => {
     z.INTEGER_WORD_DICTIONARY =
     z.MONTH_DICTIONARY =
     z.WEEKDAY_DICTIONARY =
-    void 0;
+      void 0;
   var ks = ae(),
     Yy = Ne();
   z.WEEKDAY_DICTIONARY = {
@@ -3649,16 +3652,16 @@ var Qn = p((z) => {
     return z.INTEGER_WORD_DICTIONARY[e] !== void 0
       ? z.INTEGER_WORD_DICTIONARY[e]
       : e === "a" || e === "an"
-        ? 1
-        : e.match(/few/)
-          ? 3
-          : e.match(/half/)
-            ? 0.5
-            : e.match(/couple/)
-              ? 2
-              : e.match(/several/)
-                ? 7
-                : parseFloat(e);
+      ? 1
+      : e.match(/few/)
+      ? 3
+      : e.match(/half/)
+      ? 0.5
+      : e.match(/couple/)
+      ? 2
+      : e.match(/several/)
+      ? 7
+      : parseFloat(e);
   }
   z.parseNumberPattern = ic;
   z.YEAR_PATTERN = "(?:[0-9]{1,4}(?:\\s*[vn]\\.?\\s*C(?:hr)?\\.?)?)";
@@ -3670,15 +3673,15 @@ var Qn = p((z) => {
   }
   z.parseYear = Uy;
   var sc = `(${z.NUMBER_PATTERN})\\s{0,5}(${ks.matchAnyPattern(
-    z.TIME_UNIT_DICTIONARY
-  )})\\s{0,5}`,
+      z.TIME_UNIT_DICTIONARY
+    )})\\s{0,5}`,
     ac = new RegExp(sc, "i");
   z.TIME_UNITS_PATTERN = ks.repeatedTimeunitPattern("", sc);
   function qy(r) {
     let e = {},
       t = r,
       n = ac.exec(t);
-    for (; n;) $y(e, n), (t = t.substring(n[0].length)), (n = ac.exec(t));
+    for (; n; ) $y(e, n), (t = t.substring(n[0].length)), (n = ac.exec(t));
     return e;
   }
   z.parseTimeUnits = qy;
@@ -3719,8 +3722,8 @@ var lc = p((Rs) => {
         o.match(/letzte/)
           ? (u = "last")
           : o.match(/chste/)
-            ? (u = "next")
-            : o.match(/diese/) && (u = "this");
+          ? (u = "next")
+          : o.match(/diese/) && (u = "this");
         let l = Gy.toDayJSWeekday(e.refDate, i, u);
         return e
           .createParsingComponents()
@@ -3842,29 +3845,29 @@ var Ps = p((Kr) => {
 var gc = p((Qe) => {
   "use strict";
   var sg =
-    (Qe && Qe.__createBinding) ||
-    (Object.create
-      ? function (r, e, t, n) {
-        n === void 0 && (n = t),
-          Object.defineProperty(r, n, {
-            enumerable: !0,
-            get: function () {
-              return e[t];
-            },
-          });
-      }
-      : function (r, e, t, n) {
-        n === void 0 && (n = t), (r[n] = e[t]);
-      }),
+      (Qe && Qe.__createBinding) ||
+      (Object.create
+        ? function (r, e, t, n) {
+            n === void 0 && (n = t),
+              Object.defineProperty(r, n, {
+                enumerable: !0,
+                get: function () {
+                  return e[t];
+                },
+              });
+          }
+        : function (r, e, t, n) {
+            n === void 0 && (n = t), (r[n] = e[t]);
+          }),
     ag =
       (Qe && Qe.__setModuleDefault) ||
       (Object.create
         ? function (r, e) {
-          Object.defineProperty(r, "default", { enumerable: !0, value: e });
-        }
+            Object.defineProperty(r, "default", { enumerable: !0, value: e });
+          }
         : function (r, e) {
-          r.default = e;
-        }),
+            r.default = e;
+          }),
     og =
       (Qe && Qe.__importStar) ||
       function (r) {
@@ -3930,8 +3933,8 @@ var gc = p((Qe) => {
           default:
             i.match(/letzte\s*nacht/) &&
               (n.hour() > 6 && (n = n.add(-1, "day")),
-                Ht.assignSimilarDate(a, n),
-                a.imply("hour", 0));
+              Ht.assignSimilarDate(a, n),
+              a.imply("hour", 0));
             break;
         }
         return s && (a = cg.default.extractTimeComponents(a, s)), a;
@@ -3996,7 +3999,7 @@ var Pc = p((pe) => {
     pe.parse =
     pe.strict =
     pe.casual =
-    void 0;
+      void 0;
   var Tg = hr(),
     kc = Ot(),
     bg = dt(yr()),
@@ -4047,29 +4050,29 @@ var Pc = p((pe) => {
 var Ac = p((Xe) => {
   "use strict";
   var xg =
-    (Xe && Xe.__createBinding) ||
-    (Object.create
-      ? function (r, e, t, n) {
-        n === void 0 && (n = t),
-          Object.defineProperty(r, n, {
-            enumerable: !0,
-            get: function () {
-              return e[t];
-            },
-          });
-      }
-      : function (r, e, t, n) {
-        n === void 0 && (n = t), (r[n] = e[t]);
-      }),
+      (Xe && Xe.__createBinding) ||
+      (Object.create
+        ? function (r, e, t, n) {
+            n === void 0 && (n = t),
+              Object.defineProperty(r, n, {
+                enumerable: !0,
+                get: function () {
+                  return e[t];
+                },
+              });
+          }
+        : function (r, e, t, n) {
+            n === void 0 && (n = t), (r[n] = e[t]);
+          }),
     Cg =
       (Xe && Xe.__setModuleDefault) ||
       (Object.create
         ? function (r, e) {
-          Object.defineProperty(r, "default", { enumerable: !0, value: e });
-        }
+            Object.defineProperty(r, "default", { enumerable: !0, value: e });
+          }
         : function (r, e) {
-          r.default = e;
-        }),
+            r.default = e;
+          }),
     Ng =
       (Xe && Xe.__importStar) ||
       function (r) {
@@ -4116,7 +4119,7 @@ var Ac = p((Xe) => {
                 s.imply("hour", 22),
                 s.imply("meridiem", Fg.Meridiem.PM))
               : i.match(/la\s*veille/) &&
-              ((n = n.add(-1, "day")),
+                ((n = n.add(-1, "day")),
                 Mc.assignSimilarDate(s, n),
                 s.imply("hour", 0));
         }
@@ -4234,7 +4237,7 @@ var At = p(($) => {
     $.INTEGER_WORD_DICTIONARY =
     $.MONTH_DICTIONARY =
     $.WEEKDAY_DICTIONARY =
-    void 0;
+      void 0;
   var Cs = ae();
   $.WEEKDAY_DICTIONARY = {
     dimanche: 0,
@@ -4340,12 +4343,12 @@ var At = p(($) => {
     return $.INTEGER_WORD_DICTIONARY[e] !== void 0
       ? $.INTEGER_WORD_DICTIONARY[e]
       : e === "une" || e === "un"
-        ? 1
-        : e.match(/quelques?/)
-          ? 3
-          : e.match(/demi-?/)
-            ? 0.5
-            : parseFloat(e);
+      ? 1
+      : e.match(/quelques?/)
+      ? 3
+      : e.match(/demi-?/)
+      ? 0.5
+      : parseFloat(e);
   }
   $.parseNumberPattern = Yc;
   $.ORDINAL_NUMBER_PATTERN = "(?:[0-9]{1,2}(?:er)?)";
@@ -4365,15 +4368,15 @@ var At = p(($) => {
   }
   $.parseYear = Gg;
   var Uc = `(${$.NUMBER_PATTERN})\\s{0,5}(${Cs.matchAnyPattern(
-    $.TIME_UNIT_DICTIONARY
-  )})\\s{0,5}`,
+      $.TIME_UNIT_DICTIONARY
+    )})\\s{0,5}`,
     qc = new RegExp(Uc, "i");
   $.TIME_UNITS_PATTERN = Cs.repeatedTimeunitPattern("", Uc);
   function Hg(r) {
     let e = {},
       t = r,
       n = qc.exec(t);
-    for (; n;) zg(e, n), (t = t.substring(n[0].length)), (n = qc.exec(t));
+    for (; n; ) zg(e, n), (t = t.substring(n[0].length)), (n = qc.exec(t));
     return e;
   }
   $.parseTimeUnits = Hg;
@@ -4455,7 +4458,7 @@ var Kc = p((Ss) => {
           s = t_.exec(i);
         return (
           s &&
-          ((n.end = Jr.extractTimeComponent(n.start.clone(), s)),
+            ((n.end = Jr.extractTimeComponent(n.start.clone(), s)),
             n.end && (n.text += s[0])),
           n
         );
@@ -4466,8 +4469,8 @@ var Kc = p((Ss) => {
           s = null;
         if (
           ((n = parseInt(t[r_])),
-            t[Gc] != null && (i = parseInt(t[Gc])),
-            i >= 60 || n > 24)
+          t[Gc] != null && (i = parseInt(t[Gc])),
+          i >= 60 || n > 24)
         )
           return null;
         if ((n >= 12 && (s = Xr.Meridiem.PM), t[zc] != null)) {
@@ -4478,13 +4481,13 @@ var Kc = p((Ss) => {
         }
         if (
           (e.assign("hour", n),
-            e.assign("minute", i),
-            s !== null
-              ? e.assign("meridiem", s)
-              : n < 12
-                ? e.imply("meridiem", Xr.Meridiem.AM)
-                : e.imply("meridiem", Xr.Meridiem.PM),
-            t[Hc] != null)
+          e.assign("minute", i),
+          s !== null
+            ? e.assign("meridiem", s)
+            : n < 12
+            ? e.imply("meridiem", Xr.Meridiem.AM)
+            : e.imply("meridiem", Xr.Meridiem.PM),
+          t[Hc] != null)
         ) {
           let a = parseInt(t[Hc]);
           if (a >= 60) return null;
@@ -4505,8 +4508,10 @@ var td = p((Is) => {
     i_ = ae(),
     s_ = N(),
     a_ = new RegExp(
-      `(?:on\\s*?)?(${ei.ORDINAL_NUMBER_PATTERN
-      })(?:\\s*(?:au|\\-|\\\u2013|jusqu'au?|\\s)\\s*(${ei.ORDINAL_NUMBER_PATTERN
+      `(?:on\\s*?)?(${
+        ei.ORDINAL_NUMBER_PATTERN
+      })(?:\\s*(?:au|\\-|\\\u2013|jusqu'au?|\\s)\\s*(${
+        ei.ORDINAL_NUMBER_PATTERN
       }))?(?:-|/|\\s*(?:de)?\\s*)(${i_.matchAnyPattern(
         Vc.MONTH_DICTIONARY
       )})(?:(?:-|/|,?\\s*)(${Zc.YEAR_PATTERN}(?![^\\s]\\d)))?(?=\\W|$)`,
@@ -4600,7 +4605,8 @@ var ld = p((Ls) => {
       }
       innerPattern() {
         return new RegExp(
-          `(?:les?|la|l'|du|des?)\\s*(${ti.NUMBER_PATTERN
+          `(?:les?|la|l'|du|des?)\\s*(${
+            ti.NUMBER_PATTERN
           })?(?:\\s*(prochaine?s?|derni[e\xE8]re?s?|pass[\xE9e]e?s?|pr[\xE9e]c[\xE9e]dents?|suivante?s?))?\\s*(${y_.matchAnyPattern(
             ti.TIME_UNIT_DICTIONARY
           )})(?:\\s*(prochaine?s?|derni[e\xE8]re?s?|pass[\xE9e]e?s?|pr[\xE9e]c[\xE9e]dents?|suivante?s?))?`,
@@ -4618,7 +4624,7 @@ var ld = p((Ls) => {
             (/derni[eè]re?s?/.test(a) ||
               /pass[ée]e?s?/.test(a) ||
               /pr[ée]c[ée]dents?/.test(a)) &&
-            (s = m_.reverseTimeUnits(s)),
+              (s = m_.reverseTimeUnits(s)),
             h_.ParsingComponents.createRelativeFromRefDate(e.refDate, s)
           );
       }
@@ -4639,7 +4645,7 @@ var fd = p((me) => {
     me.parse =
     me.strict =
     me.casual =
-    void 0;
+      void 0;
   var g_ = hr(),
     cd = Ot(),
     __ = He(Ac()),
@@ -4750,8 +4756,8 @@ var yd = p((en) => {
           t[qs] == "\u4EE4\u548C"
             ? (o += 2018)
             : t[qs] == "\u5E73\u6210"
-              ? (o += 1988)
-              : t[qs] == "\u662D\u548C" && (o += 1925),
+            ? (o += 1988)
+            : t[qs] == "\u662D\u548C" && (o += 1925),
             s.assign("year", o);
         } else {
           let a = I_.findYearClosestToRef(e.refDate, i, n);
@@ -4781,29 +4787,29 @@ var _d = p((tn) => {
 var vd = p((Je) => {
   "use strict";
   var B_ =
-    (Je && Je.__createBinding) ||
-    (Object.create
-      ? function (r, e, t, n) {
-        n === void 0 && (n = t),
-          Object.defineProperty(r, n, {
-            enumerable: !0,
-            get: function () {
-              return e[t];
-            },
-          });
-      }
-      : function (r, e, t, n) {
-        n === void 0 && (n = t), (r[n] = e[t]);
-      }),
+      (Je && Je.__createBinding) ||
+      (Object.create
+        ? function (r, e, t, n) {
+            n === void 0 && (n = t),
+              Object.defineProperty(r, n, {
+                enumerable: !0,
+                get: function () {
+                  return e[t];
+                },
+              });
+          }
+        : function (r, e, t, n) {
+            n === void 0 && (n = t), (r[n] = e[t]);
+          }),
     G_ =
       (Je && Je.__setModuleDefault) ||
       (Object.create
         ? function (r, e) {
-          Object.defineProperty(r, "default", { enumerable: !0, value: e });
-        }
+            Object.defineProperty(r, "default", { enumerable: !0, value: e });
+          }
         : function (r, e) {
-          r.default = e;
-        }),
+            r.default = e;
+          }),
     H_ =
       (Je && Je.__importStar) ||
       function (r) {
@@ -4847,7 +4853,7 @@ var vd = p((Je) => {
           n == "\u4ECA\u591C" || n == "\u4ECA\u5915" || n == "\u4ECA\u6669"
             ? (s.imply("hour", 22), s.assign("meridiem", Td.Meridiem.PM))
             : n.match("\u4ECA\u671D") &&
-            (s.imply("hour", 6), s.assign("meridiem", Td.Meridiem.AM)),
+              (s.imply("hour", 6), s.assign("meridiem", Td.Meridiem.AM)),
           s.assign("day", i.date()),
           s.assign("month", i.month() + 1),
           s.assign("year", i.year()),
@@ -4871,7 +4877,7 @@ var Ed = p((ye) => {
     ye.parse =
     ye.strict =
     ye.casual =
-    void 0;
+      void 0;
   var Z_ = js(yd()),
     Q_ = js(_d()),
     X_ = js(vd()),
@@ -4903,7 +4909,7 @@ var ni = p((it) => {
     it.YEAR_PATTERN =
     it.MONTH_DICTIONARY =
     it.WEEKDAY_DICTIONARY =
-    void 0;
+      void 0;
   it.WEEKDAY_DICTIONARY = {
     domingo: 0,
     dom: 0,
@@ -5009,8 +5015,8 @@ var Pd = p((Gs) => {
         o == "passado"
           ? (u = "this")
           : o == "pr\xF3ximo" || o == "proximo"
-            ? (u = "next")
-            : o == "este" && (u = "this");
+          ? (u = "next")
+          : o == "este" && (u = "this");
         let l = iT.toDayJSWeekday(e.refDate, i, u);
         return e
           .createParsingComponents()
@@ -5114,29 +5120,29 @@ var Ud = p((zs) => {
 var $d = p((ft) => {
   "use strict";
   var TT =
-    (ft && ft.__createBinding) ||
-    (Object.create
-      ? function (r, e, t, n) {
-        n === void 0 && (n = t),
-          Object.defineProperty(r, n, {
-            enumerable: !0,
-            get: function () {
-              return e[t];
-            },
-          });
-      }
-      : function (r, e, t, n) {
-        n === void 0 && (n = t), (r[n] = e[t]);
-      }),
+      (ft && ft.__createBinding) ||
+      (Object.create
+        ? function (r, e, t, n) {
+            n === void 0 && (n = t),
+              Object.defineProperty(r, n, {
+                enumerable: !0,
+                get: function () {
+                  return e[t];
+                },
+              });
+          }
+        : function (r, e, t, n) {
+            n === void 0 && (n = t), (r[n] = e[t]);
+          }),
     bT =
       (ft && ft.__setModuleDefault) ||
       (Object.create
         ? function (r, e) {
-          Object.defineProperty(r, "default", { enumerable: !0, value: e });
-        }
+            Object.defineProperty(r, "default", { enumerable: !0, value: e });
+          }
         : function (r, e) {
-          r.default = e;
-        }),
+            r.default = e;
+          }),
     vT =
       (ft && ft.__importStar) ||
       function (r) {
@@ -5234,7 +5240,7 @@ var zd = p((ge) => {
     ge.parse =
     ge.strict =
     ge.casual =
-    void 0;
+      void 0;
   var PT = hr(),
     Gd = Ot(),
     MT = xt(yr()),
@@ -5313,29 +5319,29 @@ var Qd = p((on) => {
 var Jd = p((ht) => {
   "use strict";
   var $T =
-    (ht && ht.__createBinding) ||
-    (Object.create
-      ? function (r, e, t, n) {
-        n === void 0 && (n = t),
-          Object.defineProperty(r, n, {
-            enumerable: !0,
-            get: function () {
-              return e[t];
-            },
-          });
-      }
-      : function (r, e, t, n) {
-        n === void 0 && (n = t), (r[n] = e[t]);
-      }),
+      (ht && ht.__createBinding) ||
+      (Object.create
+        ? function (r, e, t, n) {
+            n === void 0 && (n = t),
+              Object.defineProperty(r, n, {
+                enumerable: !0,
+                get: function () {
+                  return e[t];
+                },
+              });
+          }
+        : function (r, e, t, n) {
+            n === void 0 && (n = t), (r[n] = e[t]);
+          }),
     jT =
       (ht && ht.__setModuleDefault) ||
       (Object.create
         ? function (r, e) {
-          Object.defineProperty(r, "default", { enumerable: !0, value: e });
-        }
+            Object.defineProperty(r, "default", { enumerable: !0, value: e });
+          }
         : function (r, e) {
-          r.default = e;
-        }),
+            r.default = e;
+          }),
     BT =
       (ht && ht.__importStar) ||
       function (r) {
@@ -5396,8 +5402,8 @@ var tf = p((un) => {
         let n = KT.default(e.refDate),
           i = e.createParsingComponents();
         switch (
-        (t[ZT] === "deze" &&
-          (i.assign("day", e.refDate.getDate()),
+          (t[ZT] === "deze" &&
+            (i.assign("day", e.refDate.getDate()),
             i.assign("month", e.refDate.getMonth() + 1),
             i.assign("year", e.refDate.getFullYear())),
           t[QT].toLowerCase())
@@ -5446,7 +5452,7 @@ var pt = p((F) => {
     F.INTEGER_WORD_DICTIONARY =
     F.MONTH_DICTIONARY =
     F.WEEKDAY_DICTIONARY =
-    void 0;
+      void 0;
   var ui = ae(),
     XT = Ne();
   F.WEEKDAY_DICTIONARY = {
@@ -5600,10 +5606,10 @@ var pt = p((F) => {
     return F.INTEGER_WORD_DICTIONARY[e] !== void 0
       ? F.INTEGER_WORD_DICTIONARY[e]
       : e === "een"
-        ? 1
-        : e.match(/halve?/)
-          ? 0.5
-          : parseFloat(e);
+      ? 1
+      : e.match(/halve?/)
+      ? 0.5
+      : parseFloat(e);
   }
   F.parseNumberPattern = rf;
   F.ORDINAL_NUMBER_PATTERN = `(?:${ui.matchAnyPattern(
@@ -5628,8 +5634,8 @@ var pt = p((F) => {
   }
   F.parseYear = eb;
   var nf = `(${F.NUMBER_PATTERN})\\s{0,5}(${ui.matchAnyPattern(
-    F.TIME_UNIT_DICTIONARY
-  )})\\s{0,5}`,
+      F.TIME_UNIT_DICTIONARY
+    )})\\s{0,5}`,
     sf = new RegExp(nf, "i");
   F.TIME_UNITS_PATTERN = ui.repeatedTimeunitPattern(
     "(?:(?:binnen|in)\\s*)?",
@@ -5639,7 +5645,7 @@ var pt = p((F) => {
     let e = {},
       t = r,
       n = sf.exec(t);
-    for (; n;) rb(e, n), (t = t.substring(n[0].length)), (n = sf.exec(t));
+    for (; n; ) rb(e, n), (t = t.substring(n[0].length)), (n = sf.exec(t));
     return e;
   }
   F.parseTimeUnits = tb;
@@ -5659,8 +5665,8 @@ var uf = p((Vs) => {
       innerPattern() {
         return new RegExp(
           "(?:binnen|in|binnen de|voor)\\s*(" +
-          af.TIME_UNITS_PATTERN +
-          ")(?=\\W|$)",
+            af.TIME_UNITS_PATTERN +
+            ")(?=\\W|$)",
           "i"
         );
       }
@@ -5702,8 +5708,8 @@ var df = p((Zs) => {
         o == "vorige"
           ? (u = "last")
           : o == "volgende"
-            ? (u = "next")
-            : o == "deze" && (u = "this");
+          ? (u = "next")
+          : o == "deze" && (u = "this");
         let l = ob.toDayJSWeekday(e.refDate, i, u);
         return e
           .createParsingComponents()
@@ -5726,8 +5732,8 @@ var _f = p((Qs) => {
     pb = N(),
     mb = new RegExp(
       `(?:on\\s*?)?(${li.ORDINAL_NUMBER_PATTERN})(?:\\s*(?:tot|\\-|\\\u2013|until|through|till|\\s)\\s*(${li.ORDINAL_NUMBER_PATTERN}))?(?:-|/|\\s*(?:of)?\\s*)(` +
-      hb.matchAnyPattern(ff.MONTH_DICTIONARY) +
-      `)(?:(?:-|/|,?\\s*)(${hf.YEAR_PATTERN}(?![^\\s]\\d)))?(?=\\W|$)`,
+        hb.matchAnyPattern(ff.MONTH_DICTIONARY) +
+        `)(?:(?:-|/|,?\\s*)(${hf.YEAR_PATTERN}(?![^\\s]\\d)))?(?=\\W|$)`,
       "i"
     ),
     yb = 3,
@@ -5767,7 +5773,8 @@ var wf = p((Xs) => {
     bf = pt(),
     Tb = N(),
     bb = new RegExp(
-      `(${_b.matchAnyPattern(Tf.MONTH_DICTIONARY)})\\s*(?:[,-]?\\s*(${bf.YEAR_PATTERN
+      `(${_b.matchAnyPattern(Tf.MONTH_DICTIONARY)})\\s*(?:[,-]?\\s*(${
+        bf.YEAR_PATTERN
       })?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)`,
       "i"
     ),
@@ -5934,7 +5941,7 @@ var Ff = p((_e) => {
     _e.parse =
     _e.strict =
     _e.casual =
-    void 0;
+      void 0;
   var Lb = hr(),
     Sf = Ot(),
     Yb = qe(Vd()),
@@ -5993,29 +6000,29 @@ var Ff = p((_e) => {
 var ve = p((Y) => {
   "use strict";
   var ev =
-    (Y && Y.__createBinding) ||
-    (Object.create
-      ? function (r, e, t, n) {
-        n === void 0 && (n = t),
-          Object.defineProperty(r, n, {
-            enumerable: !0,
-            get: function () {
-              return e[t];
-            },
-          });
-      }
-      : function (r, e, t, n) {
-        n === void 0 && (n = t), (r[n] = e[t]);
-      }),
+      (Y && Y.__createBinding) ||
+      (Object.create
+        ? function (r, e, t, n) {
+            n === void 0 && (n = t),
+              Object.defineProperty(r, n, {
+                enumerable: !0,
+                get: function () {
+                  return e[t];
+                },
+              });
+          }
+        : function (r, e, t, n) {
+            n === void 0 && (n = t), (r[n] = e[t]);
+          }),
     tv =
       (Y && Y.__setModuleDefault) ||
       (Object.create
         ? function (r, e) {
-          Object.defineProperty(r, "default", { enumerable: !0, value: e });
-        }
+            Object.defineProperty(r, "default", { enumerable: !0, value: e });
+          }
         : function (r, e) {
-          r.default = e;
-        }),
+            r.default = e;
+          }),
     gr =
       (Y && Y.__importStar) ||
       function (r) {
@@ -6041,7 +6048,7 @@ var ve = p((Y) => {
     Y.Meridiem =
     Y.Chrono =
     Y.en =
-    void 0;
+      void 0;
   var ia = gr(Ts());
   Y.en = ia;
   var rv = Ot();
@@ -6087,8 +6094,8 @@ var Tv = new Error("timeout while waiting for mutex to become available"),
       return s instanceof t
         ? s
         : new t(function (a) {
-          a(s);
-        });
+            a(s);
+          });
     }
     return new (t || (t = Promise))(function (s, a) {
       function o(d) {
@@ -6115,10 +6122,10 @@ var Tv = new Error("timeout while waiting for mutex to become available"),
     constructor(e, t = nh) {
       if (
         ((this._maxConcurrency = e),
-          (this._cancelError = t),
-          (this._queue = []),
-          (this._waiters = []),
-          e <= 0)
+        (this._cancelError = t),
+        (this._queue = []),
+        (this._waiters = []),
+        e <= 0)
       )
         throw new Error("semaphore must be initialized to a positive value");
       this._value = e;
@@ -6181,8 +6188,8 @@ var Tv = new Error("timeout while waiting for mutex to become available"),
       return s instanceof t
         ? s
         : new t(function (a) {
-          a(s);
-        });
+            a(s);
+          });
     }
     return new (t || (t = Promise))(function (s, a) {
       function o(d) {
@@ -6269,23 +6276,23 @@ var Ri,
         previousTries: i,
       }) {
         let a = () => {
-          if (i > 10) {
-            console.error(
-              "Tasks: Too many retries. File update not possible ..."
-            );
-            return;
-          }
-          let b = Math.min(Math.pow(10, i), 100);
-          setTimeout(() => {
-            Ja({
-              originalTask: r,
-              newTasks: e,
-              vault: t,
-              metadataCache: n,
-              previousTries: i + 1,
-            });
-          }, b);
-        },
+            if (i > 10) {
+              console.error(
+                "Tasks: Too many retries. File update not possible ..."
+              );
+              return;
+            }
+            let b = Math.min(Math.pow(10, i), 100);
+            setTimeout(() => {
+              Ja({
+                originalTask: r,
+                newTasks: e,
+                vault: t,
+                metadataCache: n,
+                previousTries: i + 1,
+              });
+            }, b);
+          },
           o = t.getAbstractFileByPath(r.path);
         if (!(o instanceof Qa.TFile))
           return (
@@ -6389,8 +6396,8 @@ var Pn = ["MO", "TU", "WE", "TH", "FR", "SA", "SU"],
     );
   })();
 var Z = function (r) {
-  return r != null;
-},
+    return r != null;
+  },
   Ye = function (r) {
     return typeof r == "number";
   },
@@ -6404,12 +6411,12 @@ var Z = function (r) {
     return t;
   };
 var W = function (r, e) {
-  var t = 0,
-    n = [];
-  if (Te(r)) for (; t < e; t++) n[t] = [].concat(r);
-  else for (; t < e; t++) n[t] = r;
-  return n;
-},
+    var t = 0,
+      n = [];
+    if (Te(r)) for (; t < e; t++) n[t] = [].concat(r);
+    else for (; t < e; t++) n[t] = r;
+    return n;
+  },
   eo = function (r) {
     return Te(r) ? r : [r];
   };
@@ -6426,9 +6433,9 @@ function Ft(r, e, t) {
   );
 }
 var to = function (r, e, t) {
-  var n = r.split(e);
-  return t ? n.slice(0, t).concat([n.slice(t).join(e)]) : n;
-},
+    var n = r.split(e);
+    return t ? n.slice(0, t).concat([n.slice(t).join(e)]) : n;
+  },
   we = function (r, e) {
     var t = r % e;
     return t * e < 0 ? t + e : t;
@@ -6457,7 +6464,7 @@ var _t;
       return (
         Math.ceil(
           (t.valueOf() - new Date(e.getUTCFullYear(), 0, 1).valueOf()) /
-          r.ONE_DAY
+            r.ONE_DAY
         ) + 1
       );
     }),
@@ -6557,57 +6564,57 @@ var _t;
 })(_t || (_t = {}));
 var P = _t;
 var ah = (function () {
-  function r(e, t) {
-    (this.minDate = null),
-      (this.maxDate = null),
-      (this._result = []),
-      (this.total = 0),
-      (this.method = e),
-      (this.args = t),
-      e === "between"
-        ? ((this.maxDate = t.inc
-          ? t.before
-          : new Date(t.before.getTime() - 1)),
-          (this.minDate = t.inc ? t.after : new Date(t.after.getTime() + 1)))
-        : e === "before"
+    function r(e, t) {
+      (this.minDate = null),
+        (this.maxDate = null),
+        (this._result = []),
+        (this.total = 0),
+        (this.method = e),
+        (this.args = t),
+        e === "between"
+          ? ((this.maxDate = t.inc
+              ? t.before
+              : new Date(t.before.getTime() - 1)),
+            (this.minDate = t.inc ? t.after : new Date(t.after.getTime() + 1)))
+          : e === "before"
           ? (this.maxDate = t.inc ? t.dt : new Date(t.dt.getTime() - 1))
           : e === "after" &&
-          (this.minDate = t.inc ? t.dt : new Date(t.dt.getTime() + 1));
-  }
-  return (
-    (r.prototype.accept = function (e) {
-      ++this.total;
-      var t = this.minDate && e < this.minDate,
-        n = this.maxDate && e > this.maxDate;
-      if (this.method === "between") {
-        if (t) return !0;
-        if (n) return !1;
-      } else if (this.method === "before") {
-        if (n) return !1;
-      } else if (this.method === "after") return t ? !0 : (this.add(e), !1);
-      return this.add(e);
-    }),
-    (r.prototype.add = function (e) {
-      return this._result.push(e), !0;
-    }),
-    (r.prototype.getValue = function () {
-      var e = this._result;
-      switch (this.method) {
-        case "all":
-        case "between":
-          return e;
-        case "before":
-        case "after":
-        default:
-          return e.length ? e[e.length - 1] : null;
-      }
-    }),
-    (r.prototype.clone = function () {
-      return new r(this.method, this.args);
-    }),
-    r
-  );
-})(),
+            (this.minDate = t.inc ? t.dt : new Date(t.dt.getTime() + 1));
+    }
+    return (
+      (r.prototype.accept = function (e) {
+        ++this.total;
+        var t = this.minDate && e < this.minDate,
+          n = this.maxDate && e > this.maxDate;
+        if (this.method === "between") {
+          if (t) return !0;
+          if (n) return !1;
+        } else if (this.method === "before") {
+          if (n) return !1;
+        } else if (this.method === "after") return t ? !0 : (this.add(e), !1);
+        return this.add(e);
+      }),
+      (r.prototype.add = function (e) {
+        return this._result.push(e), !0;
+      }),
+      (r.prototype.getValue = function () {
+        var e = this._result;
+        switch (this.method) {
+          case "all":
+          case "between":
+            return e;
+          case "before":
+          case "after":
+          default:
+            return e.length ? e[e.length - 1] : null;
+        }
+      }),
+      (r.prototype.clone = function () {
+        return new r(this.method, this.args);
+      }),
+      r
+    );
+  })(),
   ot = ah;
 var Eo = Le(wo()),
   {
@@ -6636,94 +6643,94 @@ var Eo = Le(wo()),
     __classPrivateFieldSet: tD,
   } = Eo.default;
 var oh = (function (r) {
-  Jt(e, r);
-  function e(t, n, i) {
-    var s = r.call(this, t, n) || this;
-    return (s.iterator = i), s;
-  }
-  return (
-    (e.prototype.add = function (t) {
-      return this.iterator(t, this._result.length)
-        ? (this._result.push(t), !0)
-        : !1;
-    }),
-    e
-  );
-})(ot),
+    Jt(e, r);
+    function e(t, n, i) {
+      var s = r.call(this, t, n) || this;
+      return (s.iterator = i), s;
+    }
+    return (
+      (e.prototype.add = function (t) {
+        return this.iterator(t, this._result.length)
+          ? (this._result.push(t), !0)
+          : !1;
+      }),
+      e
+    );
+  })(ot),
   Ai = oh;
 var uh = {
-  dayNames: [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ],
-  monthNames: [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ],
-  tokens: {
-    SKIP: /^[ \r\n\t]+|^\.$/,
-    number: /^[1-9][0-9]*/,
-    numberAsText: /^(one|two|three)/i,
-    every: /^every/i,
-    "day(s)": /^days?/i,
-    "weekday(s)": /^weekdays?/i,
-    "week(s)": /^weeks?/i,
-    "hour(s)": /^hours?/i,
-    "minute(s)": /^minutes?/i,
-    "month(s)": /^months?/i,
-    "year(s)": /^years?/i,
-    on: /^(on|in)/i,
-    at: /^(at)/i,
-    the: /^the/i,
-    first: /^first/i,
-    second: /^second/i,
-    third: /^third/i,
-    nth: /^([1-9][0-9]*)(\.|th|nd|rd|st)/i,
-    last: /^last/i,
-    for: /^for/i,
-    "time(s)": /^times?/i,
-    until: /^(un)?til/i,
-    monday: /^mo(n(day)?)?/i,
-    tuesday: /^tu(e(s(day)?)?)?/i,
-    wednesday: /^we(d(n(esday)?)?)?/i,
-    thursday: /^th(u(r(sday)?)?)?/i,
-    friday: /^fr(i(day)?)?/i,
-    saturday: /^sa(t(urday)?)?/i,
-    sunday: /^su(n(day)?)?/i,
-    january: /^jan(uary)?/i,
-    february: /^feb(ruary)?/i,
-    march: /^mar(ch)?/i,
-    april: /^apr(il)?/i,
-    may: /^may/i,
-    june: /^june?/i,
-    july: /^july?/i,
-    august: /^aug(ust)?/i,
-    september: /^sep(t(ember)?)?/i,
-    october: /^oct(ober)?/i,
-    november: /^nov(ember)?/i,
-    december: /^dec(ember)?/i,
-    comma: /^(,\s*|(and|or)\s*)+/i,
+    dayNames: [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ],
+    monthNames: [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ],
+    tokens: {
+      SKIP: /^[ \r\n\t]+|^\.$/,
+      number: /^[1-9][0-9]*/,
+      numberAsText: /^(one|two|three)/i,
+      every: /^every/i,
+      "day(s)": /^days?/i,
+      "weekday(s)": /^weekdays?/i,
+      "week(s)": /^weeks?/i,
+      "hour(s)": /^hours?/i,
+      "minute(s)": /^minutes?/i,
+      "month(s)": /^months?/i,
+      "year(s)": /^years?/i,
+      on: /^(on|in)/i,
+      at: /^(at)/i,
+      the: /^the/i,
+      first: /^first/i,
+      second: /^second/i,
+      third: /^third/i,
+      nth: /^([1-9][0-9]*)(\.|th|nd|rd|st)/i,
+      last: /^last/i,
+      for: /^for/i,
+      "time(s)": /^times?/i,
+      until: /^(un)?til/i,
+      monday: /^mo(n(day)?)?/i,
+      tuesday: /^tu(e(s(day)?)?)?/i,
+      wednesday: /^we(d(n(esday)?)?)?/i,
+      thursday: /^th(u(r(sday)?)?)?/i,
+      friday: /^fr(i(day)?)?/i,
+      saturday: /^sa(t(urday)?)?/i,
+      sunday: /^su(n(day)?)?/i,
+      january: /^jan(uary)?/i,
+      february: /^feb(ruary)?/i,
+      march: /^mar(ch)?/i,
+      april: /^apr(il)?/i,
+      may: /^may/i,
+      june: /^june?/i,
+      july: /^july?/i,
+      august: /^aug(ust)?/i,
+      september: /^sep(t(ember)?)?/i,
+      october: /^oct(ober)?/i,
+      november: /^nov(ember)?/i,
+      december: /^dec(ember)?/i,
+      comma: /^(,\s*|(and|or)\s*)+/i,
+    },
   },
-},
   Lt = uh;
 var ko = function (r, e) {
-  return r.indexOf(e) !== -1;
-},
+    return r.indexOf(e) !== -1;
+  },
   lh = function (r) {
     return r.toString();
   },
@@ -6734,16 +6741,16 @@ var ko = function (r, e) {
     function r(e, t, n, i) {
       if (
         (t === void 0 && (t = lh),
-          n === void 0 && (n = Lt),
-          i === void 0 && (i = ch),
-          (this.text = []),
-          (this.language = n || Lt),
-          (this.gettext = t),
-          (this.dateFormatter = i),
-          (this.rrule = e),
-          (this.options = e.options),
-          (this.origOptions = e.origOptions),
-          this.origOptions.bymonthday)
+        n === void 0 && (n = Lt),
+        i === void 0 && (i = ch),
+        (this.text = []),
+        (this.language = n || Lt),
+        (this.gettext = t),
+        (this.dateFormatter = i),
+        (this.rrule = e),
+        (this.options = e.options),
+        (this.origOptions = e.origOptions),
+        this.origOptions.bymonthday)
       ) {
         var s = [].concat(this.options.bymonthday),
           a = [].concat(this.options.bynmonthday);
@@ -6758,8 +6765,8 @@ var ko = function (r, e) {
       }
       if (Z(this.origOptions.byweekday)) {
         var o = Te(this.origOptions.byweekday)
-          ? this.origOptions.byweekday
-          : [this.origOptions.byweekday],
+            ? this.origOptions.byweekday
+            : [this.origOptions.byweekday],
           u = String(o);
         this.byweekday = {
           allWeeks: o.filter(function (d) {
@@ -6817,8 +6824,8 @@ var ko = function (r, e) {
           return e("RRule error: Unable to fully convert this rrule to text");
         if (
           ((this.text = [e("every")]),
-            this[D.FREQUENCIES[this.options.freq]](),
-            this.options.until)
+          this[D.FREQUENCIES[this.options.freq]](),
+          this.options.until)
         ) {
           this.add(e("until"));
           var t = this.options.until;
@@ -6859,19 +6866,19 @@ var ko = function (r, e) {
           this.add(this.options.interval.toString()),
           this.byweekday && this.byweekday.isWeekdays
             ? this.add(
-              this.plural(this.options.interval)
-                ? e("weekdays")
-                : e("weekday")
-            )
+                this.plural(this.options.interval)
+                  ? e("weekdays")
+                  : e("weekday")
+              )
             : this.add(
-              this.plural(this.options.interval) ? e("days") : e("day")
-            ),
+                this.plural(this.options.interval) ? e("days") : e("day")
+              ),
           this.origOptions.bymonth && (this.add(e("in")), this._bymonth()),
           this.bymonthday
             ? this._bymonthday()
             : this.byweekday
-              ? this._byweekday()
-              : this.origOptions.byhour && this._byhour();
+            ? this._byweekday()
+            : this.origOptions.byhour && this._byhour();
       }),
       (r.prototype.WEEKLY = function () {
         var e = this.gettext;
@@ -6882,48 +6889,48 @@ var ko = function (r, e) {
           this.byweekday && this.byweekday.isWeekdays
             ? this.options.interval === 1
               ? this.add(
-                this.plural(this.options.interval)
-                  ? e("weekdays")
-                  : e("weekday")
-              )
+                  this.plural(this.options.interval)
+                    ? e("weekdays")
+                    : e("weekday")
+                )
               : this.add(e("on")).add(e("weekdays"))
             : this.byweekday && this.byweekday.isEveryDay
-              ? this.add(
+            ? this.add(
                 this.plural(this.options.interval) ? e("days") : e("day")
               )
-              : (this.options.interval === 1 && this.add(e('')),
-                this.origOptions.bymonth && (this.add(e("in")), this._bymonth()),
-                this.bymonthday
-                  ? this._bymonthday()
-                  : this.byweekday && this._byweekday());
+            : (this.options.interval === 1 && this.add(e("week")),
+              this.origOptions.bymonth && (this.add(e("in")), this._bymonth()),
+              this.bymonthday
+                ? this._bymonthday()
+                : this.byweekday && this._byweekday());
       }),
       (r.prototype.MONTHLY = function () {
         var e = this.gettext;
         this.origOptions.bymonth
           ? (this.options.interval !== 1 &&
-            (this.add(this.options.interval.toString()).add(e("months")),
+              (this.add(this.options.interval.toString()).add(e("months")),
               this.plural(this.options.interval) && this.add(e("in"))),
             this._bymonth())
           : (this.options.interval !== 1 &&
-            this.add(this.options.interval.toString()),
+              this.add(this.options.interval.toString()),
             this.add(
               this.plural(this.options.interval) ? e("months") : e("month")
             )),
           this.bymonthday
             ? this._bymonthday()
             : this.byweekday && this.byweekday.isWeekdays
-              ? this.add(e("on")).add(e("weekdays"))
-              : this.byweekday && this._byweekday();
+            ? this.add(e("on")).add(e("weekdays"))
+            : this.byweekday && this._byweekday();
       }),
       (r.prototype.YEARLY = function () {
         var e = this.gettext;
         this.origOptions.bymonth
           ? (this.options.interval !== 1 &&
-            (this.add(this.options.interval.toString()),
+              (this.add(this.options.interval.toString()),
               this.add(e("years"))),
             this._bymonth())
           : (this.options.interval !== 1 &&
-            this.add(this.options.interval.toString()),
+              this.add(this.options.interval.toString()),
             this.add(
               this.plural(this.options.interval) ? e("years") : e("year")
             )),
@@ -6931,47 +6938,40 @@ var ko = function (r, e) {
             ? this._bymonthday()
             : this.byweekday && this._byweekday(),
           this.options.byyearday &&
-          this.add(e("on the"))
-            .add(this.list(this.options.byyearday, this.nth, e("and")))
-            .add(e("day")),
+            this.add(e("on the"))
+              .add(this.list(this.options.byyearday, this.nth, e("and")))
+              .add(e("day")),
           this.options.byweekno &&
-          this.add(e("in"))
-            .add(
-              this.plural(this.options.byweekno.length)
-                ? e("weeks")
-                : e("week")
-            )
-            .add(this.list(this.options.byweekno, void 0, e("and")));
+            this.add(e("in"))
+              .add(
+                this.plural(this.options.byweekno.length)
+                  ? e("weeks")
+                  : e("week")
+              )
+              .add(this.list(this.options.byweekno, void 0, e("and")));
       }),
       (r.prototype._bymonthday = function () {
         var e = this.gettext;
         this.byweekday && this.byweekday.allWeeks
           ? this.add(e("on"))
-            .add(
-              this.list(this.byweekday.allWeeks, this.weekdaytext, e("or"))
-            )
-            .add(e("the"))
-            .add(this.list(this.bymonthday, this.nth, e("or")))
+              .add(
+                this.list(this.byweekday.allWeeks, this.weekdaytext, e("or"))
+              )
+              .add(e("the"))
+              .add(this.list(this.bymonthday, this.nth, e("or")))
           : this.add(e("on the")).add(
-            this.list(this.bymonthday, this.nth, e("and"))
-          );
+              this.list(this.bymonthday, this.nth, e("and"))
+            );
       }),
       (r.prototype._byweekday = function () {
         var e = this.gettext;
         this.byweekday.allWeeks &&
           !this.byweekday.isWeekdays &&
-          this.options.interval > 1 &&
           this.add(e("on")).add(
             this.list(this.byweekday.allWeeks, this.weekdaytext)
           ),
-          this.byweekday.allWeeks &&
-          !this.byweekday.isWeekdays &&
-          this.options.interval === 1 &&
-          this.add(
-            this.list(this.byweekday.allWeeks, this.weekdaytext)
-          ),
           this.byweekday.someWeeks &&
-          (this.byweekday.allWeeks && this.add(e("and")),
+            (this.byweekday.allWeeks && this.add(e("and")),
             this.add(e("on the")).add(
               this.list(this.byweekday.someWeeks, this.weekdaytext, e("and"))
             ));
@@ -7077,8 +7077,8 @@ var fh = (function () {
         if (
           (e != null &&
             ((this.text = this.text.substr(e[0].length)),
-              this.text === "" && (this.done = !0)),
-            e == null)
+            this.text === "" && (this.done = !0)),
+          e == null)
         ) {
           (this.done = !0), (this.symbol = null), (this.value = null);
           return;
@@ -7152,7 +7152,7 @@ function Er(r, e) {
         t.freq = D.WEEKLY;
         var h = n.symbol.substr(0, 2).toUpperCase();
         if (((t.byweekday = [D[h]]), !n.nextSymbol())) return;
-        for (; n.accept("comma");) {
+        for (; n.accept("comma"); ) {
           if (n.isDone()) throw new Error("Unexpected end");
           var m = u();
           if (!m)
@@ -7176,7 +7176,7 @@ function Er(r, e) {
       case "november":
       case "december":
         if (((t.freq = D.YEARLY), (t.bymonth = [o()]), !n.nextSymbol())) return;
-        for (; n.accept("comma");) {
+        for (; n.accept("comma"); ) {
           if (n.isDone()) throw new Error("Unexpected end");
           var g = o();
           if (!g)
@@ -7221,7 +7221,7 @@ function Er(r, e) {
             throw new Error(
               "Unexpected symbol " + n.symbol + ", expected week number"
             );
-          for (t.byweekno = [parseInt(O[0], 10)]; n.accept("comma");) {
+          for (t.byweekno = [parseInt(O[0], 10)]; n.accept("comma"); ) {
             if (((O = n.acceptNumber()), !O))
               throw new Error(
                 "Unexpected symbol " + n.symbol + "; expected monthday"
@@ -7240,7 +7240,7 @@ function Er(r, e) {
         var h = n.acceptNumber();
         if (!h)
           throw new Error("Unexpected symbol " + n.symbol + ", expected hour");
-        for (t.byhour = [parseInt(h[0], 10)]; n.accept("comma");) {
+        for (t.byhour = [parseInt(h[0], 10)]; n.accept("comma"); ) {
           if (((h = n.acceptNumber()), !h))
             throw new Error(
               "Unexpected symbol " + n.symbol + "; expected hour"
@@ -7315,7 +7315,7 @@ function Er(r, e) {
     n.accept("on"), n.accept("the");
     var f = l();
     if (!!f)
-      for (t.bymonthday = [f], n.nextSymbol(); n.accept("comma");) {
+      for (t.bymonthday = [f], n.nextSymbol(); n.accept("comma"); ) {
         if (((f = l()), !f))
           throw new Error(
             "Unexpected symbol " + n.symbol + "; expected monthday"
@@ -7347,8 +7347,8 @@ function kr(r) {
   return r < S.HOURLY;
 }
 var Ro = function (r, e) {
-  return e === void 0 && (e = Lt), new D(Er(r, e) || void 0);
-},
+    return e === void 0 && (e = Lt), new D(Er(r, e) || void 0);
+  },
   er = ["count", "until", "interval", "byweekday", "bymonthday", "bymonth"];
 rt.IMPLEMENTED = [];
 rt.IMPLEMENTED[S.HOURLY] = er;
@@ -7358,8 +7358,8 @@ rt.IMPLEMENTED[S.WEEKLY] = er;
 rt.IMPLEMENTED[S.MONTHLY] = er;
 rt.IMPLEMENTED[S.YEARLY] = ["byweekno", "byyearday"].concat(er);
 var Po = function (r, e, t, n) {
-  return new rt(r, e, t, n).toString();
-},
+    return new rt(r, e, t, n).toString();
+  },
   Mo = rt.isFullyConvertible;
 var tr = (function () {
   function r(e, t, n, i) {
@@ -7455,7 +7455,7 @@ var Oo = (function (r) {
       (this.day += t), this.fixDay();
     }),
     (e.prototype.addHours = function (t, n, i) {
-      for (n && (this.hour += Math.floor((23 - this.hour) / t) * t); ;) {
+      for (n && (this.hour += Math.floor((23 - this.hour) / t) * t); ; ) {
         this.hour += t;
         var s = Mn(this.hour, 24),
           a = s.div,
@@ -7480,7 +7480,7 @@ var Oo = (function (r) {
           u = a.mod;
         if (
           (o && ((this.minute = u), this.addHours(o, !1, i)),
-            (Ue(i) || L(i, this.hour)) && (Ue(s) || L(s, this.minute)))
+          (Ue(i) || L(i, this.hour)) && (Ue(s) || L(s, this.minute)))
         )
           break;
       }
@@ -7501,7 +7501,7 @@ var Oo = (function (r) {
           l = o.mod;
         if (
           (u && ((this.second = l), this.addMinutes(u, !1, i, s)),
-            (Ue(i) || L(i, this.hour)) &&
+          (Ue(i) || L(i, this.hour)) &&
             (Ue(s) || L(s, this.minute)) &&
             (Ue(a) || L(a, this.second)))
         )
@@ -7512,11 +7512,11 @@ var Oo = (function (r) {
       if (!(this.day <= 28)) {
         var t = _t.monthRange(this.year, this.month - 1)[1];
         if (!(this.day <= t))
-          for (; this.day > t;) {
+          for (; this.day > t; ) {
             if (
               ((this.day -= t),
-                ++this.month,
-                this.month === 13 &&
+              ++this.month,
+              this.month === 13 &&
                 ((this.month = 1), ++this.year, this.year > _t.MAXYEAR))
             )
               return;
@@ -7563,15 +7563,15 @@ function Ao(r) {
   var e = Ae(Ae({}, Rr), xi(r));
   if (
     (Z(e.byeaster) && (e.freq = D.YEARLY),
-      !(Z(e.freq) && D.FREQUENCIES[e.freq]))
+    !(Z(e.freq) && D.FREQUENCIES[e.freq]))
   )
     throw new Error("Invalid frequency: " + e.freq + " " + r.freq);
   if (
     (e.dtstart || (e.dtstart = new Date(new Date().setMilliseconds(0))),
-      Z(e.wkst)
-        ? Ye(e.wkst) || (e.wkst = e.wkst.weekday)
-        : (e.wkst = D.MO.weekday),
-      Z(e.bysetpos))
+    Z(e.wkst)
+      ? Ye(e.wkst) || (e.wkst = e.wkst.weekday)
+      : (e.wkst = D.MO.weekday),
+    Z(e.bysetpos))
   ) {
     Ye(e.bysetpos) && (e.bysetpos = [e.bysetpos]);
     for (var t = 0; t < e.bysetpos.length; t++) {
@@ -7607,11 +7607,11 @@ function Ao(r) {
     }
   if (
     (Z(e.bymonth) && !Te(e.bymonth) && (e.bymonth = [e.bymonth]),
-      Z(e.byyearday) &&
+    Z(e.byyearday) &&
       !Te(e.byyearday) &&
       Ye(e.byyearday) &&
       (e.byyearday = [e.byyearday]),
-      !Z(e.bymonthday))
+    !Z(e.bymonthday))
   )
     (e.bymonthday = []), (e.bynmonthday = []);
   else if (Te(e.bymonthday)) {
@@ -7626,7 +7626,7 @@ function Ao(r) {
       : ((e.bynmonthday = []), (e.bymonthday = [e.bymonthday]));
   if (
     (Z(e.byweekno) && !Te(e.byweekno) && (e.byweekno = [e.byweekno]),
-      !Z(e.byweekday))
+    !Z(e.byweekday))
   )
     e.bynweekday = null;
   else if (Ye(e.byweekday))
@@ -7850,8 +7850,8 @@ function Or(r) {
                   return h instanceof le
                     ? h
                     : Te(h)
-                      ? new le(h[0], h[1])
-                      : new le(h);
+                    ? new le(h[0], h[1])
+                    : new le(h);
                 })
                 .toString());
             break;
@@ -7871,12 +7871,12 @@ function Or(r) {
       }
     }
   var c = e
-    .map(function (h) {
-      var m = h[0],
-        g = h[1];
-      return m + "=" + g.toString();
-    })
-    .join(";"),
+      .map(function (h) {
+        var m = h[0],
+          g = h[1];
+        return m + "=" + g.toString();
+      })
+      .join(";"),
     f = "";
   return (
     c !== "" && (f = "RRULE:" + c),
@@ -7894,11 +7894,11 @@ function gh(r, e) {
     ? !Array.isArray(e) || r.length !== e.length
       ? !1
       : r.every(function (t, n) {
-        return t.getTime() === e[n].getTime();
-      })
+          return t.getTime() === e[n].getTime();
+        })
     : r instanceof Date
-      ? e instanceof Date && r.getTime() === e.getTime()
-      : r === e;
+    ? e instanceof Date && r.getTime() === e.getTime()
+    : r === e;
 }
 var Io = (function () {
   function r() {
@@ -7943,20 +7943,20 @@ var Io = (function () {
   );
 })();
 var Fo = Wt(
-  W(1, 31),
-  W(2, 28),
-  W(3, 31),
-  W(4, 30),
-  W(5, 31),
-  W(6, 30),
-  W(7, 31),
-  W(8, 31),
-  W(9, 30),
-  W(10, 31),
-  W(11, 30),
-  W(12, 31),
-  W(1, 7)
-),
+    W(1, 31),
+    W(2, 28),
+    W(3, 31),
+    W(4, 30),
+    W(5, 31),
+    W(6, 30),
+    W(7, 31),
+    W(8, 31),
+    W(9, 30),
+    W(10, 31),
+    W(11, 30),
+    W(12, 31),
+    W(1, 7)
+  ),
   Wo = Wt(
     W(1, 31),
     W(2, 29),
@@ -8052,19 +8052,19 @@ function Dh(r) {
     n = P.getWeekday(t);
   return e === 365
     ? {
-      mmask: Fo,
-      mdaymask: Yo,
-      nmdaymask: qo,
-      wdaymask: Ci.slice(n),
-      mrange: jo,
-    }
+        mmask: Fo,
+        mdaymask: Yo,
+        nmdaymask: qo,
+        wdaymask: Ci.slice(n),
+        mrange: jo,
+      }
     : {
-      mmask: Wo,
-      mdaymask: Lo,
-      nmdaymask: Uo,
-      wdaymask: Ci.slice(n),
-      mrange: $o,
-    };
+        mmask: Wo,
+        mdaymask: Lo,
+        nmdaymask: Uo,
+        wdaymask: Ci.slice(n),
+        mrange: $o,
+      };
 }
 function Go(r, e, t, n, i, s) {
   var a = { lastyear: r, lastmonth: e, nwdaymask: [] },
@@ -8115,186 +8115,186 @@ function Ho(r, e) {
   return [Math.ceil((b - O) / (1e3 * 60 * 60 * 24))];
 }
 var wh = (function () {
-  function r(e) {
-    this.options = e;
-  }
-  return (
-    (r.prototype.rebuild = function (e, t) {
-      var n = this.options;
-      if (
-        (e !== this.lastyear && (this.yearinfo = Bo(e, n)),
+    function r(e) {
+      this.options = e;
+    }
+    return (
+      (r.prototype.rebuild = function (e, t) {
+        var n = this.options;
+        if (
+          (e !== this.lastyear && (this.yearinfo = Bo(e, n)),
           oe(n.bynweekday) && (t !== this.lastmonth || e !== this.lastyear))
-      ) {
-        var i = this.yearinfo,
-          s = i.yearlen,
-          a = i.mrange,
-          o = i.wdaymask;
-        this.monthinfo = Go(e, t, s, a, o, n);
-      }
-      Z(n.byeaster) && (this.eastermask = Ho(e, n.byeaster));
-    }),
-    Object.defineProperty(r.prototype, "lastyear", {
-      get: function () {
-        return this.monthinfo ? this.monthinfo.lastyear : null;
-      },
-      enumerable: !0,
-      configurable: !0,
-    }),
-    Object.defineProperty(r.prototype, "lastmonth", {
-      get: function () {
-        return this.monthinfo ? this.monthinfo.lastmonth : null;
-      },
-      enumerable: !0,
-      configurable: !0,
-    }),
-    Object.defineProperty(r.prototype, "yearlen", {
-      get: function () {
-        return this.yearinfo.yearlen;
-      },
-      enumerable: !0,
-      configurable: !0,
-    }),
-    Object.defineProperty(r.prototype, "yearordinal", {
-      get: function () {
-        return this.yearinfo.yearordinal;
-      },
-      enumerable: !0,
-      configurable: !0,
-    }),
-    Object.defineProperty(r.prototype, "mrange", {
-      get: function () {
-        return this.yearinfo.mrange;
-      },
-      enumerable: !0,
-      configurable: !0,
-    }),
-    Object.defineProperty(r.prototype, "wdaymask", {
-      get: function () {
-        return this.yearinfo.wdaymask;
-      },
-      enumerable: !0,
-      configurable: !0,
-    }),
-    Object.defineProperty(r.prototype, "mmask", {
-      get: function () {
-        return this.yearinfo.mmask;
-      },
-      enumerable: !0,
-      configurable: !0,
-    }),
-    Object.defineProperty(r.prototype, "wnomask", {
-      get: function () {
-        return this.yearinfo.wnomask;
-      },
-      enumerable: !0,
-      configurable: !0,
-    }),
-    Object.defineProperty(r.prototype, "nwdaymask", {
-      get: function () {
-        return this.monthinfo ? this.monthinfo.nwdaymask : [];
-      },
-      enumerable: !0,
-      configurable: !0,
-    }),
-    Object.defineProperty(r.prototype, "nextyearlen", {
-      get: function () {
-        return this.yearinfo.nextyearlen;
-      },
-      enumerable: !0,
-      configurable: !0,
-    }),
-    Object.defineProperty(r.prototype, "mdaymask", {
-      get: function () {
-        return this.yearinfo.mdaymask;
-      },
-      enumerable: !0,
-      configurable: !0,
-    }),
-    Object.defineProperty(r.prototype, "nmdaymask", {
-      get: function () {
-        return this.yearinfo.nmdaymask;
-      },
-      enumerable: !0,
-      configurable: !0,
-    }),
-    (r.prototype.ydayset = function () {
-      return [je(this.yearlen), 0, this.yearlen];
-    }),
-    (r.prototype.mdayset = function (e, t, n) {
-      for (
-        var i = this.mrange[t - 1],
-        s = this.mrange[t],
-        a = W(null, this.yearlen),
-        o = i;
-        o < s;
-        o++
-      )
-        a[o] = o;
-      return [a, i, s];
-    }),
-    (r.prototype.wdayset = function (e, t, n) {
-      for (
-        var i = W(null, this.yearlen + 7),
-        s = P.toOrdinal(new Date(Date.UTC(e, t - 1, n))) - this.yearordinal,
-        a = s,
-        o = 0;
-        o < 7 && ((i[s] = s), ++s, this.wdaymask[s] !== this.options.wkst);
-        o++
-      );
-      return [i, a, s];
-    }),
-    (r.prototype.ddayset = function (e, t, n) {
-      var i = W(null, this.yearlen),
-        s = P.toOrdinal(new Date(Date.UTC(e, t - 1, n))) - this.yearordinal;
-      return (i[s] = s), [i, s, s + 1];
-    }),
-    (r.prototype.htimeset = function (e, t, n, i) {
-      var s = this,
-        a = [];
-      return (
-        this.options.byminute.forEach(function (o) {
-          a = a.concat(s.mtimeset(e, o, n, i));
-        }),
-        P.sort(a),
-        a
-      );
-    }),
-    (r.prototype.mtimeset = function (e, t, n, i) {
-      var s = this.options.bysecond.map(function (a) {
-        return new tr(e, t, a, i);
-      });
-      return P.sort(s), s;
-    }),
-    (r.prototype.stimeset = function (e, t, n, i) {
-      return [new tr(e, t, n, i)];
-    }),
-    (r.prototype.getdayset = function (e) {
-      switch (e) {
-        case S.YEARLY:
-          return this.ydayset.bind(this);
-        case S.MONTHLY:
-          return this.mdayset.bind(this);
-        case S.WEEKLY:
-          return this.wdayset.bind(this);
-        case S.DAILY:
-          return this.ddayset.bind(this);
-        default:
-          return this.ddayset.bind(this);
-      }
-    }),
-    (r.prototype.gettimeset = function (e) {
-      switch (e) {
-        case S.HOURLY:
-          return this.htimeset.bind(this);
-        case S.MINUTELY:
-          return this.mtimeset.bind(this);
-        case S.SECONDLY:
-          return this.stimeset.bind(this);
-      }
-    }),
-    r
-  );
-})(),
+        ) {
+          var i = this.yearinfo,
+            s = i.yearlen,
+            a = i.mrange,
+            o = i.wdaymask;
+          this.monthinfo = Go(e, t, s, a, o, n);
+        }
+        Z(n.byeaster) && (this.eastermask = Ho(e, n.byeaster));
+      }),
+      Object.defineProperty(r.prototype, "lastyear", {
+        get: function () {
+          return this.monthinfo ? this.monthinfo.lastyear : null;
+        },
+        enumerable: !0,
+        configurable: !0,
+      }),
+      Object.defineProperty(r.prototype, "lastmonth", {
+        get: function () {
+          return this.monthinfo ? this.monthinfo.lastmonth : null;
+        },
+        enumerable: !0,
+        configurable: !0,
+      }),
+      Object.defineProperty(r.prototype, "yearlen", {
+        get: function () {
+          return this.yearinfo.yearlen;
+        },
+        enumerable: !0,
+        configurable: !0,
+      }),
+      Object.defineProperty(r.prototype, "yearordinal", {
+        get: function () {
+          return this.yearinfo.yearordinal;
+        },
+        enumerable: !0,
+        configurable: !0,
+      }),
+      Object.defineProperty(r.prototype, "mrange", {
+        get: function () {
+          return this.yearinfo.mrange;
+        },
+        enumerable: !0,
+        configurable: !0,
+      }),
+      Object.defineProperty(r.prototype, "wdaymask", {
+        get: function () {
+          return this.yearinfo.wdaymask;
+        },
+        enumerable: !0,
+        configurable: !0,
+      }),
+      Object.defineProperty(r.prototype, "mmask", {
+        get: function () {
+          return this.yearinfo.mmask;
+        },
+        enumerable: !0,
+        configurable: !0,
+      }),
+      Object.defineProperty(r.prototype, "wnomask", {
+        get: function () {
+          return this.yearinfo.wnomask;
+        },
+        enumerable: !0,
+        configurable: !0,
+      }),
+      Object.defineProperty(r.prototype, "nwdaymask", {
+        get: function () {
+          return this.monthinfo ? this.monthinfo.nwdaymask : [];
+        },
+        enumerable: !0,
+        configurable: !0,
+      }),
+      Object.defineProperty(r.prototype, "nextyearlen", {
+        get: function () {
+          return this.yearinfo.nextyearlen;
+        },
+        enumerable: !0,
+        configurable: !0,
+      }),
+      Object.defineProperty(r.prototype, "mdaymask", {
+        get: function () {
+          return this.yearinfo.mdaymask;
+        },
+        enumerable: !0,
+        configurable: !0,
+      }),
+      Object.defineProperty(r.prototype, "nmdaymask", {
+        get: function () {
+          return this.yearinfo.nmdaymask;
+        },
+        enumerable: !0,
+        configurable: !0,
+      }),
+      (r.prototype.ydayset = function () {
+        return [je(this.yearlen), 0, this.yearlen];
+      }),
+      (r.prototype.mdayset = function (e, t, n) {
+        for (
+          var i = this.mrange[t - 1],
+            s = this.mrange[t],
+            a = W(null, this.yearlen),
+            o = i;
+          o < s;
+          o++
+        )
+          a[o] = o;
+        return [a, i, s];
+      }),
+      (r.prototype.wdayset = function (e, t, n) {
+        for (
+          var i = W(null, this.yearlen + 7),
+            s = P.toOrdinal(new Date(Date.UTC(e, t - 1, n))) - this.yearordinal,
+            a = s,
+            o = 0;
+          o < 7 && ((i[s] = s), ++s, this.wdaymask[s] !== this.options.wkst);
+          o++
+        );
+        return [i, a, s];
+      }),
+      (r.prototype.ddayset = function (e, t, n) {
+        var i = W(null, this.yearlen),
+          s = P.toOrdinal(new Date(Date.UTC(e, t - 1, n))) - this.yearordinal;
+        return (i[s] = s), [i, s, s + 1];
+      }),
+      (r.prototype.htimeset = function (e, t, n, i) {
+        var s = this,
+          a = [];
+        return (
+          this.options.byminute.forEach(function (o) {
+            a = a.concat(s.mtimeset(e, o, n, i));
+          }),
+          P.sort(a),
+          a
+        );
+      }),
+      (r.prototype.mtimeset = function (e, t, n, i) {
+        var s = this.options.bysecond.map(function (a) {
+          return new tr(e, t, a, i);
+        });
+        return P.sort(s), s;
+      }),
+      (r.prototype.stimeset = function (e, t, n, i) {
+        return [new tr(e, t, n, i)];
+      }),
+      (r.prototype.getdayset = function (e) {
+        switch (e) {
+          case S.YEARLY:
+            return this.ydayset.bind(this);
+          case S.MONTHLY:
+            return this.mdayset.bind(this);
+          case S.WEEKLY:
+            return this.wdayset.bind(this);
+          case S.DAILY:
+            return this.ddayset.bind(this);
+          default:
+            return this.ddayset.bind(this);
+        }
+      }),
+      (r.prototype.gettimeset = function (e) {
+        switch (e) {
+          case S.HOURLY:
+            return this.htimeset.bind(this);
+          case S.MINUTELY:
+            return this.mtimeset.bind(this);
+          case S.SECONDLY:
+            return this.stimeset.bind(this);
+        }
+      }),
+      r
+    );
+  })(),
   zo = wh;
 function Ko(r, e, t, n, i, s) {
   for (var a = [], o = 0; o < r.length; o++) {
@@ -8328,7 +8328,7 @@ function xn(r, e) {
   var u = Oo.fromDate(t),
     l = new zo(e);
   l.rebuild(u.year, u.month);
-  for (var d = Rh(l, u, e); ;) {
+  for (var d = Rh(l, u, e); ; ) {
     var c = l.getdayset(n)(u.year, u.month, u.day),
       f = c[0],
       h = c[1],
@@ -8411,18 +8411,18 @@ function Rh(r, e, t) {
     : (n >= D.HOURLY && oe(i) && !L(i, e.hour)) ||
       (n >= D.MINUTELY && oe(s) && !L(s, e.minute)) ||
       (n >= D.SECONDLY && oe(a) && !L(a, e.second))
-      ? []
-      : r.gettimeset(n)(e.hour, e.minute, e.second, e.millisecond);
+    ? []
+    : r.gettimeset(n)(e.hour, e.minute, e.second, e.millisecond);
 }
 var Be = {
-  MO: new le(0),
-  TU: new le(1),
-  WE: new le(2),
-  TH: new le(3),
-  FR: new le(4),
-  SA: new le(5),
-  SU: new le(6),
-},
+    MO: new le(0),
+    TU: new le(1),
+    WE: new le(2),
+    TH: new le(3),
+    FR: new le(4),
+    SA: new le(5),
+    SU: new le(6),
+  },
   Rr = {
     freq: S.YEARLY,
     dtstart: null,
@@ -8478,7 +8478,7 @@ var Be = {
         var t = this._cacheGet("all");
         return (
           t === !1 &&
-          ((t = this._iter(new ot("all", {}))), this._cacheAdd("all", t)),
+            ((t = this._iter(new ot("all", {}))), this._cacheAdd("all", t)),
           t
         );
       }),
@@ -8490,7 +8490,7 @@ var Be = {
         var a = this._cacheGet("between", s);
         return (
           a === !1 &&
-          ((a = this._iter(new ot("between", s))),
+            ((a = this._iter(new ot("between", s))),
             this._cacheAdd("between", a, s)),
           a
         );
@@ -8502,7 +8502,7 @@ var Be = {
           i = this._cacheGet("before", n);
         return (
           i === !1 &&
-          ((i = this._iter(new ot("before", n))),
+            ((i = this._iter(new ot("before", n))),
             this._cacheAdd("before", i, n)),
           i
         );
@@ -8514,7 +8514,7 @@ var Be = {
           i = this._cacheGet("after", n);
         return (
           i === !1 &&
-          ((i = this._iter(new ot("after", n))),
+            ((i = this._iter(new ot("after", n))),
             this._cacheAdd("after", i, n)),
           i
         );
@@ -8581,11 +8581,11 @@ function Zo(r, e, t, n, i, s) {
       return isNaN(h)
         ? o.call(this, f)
         : !a[h] && (u(new Date(h - 1), new Date(h + 1)), !a[h])
-          ? ((a[h] = !0), o.call(this, f))
-          : !0;
+        ? ((a[h] = !0), o.call(this, f))
+        : !0;
     }),
     r.method === "between" &&
-    (u(r.args.after, r.args.before),
+      (u(r.args.after, r.args.before),
       (r.accept = function (f) {
         var h = Number(f);
         return a[h] ? !0 : ((a[h] = !0), o.call(this, f));
@@ -8681,7 +8681,7 @@ function Mh(r, e) {
     l = e.cache === !1;
   if (
     (e.compatible && ((e.forceset = !0), (e.unfold = !0)),
-      e.forceset || n.length > 1 || i.length || s.length || a.length)
+    e.forceset || n.length > 1 || i.length || s.length || a.length)
   ) {
     var d = new Si(l);
     return (
@@ -8720,7 +8720,7 @@ function Oh(r) {
     (t.forEach(function (i) {
       L(n, i) || e.push(i);
     }),
-      e.length)
+    e.length)
   )
     throw new Error("Invalid options: " + e.join(", "));
   return Ae(Ae({}, Qo), r);
@@ -8747,7 +8747,7 @@ function Ch(r, e) {
   for (
     var t = r.split(`
 `),
-    n = 0;
+      n = 0;
     n < t.length;
 
   ) {
@@ -8847,8 +8847,8 @@ var Si = (function (r) {
       var t = [];
       return (
         !this._rrule.length &&
-        this._dtstart &&
-        (t = t.concat(Or({ dtstart: this._dtstart }))),
+          this._dtstart &&
+          (t = t.concat(Or({ dtstart: this._dtstart }))),
         this._rrule.forEach(function (n) {
           t = t.concat(
             n.toString().split(`
@@ -8954,8 +8954,8 @@ var vt = class {
         i
           ? (l = window.moment(i))
           : n
-            ? (l = window.moment(n))
-            : t && (l = window.moment(t)),
+          ? (l = window.moment(n))
+          : t && (l = window.moment(t)),
           !o && l !== null
             ? (u.dtstart = window.moment(l).startOf("day").utc(!0).toDate())
             : (u.dtstart = window.moment().startOf("day").utc(!0).toDate());
@@ -8969,7 +8969,7 @@ var vt = class {
           dueDate: i,
         });
       }
-    } catch (s) { }
+    } catch (s) {}
     return null;
   }
   toText() {
@@ -9022,40 +9022,40 @@ var vt = class {
   }
 };
 var lt = class {
-  static calculate(e) {
-    let t = 0;
-    if (e.dueDate !== null) {
-      let n = window.moment().diff(e.dueDate) / lt.milliSecondsPerDay,
-        i;
-      n >= 7
-        ? (i = 1)
-        : n >= -14
+    static calculate(e) {
+      let t = 0;
+      if (e.dueDate !== null) {
+        let n = window.moment().diff(e.dueDate) / lt.milliSecondsPerDay,
+          i;
+        n >= 7
+          ? (i = 1)
+          : n >= -14
           ? (i = ((n + 14) * 0.8) / 21 + 0.2)
           : (i = 0.2),
-        (t += i * lt.dueCoefficient);
+          (t += i * lt.dueCoefficient);
+      }
+      switch (
+        (e.scheduledDate !== null &&
+          window.moment().isSameOrAfter(e.scheduledDate) &&
+          (t += 1 * lt.scheduledCoefficient),
+        e.startDate !== null &&
+          window.moment().isBefore(e.startDate) &&
+          (t += 1 * lt.startedCoefficient),
+        e.priority)
+      ) {
+        case "1":
+          t += 1 * lt.priorityCoefficient;
+          break;
+        case "2":
+          t += 0.65 * lt.priorityCoefficient;
+          break;
+        case "3":
+          t += 0.325 * lt.priorityCoefficient;
+          break;
+      }
+      return t;
     }
-    switch (
-    (e.scheduledDate !== null &&
-      window.moment().isSameOrAfter(e.scheduledDate) &&
-      (t += 1 * lt.scheduledCoefficient),
-      e.startDate !== null &&
-      window.moment().isBefore(e.startDate) &&
-      (t += 1 * lt.startedCoefficient),
-      e.priority)
-    ) {
-      case "1":
-        t += 1 * lt.priorityCoefficient;
-        break;
-      case "2":
-        t += 0.65 * lt.priorityCoefficient;
-        break;
-      case "3":
-        t += 0.325 * lt.priorityCoefficient;
-        break;
-    }
-    return t;
-  }
-},
+  },
   Dt = lt;
 (Dt.dueCoefficient = 12),
   (Dt.scheduledCoefficient = 5),
@@ -9064,449 +9064,361 @@ var lt = class {
   (Dt.milliSecondsPerDay = 1e3 * 60 * 60 * 24);
 var ue;
 (function (t) {
-  (t.Todo = "Todo"), (t.Done = "Done"), (t.Doing = "Doing"), (t.Del = "Del"), (t.Important = "Important"), (t.Question = "Question"), (t.Stop = "Stop");
+  (t.Todo = "Todo"), (t.Done = "Done");
 })(ue || (ue = {}));
 var X;
 (function (i) {
   (i.High = "1"), (i.Medium = "2"), (i.None = "3"), (i.Low = "4");
 })(X || (X = {}));
 var B = class {
-  constructor({
-    status: e,
-    description: t,
-    path: n,
-    indentation: i,
-    sectionStart: s,
-    sectionIndex: a,
-    originalStatusCharacter: o,
-    precedingHeader: u,
-    priority: l,
-    startDate: d,
-    scheduledDate: c,
-    dueDate: f,
-    doneDate: h,
-    recurrence: m,
-    blockLink: g,
-    tags: b,
-  }) {
-    this._urgency = null;
-    (this.status = e),
-      (this.description = t),
-      (this.path = n),
-      (this.indentation = i),
-      (this.sectionStart = s),
-      (this.sectionIndex = a),
-      (this.originalStatusCharacter = o),
-      (this.precedingHeader = u),
-      (this.tags = b),
-      (this.priority = l),
-      (this.startDate = d),
-      (this.scheduledDate = c),
-      (this.dueDate = f),
-      (this.doneDate = h),
-      (this.recurrence = m),
-      (this.blockLink = g);
-  }
-  static fromLine({
-    line: e,
-    path: t,
-    sectionStart: n,
-    sectionIndex: i,
-    precedingHeader: s,
-  }) {
-    let a = e.match(B.taskRegex);
-    if (a === null) return null;
-    let o = a[3].trim(),
-      { globalFilter: u } = se();
-    if (!o.includes(u)) return null;
-    let l = o,
-      d = a[1],
-      c = a[2].toLowerCase(),
-      f;
-    // switch (c) {
-    //   case " ":
-    //     f = ue.Todo;
-    //     break;
-    //   default:
-    //     f = ue.Done;
-    // }
-    switch (c) {
-      case " ":
-        f = ue.Todo;
-        break;
-      case ">":
-        f = ue.Doing;
-        break;
-      case "?":
-        f = ue.Question;
-        break;
-      case "!":
-        f = ue.Important;
-        break;
-      case "-":
-        f = ue.Del;
-        break;
-      case "=":
-        f = ue.Stop;
-        break;
-      default:
-        f = ue.Done;
+    constructor({
+      status: e,
+      description: t,
+      path: n,
+      indentation: i,
+      sectionStart: s,
+      sectionIndex: a,
+      originalStatusCharacter: o,
+      precedingHeader: u,
+      priority: l,
+      startDate: d,
+      scheduledDate: c,
+      dueDate: f,
+      doneDate: h,
+      recurrence: m,
+      blockLink: g,
+      tags: b,
+    }) {
+      this._urgency = null;
+      (this.status = e),
+        (this.description = t),
+        (this.path = n),
+        (this.indentation = i),
+        (this.sectionStart = s),
+        (this.sectionIndex = a),
+        (this.originalStatusCharacter = o),
+        (this.precedingHeader = u),
+        (this.tags = b),
+        (this.priority = l),
+        (this.startDate = d),
+        (this.scheduledDate = c),
+        (this.dueDate = f),
+        (this.doneDate = h),
+        (this.recurrence = m),
+        (this.blockLink = g);
     }
-    let h = l.match(this.blockLinkRegex),
-      m = h !== null ? h[0] : "";
-    m !== "" && (l = l.replace(this.blockLinkRegex, "").trim());
-    let g,
-      b = X.None,
-      O = null,
-      K = null,
-      J = null,
-      j = null,
-      V = null,
-      re = [],
-      x = 7,
-      R = 0;
-    do {
-      g = !1;
-      let w = l.match(B.priorityRegex);
-      if (w !== null) {
-        switch (w[1]) {
-          case "\u{1F53D}":
-            b = X.Low;
-            break;
-          case "\u{1F53C}":
-            b = X.Medium;
-            break;
-          case "\u23EB":
-            b = X.High;
-            break;
-        }
-        (l = l.replace(B.priorityRegex, "").trim()), (g = !0);
+    static fromLine({
+      line: e,
+      path: t,
+      sectionStart: n,
+      sectionIndex: i,
+      precedingHeader: s,
+    }) {
+      let a = e.match(B.taskRegex);
+      if (a === null) return null;
+      let o = a[3].trim(),
+        { globalFilter: u } = se();
+      if (!o.includes(u)) return null;
+      let l = o,
+        d = a[1],
+        c = a[2].toLowerCase(),
+        f;
+      switch (c) {
+        case " ":
+          f = ue.Todo;
+          break;
+        default:
+          f = ue.Done;
       }
-      let v = l.match(B.doneDateRegex);
-      v !== null &&
-        ((j = window.moment(v[1], B.dateFormat)),
+      let h = l.match(this.blockLinkRegex),
+        m = h !== null ? h[0] : "";
+      m !== "" && (l = l.replace(this.blockLinkRegex, "").trim());
+      let g,
+        b = X.None,
+        O = null,
+        K = null,
+        J = null,
+        j = null,
+        V = null,
+        re = [],
+        x = 7,
+        R = 0;
+      do {
+        g = !1;
+        let w = l.match(B.priorityRegex);
+        if (w !== null) {
+          switch (w[1]) {
+            case "\u{1F53D}":
+              b = X.Low;
+              break;
+            case "\u{1F53C}":
+              b = X.Medium;
+              break;
+            case "\u23EB":
+              b = X.High;
+              break;
+          }
+          (l = l.replace(B.priorityRegex, "").trim()), (g = !0);
+        }
+        let v = l.match(B.doneDateRegex);
+        v !== null &&
+          ((j = window.moment(v[1], B.dateFormat)),
           (l = l.replace(B.doneDateRegex, "").trim()),
           (g = !0));
-      let y = l.match(B.dueDateRegex);
-      y !== null &&
-        ((J = window.moment(y[1], B.dateFormat)),
+        let y = l.match(B.dueDateRegex);
+        y !== null &&
+          ((J = window.moment(y[1], B.dateFormat)),
           (l = l.replace(B.dueDateRegex, "").trim()),
           (g = !0));
-      let E = l.match(B.scheduledDateRegex);
-      E !== null &&
-        ((K = window.moment(E[1], B.dateFormat)),
+        let E = l.match(B.scheduledDateRegex);
+        E !== null &&
+          ((K = window.moment(E[1], B.dateFormat)),
           (l = l.replace(B.scheduledDateRegex, "").trim()),
           (g = !0));
-      let T = l.match(B.startDateRegex);
-      T !== null &&
-        ((O = window.moment(T[1], B.dateFormat)),
+        let T = l.match(B.startDateRegex);
+        T !== null &&
+          ((O = window.moment(T[1], B.dateFormat)),
           (l = l.replace(B.startDateRegex, "").trim()),
           (g = !0));
-      let k = l.match(B.recurrenceRegex);
-      k !== null &&
-        ((V = vt.fromText({
-          recurrenceRuleText: k[1].trim(),
+        let k = l.match(B.recurrenceRegex);
+        k !== null &&
+          ((V = vt.fromText({
+            recurrenceRuleText: k[1].trim(),
+            startDate: O,
+            scheduledDate: K,
+            dueDate: J,
+          })),
+          (l = l.replace(B.recurrenceRegex, "").trim()),
+          (g = !0)),
+          R++;
+      } while (g && R <= x);
+      let ne = l.match(this.hashTags);
+      return (
+        ne !== null && (re = ne.filter((w) => w !== u).map((w) => w.trim())),
+        new B({
+          status: f,
+          description: l,
+          path: t,
+          indentation: d,
+          sectionStart: n,
+          sectionIndex: i,
+          originalStatusCharacter: c,
+          precedingHeader: s,
+          priority: b,
           startDate: O,
           scheduledDate: K,
           dueDate: J,
-        })),
-          (l = l.replace(B.recurrenceRegex, "").trim()),
-          (g = !0)),
-        R++;
-    } while (g && R <= x);
-    let ne = l.match(this.hashTags);
-    return (
-      ne !== null && (re = ne.filter((w) => w !== u).map((w) => w.trim())),
-      new B({
-        status: f,
-        description: l,
-        path: t,
-        indentation: d,
-        sectionStart: n,
-        sectionIndex: i,
-        originalStatusCharacter: c,
-        precedingHeader: s,
-        priority: b,
-        startDate: O,
-        scheduledDate: K,
-        dueDate: J,
-        doneDate: j,
-        recurrence: V,
-        blockLink: m,
-        tags: re,
-      })
-    );
-  }
-  toLi(s) {
-    return te(
-      this,
-      arguments,
-      function* ({
-        parentUlElement: e,
-        listIndex: t,
-        layoutOptions: n,
-        isFilenameUnique: i,
-      }) {
-        let a = e.createEl("li");
-        a.addClasses(["task-list-item", "plugin-tasks-list-item"]);
-        let o = this.toString(n),
-          { globalFilter: u, removeGlobalFilter: l } = se();
-        l && (o = o.replace(u, "").trim());
-        let d = a.createSpan();
-        d.addClass("tasks-list-text"),
-          yield nu.MarkdownRenderer.renderMarkdown(o, d, this.path, null);
-        let c = d.querySelector("blockquote"),
-          f = c != null ? c : d,
-          h = f.querySelector("p");
-        if (h !== null) {
-          for (; h.firstChild;) f.insertBefore(h.firstChild, h);
-          h.remove();
-        }
-        d.findAll("p").forEach((g) => {
-          g.hasChildNodes() || g.remove();
-        }),
-          d.findAll(".footnotes").forEach((g) => {
-            g.remove();
-          });
-        let m = a.createEl("input");
-        return (
-          m.addClass("task-list-item-checkbox"),
-          (m.type = "checkbox"),
-          this.status !== ue.Todo &&
-          ((m.checked = !0), a.addClass("is-checked")),
-          m.onClickEvent((g) => {
-            g.preventDefault(), g.stopPropagation(), (m.disabled = !0);
-            let b = this.toggle();
-            Rn({ originalTask: this, newTasks: b });
+          doneDate: j,
+          recurrence: V,
+          blockLink: m,
+          tags: re,
+        })
+      );
+    }
+    toLi(s) {
+      return te(
+        this,
+        arguments,
+        function* ({
+          parentUlElement: e,
+          listIndex: t,
+          layoutOptions: n,
+          isFilenameUnique: i,
+        }) {
+          let a = e.createEl("li");
+          a.addClasses(["task-list-item", "plugin-tasks-list-item"]);
+          let o = this.toString(n),
+            { globalFilter: u, removeGlobalFilter: l } = se();
+          l && (o = o.replace(u, "").trim());
+          let d = a.createSpan();
+          d.addClass("tasks-list-text"),
+            yield nu.MarkdownRenderer.renderMarkdown(o, d, this.path, null);
+          let c = d.querySelector("blockquote"),
+            f = c != null ? c : d,
+            h = f.querySelector("p");
+          if (h !== null) {
+            for (; h.firstChild; ) f.insertBefore(h.firstChild, h);
+            h.remove();
+          }
+          d.findAll("p").forEach((g) => {
+            g.hasChildNodes() || g.remove();
           }),
-          a.prepend(m),
-          a.setAttr("data-task", this.originalStatusCharacter.trim()),
-          a.setAttr("data-line", t),
-          m.setAttr("data-line", t),
-          (n == null ? void 0 : n.shortMode) &&
-          this.addTooltip({ element: d, isFilenameUnique: i }),
-          a
-        );
-      }
-    );
-  }
-  toString(e) {
-    var i;
-    e = e != null ? e : new wr();
-    let t = this.description;
-    if (!e.hidePriority) {
-      let s = "";
-      this.priority === X.High
-        ? (s = " \u23EB")
-        : this.priority === X.Medium
+            d.findAll(".footnotes").forEach((g) => {
+              g.remove();
+            });
+          let m = a.createEl("input");
+          return (
+            m.addClass("task-list-item-checkbox"),
+            (m.type = "checkbox"),
+            this.status !== ue.Todo &&
+              ((m.checked = !0), a.addClass("is-checked")),
+            m.onClickEvent((g) => {
+              g.preventDefault(), g.stopPropagation(), (m.disabled = !0);
+              let b = this.toggle();
+              Rn({ originalTask: this, newTasks: b });
+            }),
+            a.prepend(m),
+            a.setAttr("data-task", this.originalStatusCharacter.trim()),
+            a.setAttr("data-line", t),
+            m.setAttr("data-line", t),
+            (n == null ? void 0 : n.shortMode) &&
+              this.addTooltip({ element: d, isFilenameUnique: i }),
+            a
+          );
+        }
+      );
+    }
+    toString(e) {
+      var i;
+      e = e != null ? e : new wr();
+      let t = this.description;
+      if (!e.hidePriority) {
+        let s = "";
+        this.priority === X.High
+          ? (s = " \u23EB")
+          : this.priority === X.Medium
           ? (s = " \u{1F53C}")
           : this.priority === X.Low && (s = " \u{1F53D}"),
-        (t += s);
+          (t += s);
+      }
+      return (
+        !e.hideRecurrenceRule &&
+          this.recurrence &&
+          (t += e.shortMode
+            ? " \u{1F501}"
+            : ` \u{1F501} ${this.recurrence.toText()}`),
+        !e.hideStartDate &&
+          this.startDate &&
+          (t += e.shortMode
+            ? " \u{1F6EB}"
+            : ` \u{1F6EB} ${this.startDate.format(B.dateFormat)}`),
+        !e.hideScheduledDate &&
+          this.scheduledDate &&
+          (t += e.shortMode
+            ? " \u23F3"
+            : ` \u23F3 ${this.scheduledDate.format(B.dateFormat)}`),
+        !e.hideDueDate &&
+          this.dueDate &&
+          (t += e.shortMode
+            ? " \u{1F4C5}"
+            : ` \u{1F4C5} ${this.dueDate.format(B.dateFormat)}`),
+        !e.hideDoneDate &&
+          this.doneDate &&
+          (t += e.shortMode
+            ? " \u2705"
+            : ` \u2705 ${this.doneDate.format(B.dateFormat)}`),
+        (t += (i = this.blockLink) != null ? i : ""),
+        t
+      );
     }
-    return (
-      !e.hideRecurrenceRule &&
-      this.recurrence &&
-      (t += e.shortMode
-        ? " \u{1F501}"
-        : ` \u{1F501} ${this.recurrence.toText()}`),
-      !e.hideStartDate &&
-      this.startDate &&
-      (t += e.shortMode
-        ? " \u{1F6EB}"
-        : ` \u{1F6EB} ${this.startDate.format(B.dateFormat)}`),
-      !e.hideScheduledDate &&
-      this.scheduledDate &&
-      (t += e.shortMode
-        ? " ⏱"
-        : ` ⏱ ${this.scheduledDate.format(B.dateFormat)}`),
-      !e.hideDueDate &&
-      this.dueDate &&
-      (t += e.shortMode
-        ? " \u{1F4C5}"
-        : ` \u{1F4C5} ${this.dueDate.format(B.dateFormat)}`),
-      !e.hideDoneDate &&
-      this.doneDate &&
-      (t += e.shortMode
-        ? " \u2705"
-        : ` \u2705 ${this.doneDate.format(B.dateFormat)}`),
-      (t += (i = this.blockLink) != null ? i : ""),
-      t
-    );
-  }
-  toFileLineString() {
-    return `${this.indentation}- [${this.originalStatusCharacter
+    toFileLineString() {
+      return `${this.indentation}- [${
+        this.originalStatusCharacter
       }] ${this.toString()}`;
-  }
-  toggle() {
-    // let e = this.status === ue.Todo ? ue.Done : ue.Todo,
-    //   t = null,
-    //   n = null;
-    let e;
-    let t = null, n = null;
-    switch (this.status) {
-      case ue.Todo:
-        e = ue.Done; break;
-      case ue.Doing:
-        e = ue.Done; break;
-      case ue.Question:
-        e = ue.Done; break;
-      case ue.Important:
-        e = ue.Done; break;
-      case ue.Del:
-        e = ue.Todo; break;
-      default:
-        e = ue.Todo;
     }
-    const delString = / xxx/;
-    const questring = / \?\?\?/;
-    const impstring = / \!\!\!/;
-    const stopstring = / ===/;
-    const donestring = / ✅✅✅.*/; //delete this
-    let newDescription = this.description;
-    switch (true) {
-      case delString.test(this.description):
-        e = ue.Del;
-        newDescription = this.description.replace(delString, "");
-        break;
-      case questring.test(this.description):
-        e = ue.Question;
-        newDescription = this.description.replace(questring, "");
-        break;
-      case impstring.test(this.description):
-        e = ue.Important;
-        newDescription = this.description.replace(impstring, "");
-        break;
-      case stopstring.test(this.description):
-        e = ue.Stop;
-        newDescription = this.description.replace(stopstring, "");// ⏱
-        break;
-      case donestring.test(this.description):
-        newDescription = this.description.replace(donestring, "");
-        break;
+    toggle() {
+      let e = this.status === ue.Todo ? ue.Done : ue.Todo,
+        t = null,
+        n = null;
+      if (e !== ue.Todo) {
+        let { setDoneDate: a } = se();
+        a && (t = window.moment()),
+          this.recurrence !== null && (n = this.recurrence.next());
+      }
+      let i = new B(
+          It(We({}, this), {
+            status: e,
+            doneDate: t,
+            originalStatusCharacter: e === ue.Done ? "x" : " ",
+          })
+        ),
+        s = [];
+      if (n !== null) {
+        let a = new B(It(We(We({}, this), n), { blockLink: "" }));
+        s.push(a);
+      }
+      return s.push(i), s;
     }
-    if (e === ue.Done || e === ue.Del) {
-      let { setDoneDate: a } = se();
-      a && (t = window.moment()),
-        this.recurrence !== null && (n = this.recurrence.next());
+    get urgency() {
+      return (
+        this._urgency === null && (this._urgency = Dt.calculate(this)),
+        this._urgency
+      );
     }
-    let newStatusCharacter;
-    switch (e) {
-      case ue.Todo:
-        newStatusCharacter = ' ';
-        break;
-      case ue.Doing:
-        newStatusCharacter = '>';
-        break;
-      case ue.Question:
-        newStatusCharacter = '?';
-        break;
-      case ue.Important:
-        newStatusCharacter = '!';
-        break;
-      case ue.Del:
-        newStatusCharacter = '-';
-        break;
-      case ue.Stop:
-        newStatusCharacter = '=';
-        break;
-      default:
-        newStatusCharacter = 'x';
+    get filename() {
+      let e = this.path.match(/([^/]+)\.md$/);
+      return e !== null ? e[1] : null;
     }
-    let i = new B(
-      It(We({}, this), {
-        status: e,
-        doneDate: t,
-        description: newDescription,
-        originalStatusCharacter: newStatusCharacter,
-      })
-    ),
-      s = [];
-    if (n !== null) {
-      let a = new B(It(We(We({}, this), n), { blockLink: "" }));
-      s.push(a);
+    getLinkText({ isFilenameUnique: e }) {
+      let t;
+      return (
+        e ? (t = this.filename) : (t = "/" + this.path),
+        t === null
+          ? null
+          : (this.precedingHeader !== null &&
+              this.precedingHeader !== t &&
+              (t = t + " > " + this.precedingHeader),
+            t)
+      );
     }
-    return s.push(i), s;
-  }
-  get urgency() {
-    return (
-      this._urgency === null && (this._urgency = Dt.calculate(this)),
-      this._urgency
-    );
-  }
-  get filename() {
-    let e = this.path.match(/([^/]+)\.md$/);
-    return e !== null ? e[1] : null;
-  }
-  getLinkText({ isFilenameUnique: e }) {
-    let t;
-    return (
-      e ? (t = this.filename) : (t = "/" + this.path),
-      t === null
-        ? null
-        : (this.precedingHeader !== null &&
-          this.precedingHeader !== t &&
-          (t = t + " > " + this.precedingHeader),
-          t)
-    );
-  }
-  addTooltip({ element: e, isFilenameUnique: t }) {
-    e.addEventListener("mouseenter", () => {
-      let n = e.createDiv();
-      n.addClasses(["tooltip", "mod-right"]),
-        this.recurrence &&
-        n.createDiv().setText(`\u{1F501} ${this.recurrence.toText()}`),
-        this.startDate &&
-        n
-          .createDiv()
-          .setText(
-            B.toTooltipDate({
-              signifier: "\u{1F6EB}",
-              date: this.startDate,
-            })
-          ),
-        this.scheduledDate &&
-        n
-          .createDiv()
-          .setText(
-            B.toTooltipDate({
-              signifier: "⏱",
-              date: this.scheduledDate,
-            })
-          ),
-        this.dueDate &&
-        n
-          .createDiv()
-          .setText(
-            B.toTooltipDate({ signifier: "\u{1F4C5}", date: this.dueDate })
-          ),
-        this.doneDate &&
-        n
-          .createDiv()
-          .setText(
-            B.toTooltipDate({ signifier: "\u2705", date: this.doneDate })
-          );
-      let i = this.getLinkText({ isFilenameUnique: t });
-      i && n.createDiv().setText(`\u{1F517} ${i}`),
-        e.addEventListener("mouseleave", () => {
-          n.remove();
-        });
-    });
-  }
-  static toTooltipDate({ signifier: e, date: t }) {
-    return `${e} ${t.format(B.dateFormat)} (${t.from(
-      window.moment().startOf("day")
-    )})`;
-  }
-},
+    addTooltip({ element: e, isFilenameUnique: t }) {
+      e.addEventListener("mouseenter", () => {
+        let n = e.createDiv();
+        n.addClasses(["tooltip", "mod-right"]),
+          this.recurrence &&
+            n.createDiv().setText(`\u{1F501} ${this.recurrence.toText()}`),
+          this.startDate &&
+            n
+              .createDiv()
+              .setText(
+                B.toTooltipDate({
+                  signifier: "\u{1F6EB}",
+                  date: this.startDate,
+                })
+              ),
+          this.scheduledDate &&
+            n
+              .createDiv()
+              .setText(
+                B.toTooltipDate({
+                  signifier: "\u23F3",
+                  date: this.scheduledDate,
+                })
+              ),
+          this.dueDate &&
+            n
+              .createDiv()
+              .setText(
+                B.toTooltipDate({ signifier: "\u{1F4C5}", date: this.dueDate })
+              ),
+          this.doneDate &&
+            n
+              .createDiv()
+              .setText(
+                B.toTooltipDate({ signifier: "\u2705", date: this.doneDate })
+              );
+        let i = this.getLinkText({ isFilenameUnique: t });
+        i && n.createDiv().setText(`\u{1F517} ${i}`),
+          e.addEventListener("mouseleave", () => {
+            n.remove();
+          });
+      });
+    }
+    static toTooltipDate({ signifier: e, date: t }) {
+      return `${e} ${t.format(B.dateFormat)} (${t.from(
+        window.moment().startOf("day")
+      )})`;
+    }
+  },
   H = B;
-(H.dateFormat = "MM-DD"),
+(H.dateFormat = "YYYY-MM-DD"),
   (H.taskRegex = /^([\s\t]*)[-*] +\[(.)\] *(.*)/u),
   (H.blockLinkRegex = / \^[a-zA-Z0-9-]+$/u),
   (H.priorityRegex = /([⏫🔼🔽])$/u),
-  (H.startDateRegex = /🛫 ?((?:\d{4}-)?(\d{2}-\d{2})((\(.*\))?))$/u),
-  (H.scheduledDateRegex = /[⏳⌛⏱] ?((?:\d{4}-)?(\d{2}-\d{2})((\(.*\))?))/u),
-  (H.dueDateRegex = /[📅📆🗓] ?((?:\d{4}-)?(\d{2}-\d{2})((\(.*\))?))/u),
-  (H.doneDateRegex = /✅ ?((?:\d{4}-)?(\d{2}-\d{2})((\(.*\))?))$/u),
+  (H.startDateRegex = /🛫 ?(\d{4}-\d{2}-\d{2})$/u),
+  (H.scheduledDateRegex = /[⏳⌛] ?(\d{4}-\d{2}-\d{2})$/u),
+  (H.dueDateRegex = /[📅📆🗓] ?(\d{4}-\d{2}-\d{2})$/u),
+  (H.doneDateRegex = /✅ ?(\d{4}-\d{2}-\d{2})$/u),
   (H.recurrenceRegex = /🔁 ?([a-zA-Z0-9, !]+)$/iu),
   (H.hashTags = /(^|\s)#[^ !@#$%^&*(),.?":{}|<>]*/g);
 var Ut;
@@ -9624,8 +9536,8 @@ var Ii = class {
                 lineNumberTask: u.position.start.line,
                 sections: t.sections,
               })),
-                (o = 0)),
-              a === null)
+              (o = 0)),
+            a === null)
           )
             continue;
           let l = s[u.position.start.line],
@@ -9674,7 +9586,7 @@ var Ii = class {
 };
 var aa = Le(require("obsidian"));
 var Yf = Le(require("obsidian"));
-function rr() { }
+function rr() {}
 function Fi(r) {
   return r();
 }
@@ -9770,8 +9682,8 @@ var nr = class {
   m(e, t, n = null) {
     this.e ||
       (this.is_svg ? (this.e = Fh(t.nodeName)) : (this.e = A(t.nodeName)),
-        (this.t = t),
-        this.c(e)),
+      (this.t = t),
+      this.c(e)),
       this.i(n);
   }
   h(e) {
@@ -9816,18 +9728,18 @@ var qi = new Set(),
 function hu() {
   let r = Ar;
   do {
-    for (; Wn < Cr.length;) {
+    for (; Wn < Cr.length; ) {
       let e = Cr[Wn];
       Wn++, xr(e), qh(e.$$);
     }
-    for (xr(null), Cr.length = 0, Wn = 0; In.length;) In.pop()();
+    for (xr(null), Cr.length = 0, Wn = 0; In.length; ) In.pop()();
     for (let e = 0; e < Fn.length; e += 1) {
       let t = Fn[e];
       qi.has(t) || (qi.add(t), t());
     }
     Fn.length = 0;
   } while (Cr.length);
-  for (; fu.length;) fu.pop()();
+  for (; fu.length; ) fu.pop()();
   (Ui = !1), qi.clear(), xr(r);
 }
 function qh(r) {
@@ -9847,8 +9759,8 @@ var S1 =
   typeof window != "undefined"
     ? window
     : typeof globalThis != "undefined"
-      ? globalThis
-      : global;
+    ? globalThis
+    : global;
 var I1 = new Set([
   "allowfullscreen",
   "allowpaymentrequest",
@@ -9879,19 +9791,19 @@ function Bh(r, e, t, n) {
   let { fragment: i, on_mount: s, on_destroy: a, after_update: o } = r.$$;
   i && i.m(e, t),
     n ||
-    Nr(() => {
-      let u = s.map(Fi).filter(su);
-      a ? a.push(...u) : qt(u), (r.$$.on_mount = []);
-    }),
+      Nr(() => {
+        let u = s.map(Fi).filter(su);
+        a ? a.push(...u) : qt(u), (r.$$.on_mount = []);
+      }),
     o.forEach(Nr);
 }
 function pu(r, e) {
   let t = r.$$;
   t.fragment !== null &&
     (qt(t.on_destroy),
-      t.fragment && t.fragment.d(e),
-      (t.on_destroy = t.fragment = null),
-      (t.ctx = []));
+    t.fragment && t.fragment.d(e),
+    (t.on_destroy = t.fragment = null),
+    (t.ctx = []));
 }
 function Gh(r, e) {
   r.$$.dirty[0] === -1 && (Cr.push(r), Uh(), r.$$.dirty.fill(0)),
@@ -9923,20 +9835,20 @@ function mu(r, e, t, n, i, s, a, o = [-1]) {
   if (
     ((l.ctx = t
       ? t(r, e.props || {}, (c, f, ...h) => {
-        let m = h.length ? h[0] : f;
-        return (
-          l.ctx &&
-          i(l.ctx[c], (l.ctx[c] = m)) &&
-          (!l.skip_bound && l.bound[c] && l.bound[c](m), d && Gh(r, c)),
-          f
-        );
-      })
+          let m = h.length ? h[0] : f;
+          return (
+            l.ctx &&
+              i(l.ctx[c], (l.ctx[c] = m)) &&
+              (!l.skip_bound && l.bound[c] && l.bound[c](m), d && Gh(r, c)),
+            f
+          );
+        })
       : []),
-      l.update(),
-      (d = !0),
-      qt(l.before_update),
-      (l.fragment = n ? n(l.ctx) : !1),
-      e.target)
+    l.update(),
+    (d = !0),
+    qt(l.before_update),
+    (l.fragment = n ? n(l.ctx) : !1),
+    e.target)
   ) {
     if (e.hydrate) {
       Sh();
@@ -10339,29 +10251,29 @@ function fv(r) {
         _(t, ja),
         _(t, kn),
         wi ||
-        ((Ba = [
-          wt(a, "input", r[12]),
-          wt(h, "change", r[14]),
-          wt(R, "input", r[15]),
-          wt(q, "input", r[16]),
-          wt(Fe, "input", r[17]),
-          wt(at, "input", r[18]),
-          wt(t, "submit", lu(r[7])),
-        ]),
+          ((Ba = [
+            wt(a, "input", r[12]),
+            wt(h, "change", r[14]),
+            wt(R, "input", r[15]),
+            wt(q, "input", r[16]),
+            wt(Fe, "input", r[17]),
+            wt(at, "input", r[18]),
+            wt(t, "submit", lu(r[7])),
+          ]),
           (wi = !0));
     },
     p(ie, [Oe]) {
       Oe & 1 && a.value !== ie[0].description && Ke(a, ie[0].description),
         Oe & 1 && Li(h, ie[0].priority),
         Oe & 1 &&
-        R.value !== ie[0].recurrenceRule &&
-        Ke(R, ie[0].recurrenceRule),
+          R.value !== ie[0].recurrenceRule &&
+          Ke(R, ie[0].recurrenceRule),
         Oe & 32 && v.p(ie[5]),
         Oe & 1 && q.value !== ie[0].dueDate && Ke(q, ie[0].dueDate),
         Oe & 16 && tt.p(ie[4]),
         Oe & 1 &&
-        Fe.value !== ie[0].scheduledDate &&
-        Ke(Fe, ie[0].scheduledDate),
+          Fe.value !== ie[0].scheduledDate &&
+          Ke(Fe, ie[0].scheduledDate),
         Oe & 8 && gn.p(ie[3]),
         Oe & 1 && at.value !== ie[0].startDate && Ke(at, ie[0].startDate),
         Oe & 4 && bn.p(ie[2]),
@@ -10411,8 +10323,8 @@ function hv(r, e, t) {
     s.priority === X.Low
       ? (ne = "low")
       : s.priority === X.Medium
-        ? (ne = "medium")
-        : s.priority === X.High && (ne = "high"),
+      ? (ne = "medium")
+      : s.priority === X.High && (ne = "high"),
       t(
         0,
         (u = {
@@ -10529,26 +10441,26 @@ function hv(r, e, t) {
       if (r.$$.dirty & 3073) {
         e: u.recurrenceRule
           ? t(
-            5,
-            (f =
-              t(
-                11,
-                (i =
-                  t(
-                    10,
-                    (n = vt.fromText({
-                      recurrenceRuleText: u.recurrenceRule,
-                      startDate: null,
-                      scheduledDate: null,
-                      dueDate: null,
-                    }))
-                  ) === null || n === void 0
-                    ? void 0
-                    : n.toText())
-              ) !== null && i !== void 0
-                ? i
-                : "<i>invalid recurrence rule</i>")
-          )
+              5,
+              (f =
+                t(
+                  11,
+                  (i =
+                    t(
+                      10,
+                      (n = vt.fromText({
+                        recurrenceRuleText: u.recurrenceRule,
+                        startDate: null,
+                        scheduledDate: null,
+                        dueDate: null,
+                      }))
+                    ) === null || n === void 0
+                      ? void 0
+                      : n.toText())
+                ) !== null && i !== void 0
+                  ? i
+                  : "<i>invalid recurrence rule</i>")
+            )
           : t(5, (f = "<i>not recurring</>"));
       }
       if (r.$$.dirty & 1) {
@@ -10559,11 +10471,11 @@ function hv(r, e, t) {
   );
 }
 var Wf = class extends $i {
-  constructor(e) {
-    super();
-    mu(this, e, hv, fv, au, { task: 8, onSubmit: 9 });
-  }
-},
+    constructor(e) {
+      super();
+      mu(this, e, hv, fv, au, { task: 8, onSubmit: 9 });
+    }
+  },
   Lf = Wf;
 var dn = class extends Yf.Modal {
   constructor({ app: e, task: t, onSubmit: n }) {
@@ -10584,21 +10496,21 @@ var dn = class extends Yf.Modal {
   }
 };
 var Uf = (r, e, t, n) => {
-  var c;
-  if (r) return t instanceof aa.MarkdownView;
-  if (!(t instanceof aa.MarkdownView)) return;
-  let i = (c = t.file) == null ? void 0 : c.path;
-  if (i === void 0) return;
-  let a = e.getCursor().line,
-    o = e.getLine(a),
-    u = pv({ line: o, path: i }),
-    l = (f) => {
-      let h = f.map((m) => m.toFileLineString()).join(`
+    var c;
+    if (r) return t instanceof aa.MarkdownView;
+    if (!(t instanceof aa.MarkdownView)) return;
+    let i = (c = t.file) == null ? void 0 : c.path;
+    if (i === void 0) return;
+    let a = e.getCursor().line,
+      o = e.getLine(a),
+      u = pv({ line: o, path: i }),
+      l = (f) => {
+        let h = f.map((m) => m.toFileLineString()).join(`
 `);
-      e.setLine(a, h);
-    };
-  new dn({ app: n, task: u, onSubmit: l }).open();
-},
+        e.setLine(a, h);
+      };
+    new dn({ app: n, task: u, onSubmit: l }).open();
+  },
   pv = ({ line: r, path: e }) => {
     var c;
     let t = H.fromLine({
@@ -10663,19 +10575,19 @@ var Uf = (r, e, t, n) => {
   };
 var oa = Le(require("obsidian"));
 var qf = (r, e, t) => {
-  var u;
-  if (r) return t instanceof oa.MarkdownView;
-  if (!(t instanceof oa.MarkdownView)) return;
-  let n = (u = t.file) == null ? void 0 : u.path;
-  if (n === void 0) return;
-  let i = e.getCursor(),
-    s = i.line,
-    a = e.getLine(s),
-    o = mv({ line: a, path: n });
-  e.setLine(s, o),
-    /[^ [\]*-]/.test(o) &&
-    e.setCursor({ line: i.line, ch: i.ch + o.length - a.length });
-},
+    var u;
+    if (r) return t instanceof oa.MarkdownView;
+    if (!(t instanceof oa.MarkdownView)) return;
+    let n = (u = t.file) == null ? void 0 : u.path;
+    if (n === void 0) return;
+    let i = e.getCursor(),
+      s = i.line,
+      a = e.getLine(s),
+      o = mv({ line: a, path: n });
+    e.setLine(s, o),
+      /[^ [\]*-]/.test(o) &&
+        e.setCursor({ line: i.line, ch: i.ch + o.length - a.length });
+  },
   mv = ({ line: r, path: e }) => {
     let t = r,
       n = H.fromLine({
@@ -10848,9 +10760,9 @@ var jf = () => $f.ViewPlugin.fromClass(Bf),
       if (a === null) return !1;
       e.preventDefault();
       let u = a
-        .toggle()
-        .map((c) => c.toFileLineString())
-        .join(n.lineBreak),
+          .toggle()
+          .map((c) => c.toFileLineString())
+          .join(n.lineBreak),
         l = n.update({ changes: { from: s.from, to: s.to, insert: u } });
       this.view.dispatch(l);
       let d = t.checked;
@@ -10887,7 +10799,7 @@ var fa = class {
     return t;
   }
 };
-var ha = class extends Map { },
+var ha = class extends Map {},
   pa = class {
     constructor(e, t) {
       this.groups = new ha();
@@ -10980,69 +10892,69 @@ ${this.totalTasksCount()} tasks
   }
 };
 var he = class {
-  static by(e, t) {
-    return new ya(e, t);
-  }
-  static getGroupersForAllQueryGroupings(e) {
-    let t = [];
-    for (let { property: n } of e) {
-      let i = he.groupers[n];
-      t.push(i);
+    static by(e, t) {
+      return new ya(e, t);
     }
-    return t;
-  }
-  static getGroupNamesForTask(e, t) {
-    let n = [];
-    for (let i of e) {
-      let s = i(t);
-      n.push(s);
+    static getGroupersForAllQueryGroupings(e) {
+      let t = [];
+      for (let { property: n } of e) {
+        let i = he.groupers[n];
+        t.push(i);
+      }
+      return t;
     }
-    return n;
-  }
-  static getGroupNameForTask(e, t) {
-    return he.groupers[e](t);
-  }
-  static groupByStartDate(e) {
-    return he.groupByDate(e.startDate, "start");
-  }
-  static groupByScheduledDate(e) {
-    return he.groupByDate(e.scheduledDate, "scheduled");
-  }
-  static groupByDueDate(e) {
-    return he.groupByDate(e.dueDate, "due");
-  }
-  static groupByDoneDate(e) {
-    return he.groupByDate(e.doneDate, "done");
-  }
-  static groupByDate(e, t) {
-    return e === null ? "No " + t + " date" : e.format(he.groupDateFormat);
-  }
-  static groupByPath(e) {
-    return e.path.replace(".md", "");
-  }
-  static groupByFolder(e) {
-    let t = e.path,
-      n = e.filename + ".md",
-      i = t.substring(0, t.lastIndexOf(n));
-    return i === "" ? "/" : i;
-  }
-  static groupByFileName(e) {
-    let t = e.filename;
-    return t === null ? "Unknown Location" : t;
-  }
-  static groupByBacklink(e) {
-    let t = e.getLinkText({ isFilenameUnique: !0 });
-    return t === null ? "Unknown Location" : t;
-  }
-  static groupByStatus(e) {
-    return e.status;
-  }
-  static groupByHeading(e) {
-    return e.precedingHeader === null || e.precedingHeader.length === 0
-      ? "(No heading)"
-      : e.precedingHeader;
-  }
-},
+    static getGroupNamesForTask(e, t) {
+      let n = [];
+      for (let i of e) {
+        let s = i(t);
+        n.push(s);
+      }
+      return n;
+    }
+    static getGroupNameForTask(e, t) {
+      return he.groupers[e](t);
+    }
+    static groupByStartDate(e) {
+      return he.groupByDate(e.startDate, "start");
+    }
+    static groupByScheduledDate(e) {
+      return he.groupByDate(e.scheduledDate, "scheduled");
+    }
+    static groupByDueDate(e) {
+      return he.groupByDate(e.dueDate, "due");
+    }
+    static groupByDoneDate(e) {
+      return he.groupByDate(e.doneDate, "done");
+    }
+    static groupByDate(e, t) {
+      return e === null ? "No " + t + " date" : e.format(he.groupDateFormat);
+    }
+    static groupByPath(e) {
+      return e.path.replace(".md", "");
+    }
+    static groupByFolder(e) {
+      let t = e.path,
+        n = e.filename + ".md",
+        i = t.substring(0, t.lastIndexOf(n));
+      return i === "" ? "/" : i;
+    }
+    static groupByFileName(e) {
+      let t = e.filename;
+      return t === null ? "Unknown Location" : t;
+    }
+    static groupByBacklink(e) {
+      let t = e.getLinkText({ isFilenameUnique: !0 });
+      return t === null ? "Unknown Location" : t;
+    }
+    static groupByStatus(e) {
+      return e.status;
+    }
+    static groupByHeading(e) {
+      return e.precedingHeader === null || e.precedingHeader.length === 0
+        ? "(No heading)"
+        : e.precedingHeader;
+    }
+  },
   Ct = he;
 (Ct.groupDateFormat = "YYYY-MM-DD dddd"),
   (Ct.groupers = {
@@ -11058,113 +10970,113 @@ var he = class {
     status: he.groupByStatus,
   });
 var U = class {
-  static by(e, t) {
-    let n = [
-      U.compareByUrgency,
-      U.compareByStatus,
-      U.compareByDueDate,
-      U.compareByPriority,
-      U.compareByPath,
-    ],
-      i = [];
-    for (let { property: s, reverse: a, propertyInstance: o } of e.sorting) {
-      let u = U.comparators[s];
-      i.push(a ? U.makeReversedComparator(u) : u),
-        s === "tag" && (U.tagPropertyInstance = o);
-    }
-    return t.sort(U.makeCompositeComparator([...i, ...n]));
-  }
-  static makeReversedComparator(e) {
-    return (t, n) => e(t, n) * -1;
-  }
-  static makeCompositeComparator(e) {
-    return (t, n) => {
-      for (let i of e) {
-        let s = i(t, n);
-        if (s !== 0) return s;
+    static by(e, t) {
+      let n = [
+          U.compareByUrgency,
+          U.compareByStatus,
+          U.compareByDueDate,
+          U.compareByPriority,
+          U.compareByPath,
+        ],
+        i = [];
+      for (let { property: s, reverse: a, propertyInstance: o } of e.sorting) {
+        let u = U.comparators[s];
+        i.push(a ? U.makeReversedComparator(u) : u),
+          s === "tag" && (U.tagPropertyInstance = o);
       }
-      return 0;
-    };
-  }
-  static compareByUrgency(e, t) {
-    return t.urgency - e.urgency;
-  }
-  static compareByStatus(e, t) {
-    return e.status < t.status ? 1 : e.status > t.status ? -1 : 0;
-  }
-  static compareByPriority(e, t) {
-    return e.priority.localeCompare(t.priority);
-  }
-  static compareByStartDate(e, t) {
-    return U.compareByDate(e.startDate, t.startDate);
-  }
-  static compareByScheduledDate(e, t) {
-    return U.compareByDate(e.scheduledDate, t.scheduledDate);
-  }
-  static compareByDueDate(e, t) {
-    return U.compareByDate(e.dueDate, t.dueDate);
-  }
-  static compareByDoneDate(e, t) {
-    return U.compareByDate(e.doneDate, t.doneDate);
-  }
-  static compareByTag(e, t) {
-    if (e.tags.length === 0 && t.tags.length === 0) return 0;
-    if (e.tags.length === 0) return 1;
-    if (t.tags.length === 0) return -1;
-    let n = U.tagPropertyInstance - 1;
-    return e.tags.length < U.tagPropertyInstance &&
-      t.tags.length >= U.tagPropertyInstance
-      ? 1
-      : t.tags.length < U.tagPropertyInstance &&
-        e.tags.length >= U.tagPropertyInstance
+      return t.sort(U.makeCompositeComparator([...i, ...n]));
+    }
+    static makeReversedComparator(e) {
+      return (t, n) => e(t, n) * -1;
+    }
+    static makeCompositeComparator(e) {
+      return (t, n) => {
+        for (let i of e) {
+          let s = i(t, n);
+          if (s !== 0) return s;
+        }
+        return 0;
+      };
+    }
+    static compareByUrgency(e, t) {
+      return t.urgency - e.urgency;
+    }
+    static compareByStatus(e, t) {
+      return e.status < t.status ? 1 : e.status > t.status ? -1 : 0;
+    }
+    static compareByPriority(e, t) {
+      return e.priority.localeCompare(t.priority);
+    }
+    static compareByStartDate(e, t) {
+      return U.compareByDate(e.startDate, t.startDate);
+    }
+    static compareByScheduledDate(e, t) {
+      return U.compareByDate(e.scheduledDate, t.scheduledDate);
+    }
+    static compareByDueDate(e, t) {
+      return U.compareByDate(e.dueDate, t.dueDate);
+    }
+    static compareByDoneDate(e, t) {
+      return U.compareByDate(e.doneDate, t.doneDate);
+    }
+    static compareByTag(e, t) {
+      if (e.tags.length === 0 && t.tags.length === 0) return 0;
+      if (e.tags.length === 0) return 1;
+      if (t.tags.length === 0) return -1;
+      let n = U.tagPropertyInstance - 1;
+      return e.tags.length < U.tagPropertyInstance &&
+        t.tags.length >= U.tagPropertyInstance
+        ? 1
+        : t.tags.length < U.tagPropertyInstance &&
+          e.tags.length >= U.tagPropertyInstance
         ? -1
         : e.tags.length < U.tagPropertyInstance &&
           t.tags.length < U.tagPropertyInstance
-          ? 0
-          : e.tags[n] < t.tags[n]
-            ? -1
-            : e.tags[n] > t.tags[n]
-              ? 1
-              : 0;
-  }
-  static compareByDate(e, t) {
-    return e !== null && t === null
-      ? -1
-      : e === null && t !== null
+        ? 0
+        : e.tags[n] < t.tags[n]
+        ? -1
+        : e.tags[n] > t.tags[n]
+        ? 1
+        : 0;
+    }
+    static compareByDate(e, t) {
+      return e !== null && t === null
+        ? -1
+        : e === null && t !== null
         ? 1
         : e !== null && t !== null
-          ? e.isAfter(t)
-            ? 1
-            : e.isBefore(t)
-              ? -1
-              : 0
-          : 0;
-  }
-  static compareByPath(e, t) {
-    return e.path < t.path ? -1 : e.path > t.path ? 1 : 0;
-  }
-  static compareByDescription(e, t) {
-    return U.cleanDescription(e.description).localeCompare(
-      U.cleanDescription(t.description)
-    );
-  }
-  static cleanDescription(e) {
-    let t = se().globalFilter;
-    e = e.replace(t, "").trim();
-    let n = /^\[\[?([^\]]*)\]/,
-      i = e.match(n);
-    if (i !== null) {
-      let l = i[1];
-      e = l.substring(l.indexOf("|") + 1) + e.replace(n, "");
+        ? e.isAfter(t)
+          ? 1
+          : e.isBefore(t)
+          ? -1
+          : 0
+        : 0;
     }
-    let s = /^\*\*?([^*]*)\*/,
-      a = e.match(s);
-    a !== null && (e = a[1] + e.replace(n, ""));
-    let o = /^==?([^=]*)==/,
-      u = e.match(o);
-    return u !== null && (e = u[1] + e.replace(o, "")), e;
-  }
-},
+    static compareByPath(e, t) {
+      return e.path < t.path ? -1 : e.path > t.path ? 1 : 0;
+    }
+    static compareByDescription(e, t) {
+      return U.cleanDescription(e.description).localeCompare(
+        U.cleanDescription(t.description)
+      );
+    }
+    static cleanDescription(e) {
+      let t = se().globalFilter;
+      e = e.replace(t, "").trim();
+      let n = /^\[\[?([^\]]*)\]/,
+        i = e.match(n);
+      if (i !== null) {
+        let l = i[1];
+        e = l.substring(l.indexOf("|") + 1) + e.replace(n, "");
+      }
+      let s = /^\*\*?([^*]*)\*/,
+        a = e.match(s);
+      a !== null && (e = a[1] + e.replace(n, ""));
+      let o = /^==?([^=]*)==/,
+        u = e.match(o);
+      return u !== null && (e = u[1] + e.replace(o, "")), e;
+    }
+  },
   fn = U;
 (fn.tagPropertyInstance = 1),
   (fn.comparators = {
@@ -11184,7 +11096,7 @@ var et = class {
     return this.filterRegexp().test(e);
   }
 };
-var Pe = class { };
+var Pe = class {};
 var st = class extends et {
   createFilterOrErrorMessage(e) {
     let t = new Pe(),
@@ -11193,11 +11105,11 @@ var st = class extends et {
       n !== null
         ? n[1] === "includes"
           ? (t.filter = (s) =>
-            st.stringIncludesCaseInsensitive(this.value(s), n[2]))
+              st.stringIncludesCaseInsensitive(this.value(s), n[2]))
           : n[1] === "does not include"
-            ? (t.filter = (s) =>
+          ? (t.filter = (s) =>
               !st.stringIncludesCaseInsensitive(this.value(s), n[2]))
-            : (t.error = `do not understand query filter (${this.fieldName()})`)
+          : (t.error = `do not understand query filter (${this.fieldName()})`)
         : (t.error = `do not understand query filter (${this.fieldName()})`),
       t
     );
@@ -11207,17 +11119,17 @@ var st = class extends et {
   }
 };
 var ga = class extends st {
-  fieldName() {
-    return "description";
-  }
-  filterRegexp() {
-    return ga.descriptionRegexp;
-  }
-  value(e) {
-    let t = se().globalFilter;
-    return e.description.replace(t, "").trim();
-  }
-},
+    fieldName() {
+      return "description";
+    }
+    filterRegexp() {
+      return ga.descriptionRegexp;
+    }
+    value(e) {
+      let t = se().globalFilter;
+      return e.description.replace(t, "").trim();
+    }
+  },
   fi = ga;
 fi.descriptionRegexp = /^description (includes|does not include) (.*)/;
 var Gf = Le(ve()),
@@ -11235,15 +11147,15 @@ var mt = class extends et {
       i.isValid()
         ? n[1] === "before"
           ? (t.filter = (s) => {
-            let a = this.date(s);
-            return a ? a.isBefore(i) : this.filterResultIfFieldMissing();
-          })
+              let a = this.date(s);
+              return a ? a.isBefore(i) : this.filterResultIfFieldMissing();
+            })
           : n[1] === "after"
-            ? (t.filter = (s) => {
+          ? (t.filter = (s) => {
               let a = this.date(s);
               return a ? a.isAfter(i) : this.filterResultIfFieldMissing();
             })
-            : (t.filter = (s) => {
+          : (t.filter = (s) => {
               let a = this.date(s);
               return a ? a.isSame(i) : this.filterResultIfFieldMissing();
             })
@@ -11255,225 +11167,225 @@ var mt = class extends et {
   }
 };
 var zt = class extends mt {
-  canCreateFilterForLine(e) {
-    return e === zt.instructionForFieldPresence ||
-      e === zt.instructionForFieldAbsence
-      ? !0
-      : super.canCreateFilterForLine(e);
-  }
-  createFilterOrErrorMessage(e) {
-    if (e === zt.instructionForFieldPresence) {
-      let t = new Pe();
-      return (t.filter = (n) => this.date(n) !== null), t;
+    canCreateFilterForLine(e) {
+      return e === zt.instructionForFieldPresence ||
+        e === zt.instructionForFieldAbsence
+        ? !0
+        : super.canCreateFilterForLine(e);
     }
-    if (e === zt.instructionForFieldAbsence) {
-      let t = new Pe();
-      return (t.filter = (n) => this.date(n) === null), t;
+    createFilterOrErrorMessage(e) {
+      if (e === zt.instructionForFieldPresence) {
+        let t = new Pe();
+        return (t.filter = (n) => this.date(n) !== null), t;
+      }
+      if (e === zt.instructionForFieldAbsence) {
+        let t = new Pe();
+        return (t.filter = (n) => this.date(n) === null), t;
+      }
+      return super.createFilterOrErrorMessage(e);
     }
-    return super.createFilterOrErrorMessage(e);
-  }
-  filterRegexp() {
-    return zt.doneRegexp;
-  }
-  fieldName() {
-    return "done";
-  }
-  date(e) {
-    return e.doneDate;
-  }
-  filterResultIfFieldMissing() {
-    return !1;
-  }
-},
+    filterRegexp() {
+      return zt.doneRegexp;
+    }
+    fieldName() {
+      return "done";
+    }
+    date(e) {
+      return e.doneDate;
+    }
+    filterResultIfFieldMissing() {
+      return !1;
+    }
+  },
   Tr = zt;
 (Tr.doneRegexp = /^done (before|after|on)? ?(.*)/),
   (Tr.instructionForFieldPresence = "has done date"),
   (Tr.instructionForFieldAbsence = "no done date");
 var _a = class extends mt {
-  filterRegexp() {
-    return _a.dueRegexp;
-  }
-  fieldName() {
-    return "due";
-  }
-  date(e) {
-    return e.dueDate;
-  }
-  filterResultIfFieldMissing() {
-    return !1;
-  }
-},
+    filterRegexp() {
+      return _a.dueRegexp;
+    }
+    fieldName() {
+      return "due";
+    }
+    date(e) {
+      return e.dueDate;
+    }
+    filterResultIfFieldMissing() {
+      return !1;
+    }
+  },
   hi = _a;
 hi.dueRegexp = /^due (before|after|on)? ?(.*)/;
 var Ta = class extends st {
-  filterRegexp() {
-    return Ta.headingRegexp;
-  }
-  fieldName() {
-    return "heading";
-  }
-  value(e) {
-    return e.precedingHeader ? e.precedingHeader : "";
-  }
-},
+    filterRegexp() {
+      return Ta.headingRegexp;
+    }
+    fieldName() {
+      return "heading";
+    }
+    value(e) {
+      return e.precedingHeader ? e.precedingHeader : "";
+    }
+  },
   pi = Ta;
 pi.headingRegexp = /^heading (includes|does not include) (.*)/;
 var ba = class extends st {
-  filterRegexp() {
-    return ba.pathRegexp;
-  }
-  fieldName() {
-    return "path";
-  }
-  value(e) {
-    return e.path;
-  }
-},
+    filterRegexp() {
+      return ba.pathRegexp;
+    }
+    fieldName() {
+      return "path";
+    }
+    value(e) {
+      return e.path;
+    }
+  },
   mi = ba;
 mi.pathRegexp = /^path (includes|does not include) (.*)/;
 var va = class extends et {
-  createFilterOrErrorMessage(e) {
-    let t = new Pe(),
-      n = e.match(this.filterRegexp());
-    if (n !== null) {
-      let i = n[3],
-        s = null;
-      switch (i) {
-        case "low":
-          s = X.Low;
-          break;
-        case "none":
-          s = X.None;
-          break;
-        case "medium":
-          s = X.Medium;
-          break;
-        case "high":
-          s = X.High;
-          break;
-      }
-      if (s === null) return (t.error = "do not understand priority"), t;
-      let a;
-      n[2] === "above"
-        ? (a = (o) => (o.priority ? o.priority.localeCompare(s) < 0 : !1))
-        : n[2] === "below"
+    createFilterOrErrorMessage(e) {
+      let t = new Pe(),
+        n = e.match(this.filterRegexp());
+      if (n !== null) {
+        let i = n[3],
+          s = null;
+        switch (i) {
+          case "low":
+            s = X.Low;
+            break;
+          case "none":
+            s = X.None;
+            break;
+          case "medium":
+            s = X.Medium;
+            break;
+          case "high":
+            s = X.High;
+            break;
+        }
+        if (s === null) return (t.error = "do not understand priority"), t;
+        let a;
+        n[2] === "above"
+          ? (a = (o) => (o.priority ? o.priority.localeCompare(s) < 0 : !1))
+          : n[2] === "below"
           ? (a = (o) => (o.priority ? o.priority.localeCompare(s) > 0 : !1))
           : (a = (o) => (o.priority ? o.priority === s : !1)),
-        (t.filter = a);
-    } else t.error = "do not understand query filter (priority)";
-    return t;
-  }
-  fieldName() {
-    return "priority";
-  }
-  filterRegexp() {
-    return va.priorityRegexp;
-  }
-},
+          (t.filter = a);
+      } else t.error = "do not understand query filter (priority)";
+      return t;
+    }
+    fieldName() {
+      return "priority";
+    }
+    filterRegexp() {
+      return va.priorityRegexp;
+    }
+  },
   yi = va;
 yi.priorityRegexp = /^priority (is )?(above|below)? ?(low|none|medium|high)/;
 var Da = class extends mt {
-  filterRegexp() {
-    return Da.scheduledRegexp;
-  }
-  fieldName() {
-    return "scheduled";
-  }
-  date(e) {
-    return e.scheduledDate;
-  }
-  filterResultIfFieldMissing() {
-    return !1;
-  }
-},
+    filterRegexp() {
+      return Da.scheduledRegexp;
+    }
+    fieldName() {
+      return "scheduled";
+    }
+    date(e) {
+      return e.scheduledDate;
+    }
+    filterResultIfFieldMissing() {
+      return !1;
+    }
+  },
   gi = Da;
 gi.scheduledRegexp = /^scheduled (before|after|on)? ?(.*)/;
 var wa = class extends mt {
-  filterRegexp() {
-    return wa.startRegexp;
-  }
-  fieldName() {
-    return "start";
-  }
-  date(e) {
-    return e.startDate;
-  }
-  filterResultIfFieldMissing() {
-    return !0;
-  }
-},
+    filterRegexp() {
+      return wa.startRegexp;
+    }
+    fieldName() {
+      return "start";
+    }
+    date(e) {
+      return e.startDate;
+    }
+    filterResultIfFieldMissing() {
+      return !0;
+    }
+  },
   _i = wa;
 _i.startRegexp = /^starts (before|after|on)? ?(.*)/;
 var Kt = class extends et {
-  canCreateFilterForLine(e) {
-    return e === Kt.instructionForFieldPresence ||
-      e === Kt.instructionForFieldAbsence
-      ? !0
-      : super.canCreateFilterForLine(e);
-  }
-  createFilterOrErrorMessage(e) {
-    let t = new Pe();
-    if (e === Kt.instructionForFieldPresence) {
-      let i = new Pe();
-      return (i.filter = (s) => this.dates(s).some((a) => a !== null)), i;
+    canCreateFilterForLine(e) {
+      return e === Kt.instructionForFieldPresence ||
+        e === Kt.instructionForFieldAbsence
+        ? !0
+        : super.canCreateFilterForLine(e);
     }
-    if (e === Kt.instructionForFieldAbsence) {
-      let i = new Pe();
-      return (i.filter = (s) => !this.dates(s).some((a) => a !== null)), i;
-    }
-    let n = e.match(this.filterRegexp());
-    if (n !== null) {
-      let i = hn.parseDate(n[2]);
-      i.isValid()
-        ? n[1] === "before"
-          ? (t.filter = (s) => this.dates(s).some((a) => a && a.isBefore(i)))
-          : n[1] === "after"
+    createFilterOrErrorMessage(e) {
+      let t = new Pe();
+      if (e === Kt.instructionForFieldPresence) {
+        let i = new Pe();
+        return (i.filter = (s) => this.dates(s).some((a) => a !== null)), i;
+      }
+      if (e === Kt.instructionForFieldAbsence) {
+        let i = new Pe();
+        return (i.filter = (s) => !this.dates(s).some((a) => a !== null)), i;
+      }
+      let n = e.match(this.filterRegexp());
+      if (n !== null) {
+        let i = hn.parseDate(n[2]);
+        i.isValid()
+          ? n[1] === "before"
+            ? (t.filter = (s) => this.dates(s).some((a) => a && a.isBefore(i)))
+            : n[1] === "after"
             ? (t.filter = (s) => this.dates(s).some((a) => a && a.isAfter(i)))
             : (t.filter = (s) => this.dates(s).some((a) => a && a.isSame(i)))
-        : (t.error = "do not understand happens date");
-    } else t.error = "do not understand query filter (happens date)";
-    return t;
-  }
-  filterRegexp() {
-    return Kt.happensRegexp;
-  }
-  dates(e) {
-    return Array.of(e.startDate, e.scheduledDate, e.dueDate);
-  }
-  fieldName() {
-    return "happens";
-  }
-},
+          : (t.error = "do not understand happens date");
+      } else t.error = "do not understand query filter (happens date)";
+      return t;
+    }
+    filterRegexp() {
+      return Kt.happensRegexp;
+    }
+    dates(e) {
+      return Array.of(e.startDate, e.scheduledDate, e.dueDate);
+    }
+    fieldName() {
+      return "happens";
+    }
+  },
   br = Kt;
 (br.happensRegexp = /^happens (before|after|on)? ?(.*)/),
   (br.instructionForFieldPresence = "has happens date"),
   (br.instructionForFieldAbsence = "no happens date");
 var Ea = class extends et {
-  createFilterOrErrorMessage(e) {
-    let t = new Pe(),
-      n = e.match(this.filterRegexp());
-    if (n !== null) {
-      let i = n[2],
-        s = n[3].replace(/^#/, "");
-      i === "include" || i === "includes"
-        ? (t.filter = (a) =>
-          a.tags.find((o) => o.toLowerCase().includes(s.toLowerCase())) !==
-          void 0)
-        : n[2] === "do not include" || n[2] === "does not include"
+    createFilterOrErrorMessage(e) {
+      let t = new Pe(),
+        n = e.match(this.filterRegexp());
+      if (n !== null) {
+        let i = n[2],
+          s = n[3].replace(/^#/, "");
+        i === "include" || i === "includes"
           ? (t.filter = (a) =>
-            a.tags.find((o) => o.toLowerCase().includes(s.toLowerCase())) ==
-            null)
+              a.tags.find((o) => o.toLowerCase().includes(s.toLowerCase())) !==
+              void 0)
+          : n[2] === "do not include" || n[2] === "does not include"
+          ? (t.filter = (a) =>
+              a.tags.find((o) => o.toLowerCase().includes(s.toLowerCase())) ==
+              null)
           : (t.error = "do not understand query filter (tag/tags)");
-    } else t.error = "do not understand query filter (tag/tags)";
-    return t;
-  }
-  fieldName() {
-    return "tag/tags";
-  }
-  filterRegexp() {
-    return Ea.tagRegexp;
-  }
-},
+      } else t.error = "do not understand query filter (tag/tags)";
+      return t;
+    }
+    fieldName() {
+      return "tag/tags";
+    }
+    filterRegexp() {
+      return Ea.tagRegexp;
+    }
+  },
   Ti = Ea;
 Ti.tagRegexp =
   /^(tag|tags) (includes|does not include|include|do not include) (.*)/;
@@ -11505,19 +11417,6 @@ var pn = class {
     this.limitRegexp = /^limit (to )?(\d+)( tasks?)?/;
     this.excludeSubItemsString = "exclude sub-items";
     this.commentRegexp = /^#.*/;
-    //TOTAL
-    this.todoString = 'todo';
-    this.notTodoString = 'not todo';
-    this.doingString = 'doing';
-    this.notdoingString = 'not doing';
-    this.impString = 'important';
-    this.queString = 'question';
-    this.delString = 'delete';
-    this.notDelString = 'not delete';
-    this.stopString = 'stop';
-    this.heading2Regexp = /heading2 (includes|does not include) (.*)/;
-    this.markRegexp = /mark (includes|does not include) (.*)/;//TOTAL
-
     (this.source = e),
       e
         .split(
@@ -11562,26 +11461,6 @@ var pn = class {
             case t === this.hasDueString:
               this._filters.push((n) => n.dueDate !== null);
               break;
-            //TOTAL
-            case t === this.todoString:
-              this._filters.push((n) => n.status === ue.Todo); break;
-            case t === this.doingString:
-              this._filters.push((n) => n.status === ue.Doing); break;
-            case t === this.impString:
-              this._filters.push((n) => n.status === ue.Important); break;
-            case t === this.queString:
-              this._filters.push((n) => n.status === ue.Question); break;
-            case t === this.delString:
-              this._filters.push((n) => n.status === ue.Del); break;
-            case t === this.stopString:
-              this._filters.push((n) => n.status === ue.Stop); break;
-            case t === this.notTodoString:
-              this._filters.push((n) => n.status !== ue.Todo); break;
-            case t === this.notDoingString:
-              this._filters.push((n) => n.status !== ue.Doing); break;
-            case t === this.notDelString:
-              this._filters.push((n) => n.status !== ue.Del); break;
-            //TOTAL
             case this.shortModeRegexp.test(t):
               this._layoutOptions.shortMode = !0;
               break;
@@ -11700,10 +11579,10 @@ var pn = class {
     let t = e.match(this.sortByRegexp);
     t !== null
       ? this._sorting.push({
-        property: t[1],
-        reverse: !!t[2],
-        propertyInstance: isNaN(+t[3]) ? 1 : +t[3],
-      })
+          property: t[1],
+          reverse: !!t[2],
+          propertyInstance: isNaN(+t[3]) ? 1 : +t[3],
+        })
       : (this._error = "do not understand query sorting");
   }
   parseGroupBy({ line: e }) {
@@ -11714,33 +11593,33 @@ var pn = class {
   }
 };
 var ka = class {
-  constructor({ plugin: e, events: t }) {
-    this.addQueryRenderChild = this._addQueryRenderChild.bind(this);
-    (this.app = e.app),
-      (this.events = t),
-      e.registerMarkdownCodeBlockProcessor(
-        "tasks",
-        this._addQueryRenderChild.bind(this)
-      );
-  }
-  _addQueryRenderChild(e, t, n) {
-    return te(this, null, function* () {
-      n.addChild(
-        new mn({
-          app: this.app,
-          events: this.events,
-          container: t,
-          source: e,
-        })
-      );
-    });
-  }
-},
+    constructor({ plugin: e, events: t }) {
+      this.addQueryRenderChild = this._addQueryRenderChild.bind(this);
+      (this.app = e.app),
+        (this.events = t),
+        e.registerMarkdownCodeBlockProcessor(
+          "tasks",
+          this._addQueryRenderChild.bind(this)
+        );
+    }
+    _addQueryRenderChild(e, t, n) {
+      return te(this, null, function* () {
+        n.addChild(
+          new mn({
+            app: this.app,
+            events: this.events,
+            container: t,
+            source: e,
+          })
+        );
+      });
+    }
+  },
   mn = class extends Hf.MarkdownRenderChild {
     constructor({ app: e, events: t, container: n, source: i }) {
       super(n);
       switch (
-      ((this.app = e),
+        ((this.app = e),
         (this.events = t),
         (this.source = i),
         this.containerEl.className)
@@ -11763,7 +11642,7 @@ var ka = class {
     onunload() {
       this.renderEventRef !== void 0 && this.events.off(this.renderEventRef),
         this.queryReloadTimeout !== void 0 &&
-        clearTimeout(this.queryReloadTimeout);
+          clearTimeout(this.queryReloadTimeout);
     }
     reloadQueryAtMidnight() {
       let e = new Date();
@@ -11841,8 +11720,8 @@ var ka = class {
       t.nestingLevel === 0
         ? (n = e.createEl("h4", { cls: "tasks-group-heading" }))
         : t.nestingLevel === 1
-          ? (n = e.createEl("h5", { cls: "tasks-group-heading" }))
-          : (n = e.createEl("h6", { cls: "tasks-group-heading" })),
+        ? (n = e.createEl("h5", { cls: "tasks-group-heading" }))
+        : (n = e.createEl("h6", { cls: "tasks-group-heading" })),
         n.appendText(t.name);
     }
     addBacklinks(e, t, n, i) {
@@ -11856,7 +11735,7 @@ var ka = class {
         s.addClass("internal-link"),
         n && s.addClass("internal-link-short-mode"),
         t.precedingHeader !== null &&
-        ((s.href = s.href + "#" + t.precedingHeader),
+          ((s.href = s.href + "#" + t.precedingHeader),
           s.setAttribute(
             "data-href",
             s.getAttribute("data-href") + "#" + t.precedingHeader
